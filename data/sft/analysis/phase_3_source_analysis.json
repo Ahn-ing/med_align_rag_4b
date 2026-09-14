@@ -1,0 +1,91 @@
+{
+  "format_version": 1,
+  "method": "NFKC+whitespace+casefold exact fingerprints",
+  "sources": {
+    "coig:train": {
+      "path_argument": "coig:train",
+      "sha256": "f2a6a758362b7fa5d5c29c9ae0946f2fbf8c9318b6fb48c0e62f8b774d8ff518",
+      "records": 44694,
+      "empty_question": 0,
+      "empty_answer": 1,
+      "rag_question_overlap": 82,
+      "compatibility_query_overlap": 0,
+      "question_characters": {
+        "min": 3,
+        "max": 19344,
+        "mean": 100.56837606837607
+      },
+      "answer_characters": {
+        "min": 1,
+        "max": 23502,
+        "mean": 981.4951000134246
+      }
+    },
+    "medical:train": {
+      "path_argument": "medical:train",
+      "sha256": "98f111016800f98ef4e5c5e29f9260c8ce8ef4331897523d6c3a61003957fed3",
+      "records": 1949972,
+      "empty_question": 0,
+      "empty_answer": 0,
+      "rag_question_overlap": 367007,
+      "compatibility_query_overlap": 32,
+      "question_characters": {
+        "min": 3,
+        "max": 2758,
+        "mean": 36.92593278262457
+      },
+      "answer_characters": {
+        "min": 1,
+        "max": 41618,
+        "mean": 181.26222068829705
+      }
+    },
+    "medical:validation": {
+      "path_argument": "medical:validation",
+      "sha256": "397ce9692f0f5782227781ffc2cd9cbb18c105e03817000aedc97195584e6992",
+      "records": 500,
+      "empty_question": 0,
+      "empty_answer": 0,
+      "rag_question_overlap": 80,
+      "compatibility_query_overlap": 0,
+      "question_characters": {
+        "min": 4,
+        "max": 310,
+        "mean": 37.18
+      },
+      "answer_characters": {
+        "min": 2,
+        "max": 1410,
+        "mean": 156.12
+      }
+    },
+    "medical:test": {
+      "path_argument": "medical:test",
+      "sha256": "c3876d82565cb9958be72883a096311a5081fb6704f8607ec043921baf57b1a9",
+      "records": 500,
+      "empty_question": 0,
+      "empty_answer": 0,
+      "rag_question_overlap": 74,
+      "compatibility_query_overlap": 0,
+      "question_characters": {
+        "min": 7,
+        "max": 253,
+        "mean": 35.84
+      },
+      "answer_characters": {
+        "min": 1,
+        "max": 2062,
+        "mean": 151.538
+      }
+    }
+  },
+  "duplicates": {
+    "exact_qa_extra_records": 41717,
+    "exact_question_extra_records": 49115,
+    "normalized_qa_extra_records": 41801,
+    "normalized_question_extra_records": 51299,
+    "conflicting_question_groups": 9159,
+    "cross_source_question_groups": 81,
+    "cross_original_split_question_groups": 135
+  }
+}

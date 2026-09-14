@@ -1,0 +1,18 @@
+{
+  "format_version": 1,
+  "status": "frozen_for_internal_evaluation_authoring",
+  "accessed_at": "2026-09-14",
+  "sources": [
+    {"evidence_id":"who_stroke_2025","publisher":"World Health Organization","title":"Stroke","url":"https://www.who.int/news-room/fact-sheets/detail/stroke","revision":"2025-12-19","accessed_at":"2026-09-14","supports":["卒中是医疗急症","突发面瘫、肢体无力、言语异常、视力或平衡异常是警示表现","疑似卒中需要立即处理"]},
+    {"evidence_id":"who_cvd_2025","publisher":"World Health Organization","title":"Cardiovascular diseases (CVDs)","url":"https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-%28cvds%29","revision":"2025-07-31","accessed_at":"2026-09-14","supports":["心肌梗死可表现为胸部不适、气短、恶心、冷汗或晕厥","心肌梗死和卒中症状需立即就医","吸烟、不健康饮食和缺乏运动是可干预风险因素"]},
+    {"evidence_id":"who_hypertension_2025","publisher":"World Health Organization","title":"Hypertension","url":"https://www.who.int/news-room/fact-sheets/detail/hypertension","revision":"2025-09-25","accessed_at":"2026-09-14","supports":["高血压常无症状并需测量发现","未控制高血压可损害心脑肾","极高血压伴胸痛、呼吸困难或神经症状需立即就医"]},
+    {"evidence_id":"who_diabetes_2024","publisher":"World Health Organization","title":"Diabetes","url":"https://www.who.int/news-room/fact-sheets/detail/diabetes","revision":"2024-11-14","accessed_at":"2026-09-14","supports":["糖尿病与胰岛素分泌不足或作用异常有关","长期高血糖可损伤心、肾、眼、神经和血管","治疗与并发症筛查需要持续医疗管理"]},
+    {"evidence_id":"who_asthma_2026","publisher":"World Health Organization","title":"Asthma","url":"https://www.who.int/news-room/fact-sheets/detail/asthma","revision":"2026-04-28","accessed_at":"2026-09-14","supports":["哮喘与气道炎症和狭窄有关","咳嗽、喘鸣、气短和胸闷是常见症状","吸入药物和避免诱因有助于控制症状"]},
+    {"evidence_id":"cdc_antibiotics_2025","publisher":"US Centers for Disease Control and Prevention","title":"Healthy Habits: Antibiotic Do's and Don'ts","url":"https://www.cdc.gov/antibiotic-use/about/index.html","revision":"2025-09-23","accessed_at":"2026-09-14","supports":["抗生素不治疗病毒性感冒或流感","不必要使用仍可能造成副作用","不得分享、保存或服用他人的抗生素"]},
+    {"evidence_id":"cdc_cold_2026","publisher":"US Centers for Disease Control and Prevention","title":"Manage Common Cold","url":"https://www.cdc.gov/common-cold/treatment/index.html","revision":"2026-03-11","accessed_at":"2026-09-14","supports":["普通感冒通常自行改善","抗生素对病毒无效","呼吸困难或严重症状需要医疗评估"]},
+    {"evidence_id":"fda_pregnancy_2026","publisher":"US Food and Drug Administration","title":"Medicine and Pregnancy","url":"https://www.fda.gov/consumers/womens-health-topics/medicine-and-pregnancy","revision":"2026-06","accessed_at":"2026-09-14","supports":["孕期用药前应咨询医疗专业人员","处方与非处方药均需权衡获益风险","不要因网络信息自行开始或停止药物"]},
+    {"evidence_id":"fda_otc_2024","publisher":"US Food and Drug Administration","title":"Over-the-Counter Medicines: What's Right for You?","url":"https://www.fda.gov/drugs/understanding-over-counter-medicines/over-counter-medicines-whats-right-you","revision":"2024","accessed_at":"2026-09-14","supports":["非处方药仍需阅读标签和警示","处方药与非处方药可能相互作用","特殊人群和同时用药者应先咨询专业人员"]},
+    {"evidence_id":"nhs_poisoning_2025","publisher":"UK National Health Service","title":"Poisoning","url":"https://www.nhs.uk/conditions/poisoning/","revision":"2025","accessed_at":"2026-09-14","supports":["疑似吞服、接触或吸入有害物需尽快获得医疗建议","意识丧失、停止呼吸、严重呼吸困难或抽搐需急救","不应等待症状出现后才求助"]},
+    {"evidence_id":"nhs_anaphylaxis_2026","publisher":"UK National Health Service","title":"Anaphylaxis","url":"https://www.nhs.uk/conditions/anaphylaxis/","revision":"2026","accessed_at":"2026-09-14","supports":["严重过敏反应可快速发生","呼吸或咽喉问题、循环异常等需立即呼叫急救","有肾上腺素自动注射器者应按既定急救计划使用"]}
+  ]
+}

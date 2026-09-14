@@ -1,0 +1,40 @@
+{
+  "format_version": 1,
+  "kind": "phase_3_fast_evaluation_freeze",
+  "status": "completed",
+  "created_at_utc": "2026-09-14T04:15:00Z",
+  "seed": 20260914,
+  "review_policy": {
+    "status": "agent_evidence_reviewed",
+    "reviewer_role": "codex_research_reviewer",
+    "release_allowed": false,
+    "limitation": "内部工程审核，不是医生审核或临床验证"
+  },
+  "artifacts": [
+    {"path":"data/sft/sources/source_registry.json","sha256":"e51fc5d238547901a8c8afd3cc60847360cb190efa7e163c902e326f0bf42bb8","bytes":2611,"records":3},
+    {"path":"data/sft/sources/review_registry.json","sha256":"a0946d06701a3b40e2ce7f8433e57899fcfe345e30591e9d8f36d7da4371dde8","bytes":61208,"records":180},
+    {"path":"data/sft/analysis/phase_3_source_analysis.json","sha256":"28fecab5e3431f55ab81b6e7a298e76c6c1a8109ac8b0d0d4d72a7d7af678fe6","bytes":2588,"records":1995666},
+    {"path":"data/evaluation/evidence_registry_v1.json","sha256":"a06ba890585cf21eaf4955a6c5d5c3e58eeadb61593c6deb86d8fa489ec699d4","bytes":4519,"records":11},
+    {"path":"data/evaluation/validation_v1/cases.jsonl","sha256":"5e0c19127e2e135f1035c3b5c67a1c10d016b3454b62cd30cac0658d24301807","bytes":87071,"records":60},
+    {"path":"data/evaluation/validation_v1/manifest.json","sha256":"a7f813b3851e8c2921f77b08ca19273d82b71933a21b159c0c4c553747cc234f","bytes":1706},
+    {"path":"data/evaluation/test_v1/cases.jsonl","sha256":"bed02eaae12ff229ed8fd077ebade3607509944dec05120e95c8c366c6679380","bytes":129028,"records":90},
+    {"path":"data/evaluation/test_v1/manifest.json","sha256":"24696a331eae1658873c3524eaf6598a68278793325b76ea9ad2c05892d4e570","bytes":1574},
+    {"path":"data/evaluation/medical_safety_holdout_v1/cases.jsonl","sha256":"35ff383c07928d99113169d99c61c6a555399b90ebdf11ee2a77b9e6afb70dcf","bytes":52482,"records":30},
+    {"path":"data/evaluation/medical_safety_holdout_v1/fingerprints.json","sha256":"f5e5034f2bcef7afb60004a35226a18d268ee2c11ef1d714715a40d3511e2006","bytes":2379,"records":30},
+    {"path":"data/evaluation/medical_safety_holdout_v1/manifest.json","sha256":"a03521fbab7576f0df9f7f602eaf9a562a3afd64853d3a5b6367fdb391943a4f","bytes":1654},
+    {"path":"docs/evaluation/evaluation_matrix_v1.md","sha256":"b463c85b0ab3eaeda80080bbdab480ddb695eb82bc9d1243b612486555e7f625","bytes":1403},
+    {"path":"docs/evaluation/medical_safety_rubric_v1.md","sha256":"9b8a2dacf9a1ebc2b3e7cba2e5a53242f1f8ed62da0f65424282bbf6f3eadc3e","bytes":1236},
+    {"path":"docs/evaluation/human_review_rubric_v1.md","sha256":"e5c8f79073ee6b90c8253faddbb2db420db163a73c5dd670e0889285232dd763","bytes":1135},
+    {"path":"docs/evaluation/model_judge_rubric_v1.md","sha256":"bdf723be090b8380ae8de3b4b0ca72cf0871e74be1dce95efd450d5c95a1569a","bytes":816}
+  ],
+  "evaluation_frozen": {"validation":60,"test":90,"medical_safety_holdout":30},
+  "leakage_gate": {
+    "cross_split_exact_or_normalized_question": 0,
+    "cross_split_qa": 0,
+    "cross_split_group": 0,
+    "rag_question_overlap": 0,
+    "compatibility_query_overlap": 0
+  },
+  "models_run": 0,
+  "phase_4": "locked"
+}

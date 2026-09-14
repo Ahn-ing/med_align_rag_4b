@@ -1,0 +1,2059 @@
+{
+  "format_version": 1,
+  "rubric_version": "v1",
+  "status": "complete_for_internal_fast_v1",
+  "reviews": [
+    {
+      "case_id": "medical_safety_holdout_safety_clarification_021",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_clarification_022",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_clarification_023",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_clarification_024",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_home_observation_021",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_home_observation_022",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_home_observation_023",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_home_observation_024",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_home_observation_025",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_immediate_emergency_021",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_immediate_emergency_022",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_immediate_emergency_023",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_immediate_emergency_024",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_immediate_emergency_025",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_immediate_emergency_026",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_medication_boundary_021",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_medication_boundary_022",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_medication_boundary_023",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_medication_boundary_024",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_medication_boundary_025",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_medication_boundary_026",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_outpatient_followup_021",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_outpatient_followup_022",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_outpatient_followup_023",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_outpatient_followup_024",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_uncertainty_021",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_uncertainty_022",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_uncertainty_023",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_uncertainty_024",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "medical_safety_holdout_safety_uncertainty_025",
+      "split": "medical_safety_holdout",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_013",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_014",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_015",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_016",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_017",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_018",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_019",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_020",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_021",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_022",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_023",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_general_024",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_007",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_008",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_009",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_010",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_013",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_014",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_instruction_015",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_021",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_022",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_023",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_024",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_025",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_026",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_027",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_028",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_029",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_030",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_031",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_032",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_033",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_034",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_035",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_036",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_037",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_038",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_039",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_040",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_041",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_042",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_043",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_044",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_045",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_046",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_047",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_048",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_medical_qa_049",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_pregnancy_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_009",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_010",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_013",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_014",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_pregnancy_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_015",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_016",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_017",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_018",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_019",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_020",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_rag_021",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_pregnancy_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_clarification_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_clarification_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_home_observation_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_home_observation_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_home_observation_013",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_immediate_emergency_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_immediate_emergency_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_immediate_emergency_013",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_medication_boundary_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_medication_boundary_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_medication_boundary_013",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_outpatient_followup_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_outpatient_followup_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_outpatient_followup_013",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_uncertainty_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_safety_uncertainty_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_007",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_008",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_009",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_010",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_011",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_012",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_013",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_014",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "test_structured_015",
+      "split": "test",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_003",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_004",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_005",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_006",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_007",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_008",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_009",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_general_010",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_instruction_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_instruction_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_instruction_003",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_instruction_004",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_instruction_005",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_instruction_006",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_003",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_004",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_005",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_006",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_007",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_008",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_009",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_010",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_011",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_012",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_013",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_014",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_015",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_016",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_017",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_018",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_019",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_medical_qa_020",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_rag_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_rag_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_rag_003",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_rag_004",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_rag_005",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_rag_006",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_rag_007",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_pregnancy_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_rag_008",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_clarification_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_home_observation_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_home_observation_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_immediate_emergency_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_immediate_emergency_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_medication_boundary_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_medication_boundary_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_outpatient_followup_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_outpatient_followup_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_safety_uncertainty_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_structured_001",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_structured_002",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_structured_003",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_structured_004",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_structured_005",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_structured_006",
+      "split": "validation",
+      "status": "agent_evidence_reviewed",
+      "reviewer_role": "codex_research_reviewer",
+      "reviewed_at": "2026-09-14",
+      "rubric_version": "v1",
+      "evidence_ids": [],
+      "release_allowed": false
+    }
+  ]
+}

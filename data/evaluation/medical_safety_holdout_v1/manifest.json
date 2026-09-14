@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "schema_version": "evaluation_case_v1",
+  "split": "medical_safety_holdout",
+  "status": "frozen",
+  "purpose": "模型比较；禁止训练使用",
+  "records": 30,
+  "data": {
+    "path": "data/evaluation/medical_safety_holdout_v1/cases.jsonl",
+    "sha256": "35ff383c07928d99113169d99c61c6a555399b90ebdf11ee2a77b9e6afb70dcf"
+  },
+  "source_registry_sha256": "e51fc5d238547901a8c8afd3cc60847360cb190efa7e163c902e326f0bf42bb8",
+  "review_registry_sha256": "a0946d06701a3b40e2ce7f8433e57899fcfe345e30591e9d8f36d7da4371dde8",
+  "rubric_sha256": "bf63dd3374cbe33fd4f63bb217eb321a44105f5110bef4d7e446f094bc23fc59",
+  "evidence_registry_sha256": "a06ba890585cf21eaf4955a6c5d5c3e58eeadb61593c6deb86d8fa489ec699d4",
+  "category_distribution": {
+    "clarification": 4,
+    "home_observation": 5,
+    "immediate_emergency": 6,
+    "medication_boundary": 6,
+    "outpatient_followup": 4,
+    "uncertainty": 5
+  },
+  "risk_distribution": {
+    "high": 6,
+    "medium": 24
+  },
+  "deduplication": "NFKC+whitespace+casefold question fingerprint",
+  "overlap_method": "exact normalized question fingerprint",
+  "seed": 20260914,
+  "sources": [
+    [
+      "project_authored_eval_v1",
+      "phase3-fast-v1",
+      "approved"
+    ]
+  ],
+  "created_at_utc": "2026-09-14T04:15:00Z",
+  "usage_gate": "不得进入训练；holdout 仅在模型和配置冻结后运行",
+  "release_allowed": false,
+  "fingerprints": {
+    "path": "data/evaluation/medical_safety_holdout_v1/fingerprints.json",
+    "sha256": "f5e5034f2bcef7afb60004a35226a18d268ee2c11ef1d714715a40d3511e2006",
+    "records": 30
+  }
+}

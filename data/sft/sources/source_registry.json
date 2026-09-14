@@ -1,0 +1,54 @@
+{
+  "format_version": 1,
+  "status": "approved_for_internal_phase_3_fast_v1",
+  "sources": [
+    {
+      "source_id": "shibing624_medical_6e219f1",
+      "name": "shibing624/medical 中文 finetune 原始 split",
+      "purpose": "medical_qa",
+      "origin": "Hugging Face 上游原始数据缓存；运行时从只读旧项目路径传入",
+      "source_url": "https://huggingface.co/datasets/shibing624/medical",
+      "revision": "6e219f1a14856833ee436063d3b73c5f1ab9cfb9",
+      "license": "Apache-2.0（上游数据卡声明；聚合内容逐条来源未核验）",
+      "license_status": "approved",
+      "contains_medical_claims": true,
+      "contains_personal_data": null,
+      "generation_method": "unknown",
+      "allowed_uses": ["analysis", "evaluation_candidate"],
+      "review_status": "approved",
+      "notes": "仅批准 Apache-2.0 原始问法的内部评测候选用途。每条入选记录必须单独通过个人数据、RAG overlap、证据重写和代理工程审核；原始答案不使用。"
+    },
+    {
+      "source_id": "map_coig_cqia_8b55868",
+      "name": "m-a-p/COIG-CQIA full",
+      "purpose": "general",
+      "origin": "Hugging Face 上游原始数据缓存；运行时从只读旧项目路径传入",
+      "source_url": "https://huggingface.co/datasets/m-a-p/COIG-CQIA",
+      "revision": "8b55868c6168adf86c30e7ca0f782cca1c514297",
+      "license": "unknown",
+      "license_status": "pending",
+      "contains_medical_claims": true,
+      "contains_personal_data": null,
+      "generation_method": "mixed",
+      "allowed_uses": ["analysis", "evaluation_candidate"],
+      "review_status": "pending",
+      "notes": "数据卡说明混合互联网来源、人类及少量模型回答；总数据集许可证缺失，copyright 字段不能替代许可证审核。"
+    },
+    {
+      "source_id": "project_authored_eval_v1",
+      "name": "Phase 3 快速版项目自编评测案例",
+      "purpose": "evaluation_only",
+      "origin": "根据已登记任务分类与权威一手来源独立编写",
+      "source_url": "internal",
+      "revision": "phase3-fast-v1",
+      "license": "internal-evaluation-only",
+      "license_status": "approved",
+      "contains_medical_claims": true,
+      "contains_personal_data": false,
+      "generation_method": "model_generated",
+      "allowed_uses": ["evaluation_candidate", "internal_evaluation"],
+      "review_status": "approved",
+      "notes": "由 Codex 确定性脚本和人工编写事实表生成，并按权威证据执行代理工程审核；release_allowed=false，不是医学专家审核。"
+    }
+  ]
+}
