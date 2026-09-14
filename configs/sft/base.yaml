@@ -6,7 +6,12 @@ model:
   dtype: bfloat16
 data:
   max_length: 2048
-  target_assistant_tokens: 2500000
+  target_assistant_tokens: 500000
+  token_mix:
+    medical: 275000
+    general: 100000
+    medical_safety: 100000
+    instruction: 25000
 lora:
   rank: 16
   alpha: 32

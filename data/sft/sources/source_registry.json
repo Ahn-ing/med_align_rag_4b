@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "status": "approved_for_internal_phase_3_fast_v1",
+  "status": "approved_for_internal_phase_3_and_4_fast_v1",
   "sources": [
     {
       "source_id": "shibing624_medical_6e219f1",
@@ -49,6 +49,38 @@
       "allowed_uses": ["evaluation_candidate", "internal_evaluation"],
       "review_status": "approved",
       "notes": "由 Codex 确定性脚本和人工编写事实表生成，并按权威证据执行代理工程审核；release_allowed=false，不是医学专家审核。"
+    },
+    {
+      "source_id": "databricks_dolly_15k_bdd27f4",
+      "name": "databricks/databricks-dolly-15k",
+      "purpose": "general",
+      "origin": "Hugging Face 官方数据仓库固定 revision 原始 JSONL",
+      "source_url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k",
+      "revision": "bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a",
+      "license": "CC-BY-SA-3.0",
+      "license_status": "approved",
+      "contains_medical_claims": false,
+      "contains_personal_data": false,
+      "generation_method": "human",
+      "allowed_uses": ["analysis", "training_candidate", "internal_training"],
+      "review_status": "approved",
+      "notes": "上游数据卡声明由 Databricks 员工编写、支持训练并采用 CC BY-SA 3.0；Phase 4 另行排除医疗关键词、联系方式样式和冻结评测重叠。"
+    },
+    {
+      "source_id": "project_authored_training_v1",
+      "name": "Phase 4 快速版项目自编训练案例",
+      "purpose": "medical_safety_instruction",
+      "origin": "基于冻结权威证据事实表和确定性非医疗任务模板独立编写",
+      "source_url": "internal",
+      "revision": "phase4-fast-v1",
+      "license": "internal-training-only",
+      "license_status": "approved",
+      "contains_medical_claims": true,
+      "contains_personal_data": false,
+      "generation_method": "project_authored",
+      "allowed_uses": ["analysis", "training_candidate", "internal_training"],
+      "review_status": "approved",
+      "notes": "医疗事实逐条关联权威证据并由 codex_research_reviewer 执行代理工程审核；release_allowed=false，不是医生审核、临床验证或公开发布许可。"
     }
   ]
 }

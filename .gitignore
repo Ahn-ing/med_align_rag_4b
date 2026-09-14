@@ -21,6 +21,9 @@ Desktop.ini
 data/external/
 data/rag/artifacts/
 data/sft/released/
+data/sft/reviewed/
+data/sft/quarantine/
+artifacts/reports/phase_4/
 artifacts/runs/
 artifacts/evaluations/
 *.log

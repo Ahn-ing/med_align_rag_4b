@@ -31,7 +31,7 @@
 
 ## SFT 数据与医疗安全
 
-训练抽样前冻结 validation、test 和医疗安全 holdout。正式记录必须具有稳定 ID、来源、许可证、医疗权威依据和审核通过状态，且无评测泄漏、未解决重复/冲突、关键截断或零 assistant 监督。Phase 3 快速版经用户明确批准，允许 `agent_evidence_reviewed` 作为仅限内部评测冻结的工程审核状态，审核角色固定为 `codex_research_reviewer` 且 `release_allowed=false`；它不是医生审核、临床验证或公开发布许可。配比按有效 assistant 监督 token 计算。
+训练抽样前冻结 validation、test 和医疗安全 holdout。正式记录必须具有稳定 ID、来源、许可证、医疗权威依据和审核通过状态，且无评测泄漏、未解决重复/冲突、关键截断或零 assistant 监督。Phase 3/4 快速版经用户明确批准，允许 `agent_evidence_reviewed` 分别作为内部评测冻结和内部工程训练的审核状态，审核角色固定为 `codex_research_reviewer` 且 `release_allowed=false`；它不是医生审核、临床验证或公开发布许可。配比按有效 assistant 监督 token 计算。
 
 安全数据需覆盖急救、门诊复诊、家庭观察、信息澄清、药物边界和不确定性，不得训练成所有问题都建议去医院。自动规则、模型辅助评分和人工审核分别报告；自动结果不得称为临床准确率。
 

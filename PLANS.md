@@ -30,7 +30,7 @@
 
 ### Phase 4：SFT 清洗和构建
 
-状态：**LOCKED**。构建约 2.5M 获批 assistant 监督 token，医疗/通用/安全/指令比例 55/20/20/5。
+状态：**COMPLETED**。用户批准将首版缩小为 500,000 有效 assistant 监督 token；实际冻结 500,041 token、8,428 条，医疗/通用/安全/指令为 55/20/20/5 且六个安全子类均在 ±1% 内。数据仅允许后续获批的内部工程训练，`release_allowed=false`；代理证据审核不是医生审核或临床验证。Phase 5 保持锁定。
 
 ### Phase 5：Qwen3-4B LoRA 冒烟
 
@@ -55,7 +55,7 @@
 ## 已批准 SFT 默认值
 
 - `Qwen/Qwen3-4B`，主流程关闭 thinking；max length 2048
-- 正式预算约 2.5M unique assistant tokens
+- 快速版正式预算约 500K unique assistant tokens
 - LoRA rank 16、alpha 32、dropout 0.05
 - learning rate 1e-4，epochs 2，global batch 64，初始 micro-batch 4
 - 每 100 optimizer steps 评估

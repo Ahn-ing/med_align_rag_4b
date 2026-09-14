@@ -1,0 +1,60 @@
+{
+  "format_version": 1,
+  "kind": "phase_4_fast_sft_release",
+  "status": "completed",
+  "created_at_utc": "2026-09-14T05:30:00Z",
+  "seed": 20260914,
+  "model_id": "Qwen/Qwen3-4B",
+  "tokenizer_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "enable_thinking": false,
+  "max_length": 2048,
+  "training_allowed": true,
+  "release_allowed": false,
+  "review_policy": {
+    "status": "agent_evidence_reviewed",
+    "reviewer_role": "codex_research_reviewer",
+    "limitation": "仅限内部工程训练，不是医生审核、临床验证或公开发布许可"
+  },
+  "counts": {
+    "generated_candidates": 26439,
+    "source_or_safety_rejected": 672,
+    "duplicates": 16,
+    "conflict_groups": 121,
+    "conflict_records": 297,
+    "leakage": 0,
+    "overlength": 26,
+    "eligible_not_selected": 17000,
+    "train": 8428,
+    "smoke": 180,
+    "accounting_balanced": true
+  },
+  "assistant_tokens": {
+    "total": 500041,
+    "medical": 275011,
+    "general": 100000,
+    "medical_safety": 100026,
+    "instruction": 25004
+  },
+  "artifacts": [
+    {"path":"data/sft/released/v1/manifest.json","sha256":"c9142111bae3850e7ff91533de382a228a7bbe32747b1d0639334f8f28f24874","bytes":43639},
+    {"path":"data/sft/released/v1/train.jsonl","sha256":"a74b458b11662e08428c9fb4218376477c339325fa7363c3746fc2c0dab53b61","bytes":7858482,"records":8428},
+    {"path":"data/sft/released/v1/smoke_train.jsonl","sha256":"d48e61882b3907bb659e946ad5b1ae3e82b834f0a49796fa6235b708c765b4d2","bytes":170825,"records":180},
+    {"path":"data/sft/reviewed/v1/approved_candidates.jsonl","sha256":"38fe47dab9eeaf05aad858acd29924994bb4cda1546f151f96d15fa5dccefe29","bytes":15783883,"records":8428},
+    {"path":"data/sft/reviewed/v1/review_decisions.jsonl","sha256":"79cfbed07ad38a47389dd22dd7f41a6c3ecba95a8304b442b89620c942646b0d","bytes":1837304,"records":8428},
+    {"path":"data/sft/released/v1/data_card.md","sha256":"310c6b28e395849245b575a849f39a87269b65b9a4a60ef63ad7c76a8fe085ac","bytes":3312},
+    {"path":"data/sft/quarantine/v1/rejection_summary.json","sha256":"34783a851cb0d33e67b922108794730906bb601fd1d76462f9735a73536ec673","bytes":324},
+    {"path":"artifacts/reports/phase_4/validation_report.json","sha256":"a715dd61b0bedcd13a76576860f9b2bb5df91408fe017c874c8d95cf6719d5a6","bytes":449},
+    {"path":"docs/phases/phase_4.md","sha256":"ee2c6cdcd12bf6e8fde8c3aa83f4968542ccb8dda84b4157d0c1fa2848956d0d","bytes":2627}
+  ],
+  "gates": {
+    "quota_within_one_percent": true,
+    "safety_six_categories_complete": true,
+    "evaluation_and_rag_overlap": 0,
+    "unresolved_conflicts": 0,
+    "zero_supervision": 0,
+    "released_overlength_or_truncated": 0,
+    "phase_5": "locked"
+  },
+  "models_run": 0,
+  "training_runs": 0
+}
