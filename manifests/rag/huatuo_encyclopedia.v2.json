@@ -1,0 +1,43 @@
+{
+  "format_version": 2,
+  "kind": "rag_artifacts",
+  "created_at_utc": "2026-09-13T10:37:34Z",
+  "build_or_migration": "migration",
+  "source_dataset": "Huatuo Encyclopedia (legacy project asset)",
+  "source_license": "unknown",
+  "chunk_input_sha256": "88b89ba52f9c2ce3b710747c34b67d8be6cfe68e3b421d096efa13f1fac6642b",
+  "embedding": {
+    "model_id": "BAAI/bge-m3",
+    "model_revision": null,
+    "count": 377165,
+    "dimension": 1024,
+    "dtype": "float32",
+    "normalized": true,
+    "normalization_tolerance": 0.001,
+    "max_length": 1024
+  },
+  "similarity": "inner_product",
+  "faiss": {
+    "index_type": "IndexFlatIP",
+    "metric": "inner_product",
+    "ntotal": 377165,
+    "dimension": 1024
+  },
+  "artifacts": {
+    "cleaned": {"path": "data/rag/artifacts/huatuo_encyclopedia/cleaned.jsonl", "sha256": "763b07cfa80964279673d36cde76c8542226cc82daa30ca9c882e34873a22d21", "bytes": 604774689, "records": 361092},
+    "chunks": {"path": "data/rag/artifacts/huatuo_encyclopedia/chunks.jsonl", "sha256": "88b89ba52f9c2ce3b710747c34b67d8be6cfe68e3b421d096efa13f1fac6642b", "bytes": 662349542, "records": 377165},
+    "embeddings": {"path": "data/rag/artifacts/huatuo_encyclopedia/embeddings/embeddings.npy", "sha256": "2d0b0390640157a93f5ab907c1ed30330e394e85da33992762375071f657ba17", "bytes": 1544867968, "records": 377165},
+    "metadata": {"path": "data/rag/artifacts/huatuo_encyclopedia/embeddings/metadata.jsonl", "sha256": "88b89ba52f9c2ce3b710747c34b67d8be6cfe68e3b421d096efa13f1fac6642b", "bytes": 662349542, "records": 377165},
+    "index": {"path": "data/rag/artifacts/huatuo_encyclopedia/embeddings/index.faiss", "sha256": "67380c9841ff788698c7f017536519467ee835a2a1e9d03240ee7f24a8a050f7", "bytes": 1544867885, "records": 377165}
+  },
+  "dependency_versions": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "FlagEmbedding": "1.4.2",
+    "faiss-cpu": "1.15.0"
+  },
+  "risks": [
+    "历史产物无法可靠确认 BAAI/bge-m3 的精确 revision。",
+    "历史项目未提供可独立验证的数据集许可证记录。"
+  ]
+}
