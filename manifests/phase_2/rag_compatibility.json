@@ -1,0 +1,2654 @@
+{
+  "format_version": 1,
+  "kind": "rag_compatibility",
+  "created_at_utc": "2026-09-13T16:11:11.879460Z",
+  "status": "passed",
+  "inputs": {
+    "artifact_manifest": "manifests/rag/huatuo_encyclopedia.v2.json",
+    "artifact_manifest_sha256": "81bab2fa70e4250809187090b62af7758e0367a58d79c11e9cfb80c718869554",
+    "query_set": "data/rag/compatibility/queries.v1.jsonl",
+    "query_set_sha256": "b0258d11033e0018d0d2f4fda20d7eb722e63c841344002a7e7458436e416f79",
+    "old_retriever_sha256": "4714a3c1d172e7b5fd4030bcd951f37ef2e28f491b00a18ac356f05971a1356c",
+    "new_retriever": "src/med_align_rag_4b/rag/retrieval.py",
+    "new_retriever_sha256": "e0597ee17f4da0253205b0ce6f73c1aa7256ff2a9fe963fc36979dc133f2ea1d",
+    "compatibility_runner": "src/med_align_rag_4b/rag/compatibility.py",
+    "compatibility_runner_sha256": "230189a2a26c4a1db844097bb70ab8584dd3cbe8f42550f4c9ff311301fa6945"
+  },
+  "model": {
+    "upstream_revision": "unknown",
+    "files": [
+      {
+        "path": "config.json",
+        "sha256": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa",
+        "bytes": 687
+      },
+      {
+        "path": "pytorch_model.bin",
+        "sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+        "bytes": 2271145830
+      },
+      {
+        "path": "sentencepiece.bpe.model",
+        "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "bytes": 5069051
+      },
+      {
+        "path": "tokenizer.json",
+        "sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08",
+        "bytes": 17098108
+      },
+      {
+        "path": "tokenizer_config.json",
+        "sha256": "a62b2b6784f990259fddef5f16388693a8043be4f69179e6a5257eeb3f9abac4",
+        "bytes": 444
+      },
+      {
+        "path": "special_tokens_map.json",
+        "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+        "bytes": 964
+      },
+      {
+        "path": "modules.json",
+        "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "bytes": 349
+      },
+      {
+        "path": "sentence_bert_config.json",
+        "sha256": "eb9b44b13c0f52a3b3685c3b1cbdea1ba8b04bea123b98f61610048940776eb1",
+        "bytes": 54
+      },
+      {
+        "path": "sparse_linear.pt",
+        "sha256": "45c93804d2142b8f6d7ec6914ae23a1eee9c6a1d27d83d908a20d2afb3595ad9",
+        "bytes": 3516
+      },
+      {
+        "path": "colbert_linear.pt",
+        "sha256": "19bfbae397c2b7524158c919d0e9b19393c5639d098f0a66932c91ed8f5f9abb",
+        "bytes": 2100674
+      }
+    ],
+    "fingerprint_sha256": "913e844cbb77cbe988d0ffe0d27c38e80e35e28e67aebff345bbb88abdd47f16"
+  },
+  "environment": {
+    "device": "cpu",
+    "use_fp16": false,
+    "max_length": 1024,
+    "dense_only": true,
+    "versions": {
+      "python": "3.13.5",
+      "numpy": "2.5.2",
+      "FlagEmbedding": "1.4.2",
+      "faiss-cpu": "1.15.0",
+      "torch": "2.14.0",
+      "transformers": "5.16.1"
+    }
+  },
+  "criteria": {
+    "query_count": 32,
+    "top_k": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "score_abs_tolerance": 1e-05,
+    "tie_tolerance": 1e-07
+  },
+  "results": {
+    "static_artifacts": "passed",
+    "query_vector_max_abs_error": 0.0,
+    "max_score_abs_error": 0.0,
+    "tie_checks_flagged": 0,
+    "queries": [
+      {
+        "query_id": "compat_q_001",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              0
+            ],
+            "chunk_ids": [
+              "huatuo_000001_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              0,
+              43041,
+              34146
+            ],
+            "chunk_ids": [
+              "huatuo_000001_chunk_0000",
+              "huatuo_041272_chunk_0000",
+              "huatuo_032722_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              0,
+              43041,
+              34146,
+              341842,
+              326534
+            ],
+            "chunk_ids": [
+              "huatuo_000001_chunk_0000",
+              "huatuo_041272_chunk_0000",
+              "huatuo_032722_chunk_0000",
+              "huatuo_327297_chunk_0000",
+              "huatuo_312690_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              0,
+              43041,
+              34146,
+              341842,
+              326534,
+              321091,
+              248712,
+              302934,
+              219334,
+              219333
+            ],
+            "chunk_ids": [
+              "huatuo_000001_chunk_0000",
+              "huatuo_041272_chunk_0000",
+              "huatuo_032722_chunk_0000",
+              "huatuo_327297_chunk_0000",
+              "huatuo_312690_chunk_0000",
+              "huatuo_307471_chunk_0000",
+              "huatuo_238187_chunk_0000",
+              "huatuo_289996_chunk_0000",
+              "huatuo_210083_chunk_0001",
+              "huatuo_210083_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_002",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              12167
+            ],
+            "chunk_ids": [
+              "huatuo_011675_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              12167,
+              252386,
+              349028
+            ],
+            "chunk_ids": [
+              "huatuo_011675_chunk_0000",
+              "huatuo_241660_chunk_0000",
+              "huatuo_334166_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              12167,
+              252386,
+              349028,
+              184612,
+              278079
+            ],
+            "chunk_ids": [
+              "huatuo_011675_chunk_0000",
+              "huatuo_241660_chunk_0000",
+              "huatuo_334166_chunk_0000",
+              "huatuo_176961_chunk_0000",
+              "huatuo_266262_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              12167,
+              252386,
+              349028,
+              184612,
+              278079,
+              838,
+              175785,
+              175783,
+              40188,
+              271819
+            ],
+            "chunk_ids": [
+              "huatuo_011675_chunk_0000",
+              "huatuo_241660_chunk_0000",
+              "huatuo_334166_chunk_0000",
+              "huatuo_176961_chunk_0000",
+              "huatuo_266262_chunk_0000",
+              "huatuo_000811_chunk_0000",
+              "huatuo_168511_chunk_0002",
+              "huatuo_168511_chunk_0000",
+              "huatuo_038550_chunk_0000",
+              "huatuo_260306_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_003",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              24333
+            ],
+            "chunk_ids": [
+              "huatuo_023341_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              24333,
+              98741,
+              198209
+            ],
+            "chunk_ids": [
+              "huatuo_023341_chunk_0000",
+              "huatuo_094680_chunk_0000",
+              "huatuo_189942_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              24333,
+              98741,
+              198209,
+              258434,
+              97851
+            ],
+            "chunk_ids": [
+              "huatuo_023341_chunk_0000",
+              "huatuo_094680_chunk_0000",
+              "huatuo_189942_chunk_0000",
+              "huatuo_247439_chunk_0000",
+              "huatuo_093835_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              24333,
+              98741,
+              198209,
+              258434,
+              97851,
+              246322,
+              156952,
+              89790,
+              129126,
+              190124
+            ],
+            "chunk_ids": [
+              "huatuo_023341_chunk_0000",
+              "huatuo_094680_chunk_0000",
+              "huatuo_189942_chunk_0000",
+              "huatuo_247439_chunk_0000",
+              "huatuo_093835_chunk_0000",
+              "huatuo_235889_chunk_0000",
+              "huatuo_150475_chunk_0000",
+              "huatuo_086060_chunk_0000",
+              "huatuo_123813_chunk_0000",
+              "huatuo_182236_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_004",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              162581
+            ],
+            "chunk_ids": [
+              "huatuo_155856_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              162581,
+              36500,
+              360474
+            ],
+            "chunk_ids": [
+              "huatuo_155856_chunk_0000",
+              "huatuo_035004_chunk_0000",
+              "huatuo_345126_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              162581,
+              36500,
+              360474,
+              29521,
+              304355
+            ],
+            "chunk_ids": [
+              "huatuo_155856_chunk_0000",
+              "huatuo_035004_chunk_0000",
+              "huatuo_345126_chunk_0000",
+              "huatuo_028309_chunk_0000",
+              "huatuo_291373_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              162581,
+              36500,
+              360474,
+              29521,
+              304355,
+              164888,
+              107196,
+              123016,
+              225851,
+              336487
+            ],
+            "chunk_ids": [
+              "huatuo_155856_chunk_0000",
+              "huatuo_035004_chunk_0000",
+              "huatuo_345126_chunk_0000",
+              "huatuo_028309_chunk_0000",
+              "huatuo_291373_chunk_0000",
+              "huatuo_158053_chunk_0000",
+              "huatuo_102771_chunk_0000",
+              "huatuo_117925_chunk_0000",
+              "huatuo_216328_chunk_0000",
+              "huatuo_322210_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_005",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              48666
+            ],
+            "chunk_ids": [
+              "huatuo_046702_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              48666,
+              48667,
+              99587
+            ],
+            "chunk_ids": [
+              "huatuo_046702_chunk_0000",
+              "huatuo_046702_chunk_0001",
+              "huatuo_095478_chunk_0001"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              48666,
+              48667,
+              99587,
+              110175,
+              99588
+            ],
+            "chunk_ids": [
+              "huatuo_046702_chunk_0000",
+              "huatuo_046702_chunk_0001",
+              "huatuo_095478_chunk_0001",
+              "huatuo_105619_chunk_0000",
+              "huatuo_095478_chunk_0002"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              48666,
+              48667,
+              99587,
+              110175,
+              99588,
+              99586,
+              69729,
+              109529,
+              69307,
+              47138
+            ],
+            "chunk_ids": [
+              "huatuo_046702_chunk_0000",
+              "huatuo_046702_chunk_0001",
+              "huatuo_095478_chunk_0001",
+              "huatuo_105619_chunk_0000",
+              "huatuo_095478_chunk_0002",
+              "huatuo_095478_chunk_0000",
+              "huatuo_066863_chunk_0000",
+              "huatuo_105012_chunk_0000",
+              "huatuo_066455_chunk_0000",
+              "huatuo_045228_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_006",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              60833
+            ],
+            "chunk_ids": [
+              "huatuo_058324_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              60833,
+              116014,
+              73973
+            ],
+            "chunk_ids": [
+              "huatuo_058324_chunk_0000",
+              "huatuo_111220_chunk_0000",
+              "huatuo_070910_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              60833,
+              116014,
+              73973,
+              284916,
+              149484
+            ],
+            "chunk_ids": [
+              "huatuo_058324_chunk_0000",
+              "huatuo_111220_chunk_0000",
+              "huatuo_070910_chunk_0000",
+              "huatuo_272792_chunk_0000",
+              "huatuo_143284_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              60833,
+              116014,
+              73973,
+              284916,
+              149484,
+              182047,
+              294658,
+              292316,
+              312392,
+              200091
+            ],
+            "chunk_ids": [
+              "huatuo_058324_chunk_0000",
+              "huatuo_111220_chunk_0000",
+              "huatuo_070910_chunk_0000",
+              "huatuo_272792_chunk_0000",
+              "huatuo_143284_chunk_0000",
+              "huatuo_174503_chunk_0000",
+              "huatuo_282102_chunk_0000",
+              "huatuo_279860_chunk_0000",
+              "huatuo_299142_chunk_0000",
+              "huatuo_191733_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_007",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              72999
+            ],
+            "chunk_ids": [
+              "huatuo_069979_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              72999,
+              217496,
+              5412
+            ],
+            "chunk_ids": [
+              "huatuo_069979_chunk_0000",
+              "huatuo_208360_chunk_0000",
+              "huatuo_005192_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              72999,
+              217496,
+              5412,
+              118908,
+              216359
+            ],
+            "chunk_ids": [
+              "huatuo_069979_chunk_0000",
+              "huatuo_208360_chunk_0000",
+              "huatuo_005192_chunk_0000",
+              "huatuo_113998_chunk_0000",
+              "huatuo_207277_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              72999,
+              217496,
+              5412,
+              118908,
+              216359,
+              68770,
+              265862,
+              316503,
+              229652,
+              269451
+            ],
+            "chunk_ids": [
+              "huatuo_069979_chunk_0000",
+              "huatuo_208360_chunk_0000",
+              "huatuo_005192_chunk_0000",
+              "huatuo_113998_chunk_0000",
+              "huatuo_207277_chunk_0000",
+              "huatuo_065944_chunk_0000",
+              "huatuo_254582_chunk_0000",
+              "huatuo_303089_chunk_0000",
+              "huatuo_219950_chunk_0000",
+              "huatuo_258025_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_008",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              85166
+            ],
+            "chunk_ids": [
+              "huatuo_081643_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              85166,
+              260629,
+              343225
+            ],
+            "chunk_ids": [
+              "huatuo_081643_chunk_0000",
+              "huatuo_249553_chunk_0000",
+              "huatuo_328617_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              85166,
+              260629,
+              343225,
+              284763,
+              97003
+            ],
+            "chunk_ids": [
+              "huatuo_081643_chunk_0000",
+              "huatuo_249553_chunk_0000",
+              "huatuo_328617_chunk_0000",
+              "huatuo_272643_chunk_0000",
+              "huatuo_093019_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              85166,
+              260629,
+              343225,
+              284763,
+              97003,
+              26773,
+              19944,
+              315840,
+              280137,
+              376506
+            ],
+            "chunk_ids": [
+              "huatuo_081643_chunk_0000",
+              "huatuo_249553_chunk_0000",
+              "huatuo_328617_chunk_0000",
+              "huatuo_272643_chunk_0000",
+              "huatuo_093019_chunk_0000",
+              "huatuo_025659_chunk_0000",
+              "huatuo_019147_chunk_0000",
+              "huatuo_302440_chunk_0000",
+              "huatuo_268205_chunk_0000",
+              "huatuo_360467_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_009",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              97333
+            ],
+            "chunk_ids": [
+              "huatuo_093341_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              97333,
+              26021,
+              218463
+            ],
+            "chunk_ids": [
+              "huatuo_093341_chunk_0000",
+              "huatuo_024949_chunk_0000",
+              "huatuo_209255_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              97333,
+              26021,
+              218463,
+              23302,
+              274999
+            ],
+            "chunk_ids": [
+              "huatuo_093341_chunk_0000",
+              "huatuo_024949_chunk_0000",
+              "huatuo_209255_chunk_0000",
+              "huatuo_022352_chunk_0000",
+              "huatuo_263346_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              97333,
+              26021,
+              218463,
+              23302,
+              274999,
+              54330,
+              81529,
+              240953,
+              62115,
+              367016
+            ],
+            "chunk_ids": [
+              "huatuo_093341_chunk_0000",
+              "huatuo_024949_chunk_0000",
+              "huatuo_209255_chunk_0000",
+              "huatuo_022352_chunk_0000",
+              "huatuo_263346_chunk_0000",
+              "huatuo_052117_chunk_0000",
+              "huatuo_078152_chunk_0000",
+              "huatuo_230764_chunk_0000",
+              "huatuo_059557_chunk_0000",
+              "huatuo_351397_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_010",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              109499
+            ],
+            "chunk_ids": [
+              "huatuo_104984_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              109499,
+              310408,
+              17017
+            ],
+            "chunk_ids": [
+              "huatuo_104984_chunk_0000",
+              "huatuo_297220_chunk_0000",
+              "huatuo_016337_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              109499,
+              310408,
+              17017,
+              215198,
+              229027
+            ],
+            "chunk_ids": [
+              "huatuo_104984_chunk_0000",
+              "huatuo_297220_chunk_0000",
+              "huatuo_016337_chunk_0000",
+              "huatuo_206178_chunk_0000",
+              "huatuo_219364_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              109499,
+              310408,
+              17017,
+              215198,
+              229027,
+              296066,
+              15857,
+              352305,
+              174912,
+              83995
+            ],
+            "chunk_ids": [
+              "huatuo_104984_chunk_0000",
+              "huatuo_297220_chunk_0000",
+              "huatuo_016337_chunk_0000",
+              "huatuo_206178_chunk_0000",
+              "huatuo_219364_chunk_0000",
+              "huatuo_283438_chunk_0000",
+              "huatuo_015233_chunk_0000",
+              "huatuo_337279_chunk_0000",
+              "huatuo_167672_chunk_0000",
+              "huatuo_080521_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_011",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              376559
+            ],
+            "chunk_ids": [
+              "huatuo_360517_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              376559,
+              121666,
+              245741
+            ],
+            "chunk_ids": [
+              "huatuo_360517_chunk_0000",
+              "huatuo_116636_chunk_0000",
+              "huatuo_235331_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              376559,
+              121666,
+              245741,
+              291373,
+              322703
+            ],
+            "chunk_ids": [
+              "huatuo_360517_chunk_0000",
+              "huatuo_116636_chunk_0000",
+              "huatuo_235331_chunk_0000",
+              "huatuo_278964_chunk_0000",
+              "huatuo_309003_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              376559,
+              121666,
+              245741,
+              291373,
+              322703,
+              117183,
+              294857,
+              38263,
+              147836,
+              15113
+            ],
+            "chunk_ids": [
+              "huatuo_360517_chunk_0000",
+              "huatuo_116636_chunk_0000",
+              "huatuo_235331_chunk_0000",
+              "huatuo_278964_chunk_0000",
+              "huatuo_309003_chunk_0000",
+              "huatuo_112334_chunk_0000",
+              "huatuo_282286_chunk_0000",
+              "huatuo_036704_chunk_0000",
+              "huatuo_141701_chunk_0000",
+              "huatuo_014523_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_012",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              133832
+            ],
+            "chunk_ids": [
+              "huatuo_128307_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              133832,
+              346746,
+              163742
+            ],
+            "chunk_ids": [
+              "huatuo_128307_chunk_0000",
+              "huatuo_332000_chunk_0000",
+              "huatuo_156991_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              133832,
+              346746,
+              163742,
+              4603,
+              18147
+            ],
+            "chunk_ids": [
+              "huatuo_128307_chunk_0000",
+              "huatuo_332000_chunk_0000",
+              "huatuo_156991_chunk_0000",
+              "huatuo_004406_chunk_0000",
+              "huatuo_017426_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              133832,
+              346746,
+              163742,
+              4603,
+              18147,
+              172792,
+              36582,
+              217249,
+              102461,
+              295304
+            ],
+            "chunk_ids": [
+              "huatuo_128307_chunk_0000",
+              "huatuo_332000_chunk_0000",
+              "huatuo_156991_chunk_0000",
+              "huatuo_004406_chunk_0000",
+              "huatuo_017426_chunk_0000",
+              "huatuo_165637_chunk_0000",
+              "huatuo_035086_chunk_0000",
+              "huatuo_208121_chunk_0000",
+              "huatuo_098235_chunk_0000",
+              "huatuo_282713_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_013",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              145999
+            ],
+            "chunk_ids": [
+              "huatuo_139943_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              145999,
+              173295,
+              272662
+            ],
+            "chunk_ids": [
+              "huatuo_139943_chunk_0000",
+              "huatuo_166129_chunk_0000",
+              "huatuo_261117_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              145999,
+              173295,
+              272662,
+              176566,
+              41868
+            ],
+            "chunk_ids": [
+              "huatuo_139943_chunk_0000",
+              "huatuo_166129_chunk_0000",
+              "huatuo_261117_chunk_0000",
+              "huatuo_169250_chunk_0000",
+              "huatuo_040145_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              145999,
+              173295,
+              272662,
+              176566,
+              41868,
+              218586,
+              204147,
+              18543,
+              230364,
+              100452
+            ],
+            "chunk_ids": [
+              "huatuo_139943_chunk_0000",
+              "huatuo_166129_chunk_0000",
+              "huatuo_261117_chunk_0000",
+              "huatuo_169250_chunk_0000",
+              "huatuo_040145_chunk_0000",
+              "huatuo_209374_chunk_0000",
+              "huatuo_195591_chunk_0000",
+              "huatuo_017804_chunk_0000",
+              "huatuo_220631_chunk_0000",
+              "huatuo_096309_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_014",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              318009
+            ],
+            "chunk_ids": [
+              "huatuo_304527_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              318009,
+              200778,
+              340077
+            ],
+            "chunk_ids": [
+              "huatuo_304527_chunk_0000",
+              "huatuo_192381_chunk_0000",
+              "huatuo_325620_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              318009,
+              200778,
+              340077,
+              232471,
+              158166
+            ],
+            "chunk_ids": [
+              "huatuo_304527_chunk_0000",
+              "huatuo_192381_chunk_0000",
+              "huatuo_325620_chunk_0000",
+              "huatuo_222607_chunk_0000",
+              "huatuo_151640_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              318009,
+              200778,
+              340077,
+              232471,
+              158166,
+              302789,
+              220689,
+              36040,
+              138730,
+              125204
+            ],
+            "chunk_ids": [
+              "huatuo_304527_chunk_0000",
+              "huatuo_192381_chunk_0000",
+              "huatuo_325620_chunk_0000",
+              "huatuo_222607_chunk_0000",
+              "huatuo_151640_chunk_0000",
+              "huatuo_289863_chunk_0000",
+              "huatuo_211377_chunk_0000",
+              "huatuo_034562_chunk_0000",
+              "huatuo_132993_chunk_0000",
+              "huatuo_120019_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_015",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              170332
+            ],
+            "chunk_ids": [
+              "huatuo_163273_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              170332,
+              235355,
+              113445
+            ],
+            "chunk_ids": [
+              "huatuo_163273_chunk_0000",
+              "huatuo_225394_chunk_0000",
+              "huatuo_108749_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              170332,
+              235355,
+              113445,
+              258093,
+              84441
+            ],
+            "chunk_ids": [
+              "huatuo_163273_chunk_0000",
+              "huatuo_225394_chunk_0000",
+              "huatuo_108749_chunk_0000",
+              "huatuo_247114_chunk_0000",
+              "huatuo_080950_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              170332,
+              235355,
+              113445,
+              258093,
+              84441,
+              22707,
+              247613,
+              132608,
+              81362,
+              158757
+            ],
+            "chunk_ids": [
+              "huatuo_163273_chunk_0000",
+              "huatuo_225394_chunk_0000",
+              "huatuo_108749_chunk_0000",
+              "huatuo_247114_chunk_0000",
+              "huatuo_080950_chunk_0000",
+              "huatuo_021782_chunk_0000",
+              "huatuo_237126_chunk_0000",
+              "huatuo_127121_chunk_0000",
+              "huatuo_077990_chunk_0000",
+              "huatuo_152196_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_016",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              182499
+            ],
+            "chunk_ids": [
+              "huatuo_174936_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              182499,
+              215609,
+              153821
+            ],
+            "chunk_ids": [
+              "huatuo_174936_chunk_0000",
+              "huatuo_206554_chunk_0000",
+              "huatuo_147462_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              182499,
+              215609,
+              153821,
+              336314,
+              252154
+            ],
+            "chunk_ids": [
+              "huatuo_174936_chunk_0000",
+              "huatuo_206554_chunk_0000",
+              "huatuo_147462_chunk_0000",
+              "huatuo_322039_chunk_0000",
+              "huatuo_241447_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              182499,
+              215609,
+              153821,
+              336314,
+              252154,
+              273626,
+              347877,
+              99373,
+              318107,
+              276731
+            ],
+            "chunk_ids": [
+              "huatuo_174936_chunk_0000",
+              "huatuo_206554_chunk_0000",
+              "huatuo_147462_chunk_0000",
+              "huatuo_322039_chunk_0000",
+              "huatuo_241447_chunk_0000",
+              "huatuo_262036_chunk_0000",
+              "huatuo_333073_chunk_0000",
+              "huatuo_095273_chunk_0000",
+              "huatuo_304623_chunk_0000",
+              "huatuo_264983_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_017",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              323275
+            ],
+            "chunk_ids": [
+              "huatuo_309547_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              323275,
+              194665,
+              334530
+            ],
+            "chunk_ids": [
+              "huatuo_309547_chunk_0000",
+              "huatuo_186562_chunk_0000",
+              "huatuo_320335_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              323275,
+              194665,
+              334530,
+              323276,
+              248715
+            ],
+            "chunk_ids": [
+              "huatuo_309547_chunk_0000",
+              "huatuo_186562_chunk_0000",
+              "huatuo_320335_chunk_0000",
+              "huatuo_309547_chunk_0001",
+              "huatuo_238189_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              323275,
+              194665,
+              334530,
+              323276,
+              248715,
+              334531,
+              248716,
+              37301,
+              84126,
+              84127
+            ],
+            "chunk_ids": [
+              "huatuo_309547_chunk_0000",
+              "huatuo_186562_chunk_0000",
+              "huatuo_320335_chunk_0000",
+              "huatuo_309547_chunk_0001",
+              "huatuo_238189_chunk_0000",
+              "huatuo_320335_chunk_0001",
+              "huatuo_238189_chunk_0001",
+              "huatuo_035776_chunk_0000",
+              "huatuo_080643_chunk_0001",
+              "huatuo_080643_chunk_0002"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_018",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              206832
+            ],
+            "chunk_ids": [
+              "huatuo_198153_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              206832,
+              264345,
+              354584
+            ],
+            "chunk_ids": [
+              "huatuo_198153_chunk_0000",
+              "huatuo_253135_chunk_0000",
+              "huatuo_339465_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              206832,
+              264345,
+              354584,
+              138577,
+              44103
+            ],
+            "chunk_ids": [
+              "huatuo_198153_chunk_0000",
+              "huatuo_253135_chunk_0000",
+              "huatuo_339465_chunk_0000",
+              "huatuo_132848_chunk_0000",
+              "huatuo_042295_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              206832,
+              264345,
+              354584,
+              138577,
+              44103,
+              160952,
+              194766,
+              324467,
+              317782,
+              30638
+            ],
+            "chunk_ids": [
+              "huatuo_198153_chunk_0000",
+              "huatuo_253135_chunk_0000",
+              "huatuo_339465_chunk_0000",
+              "huatuo_132848_chunk_0000",
+              "huatuo_042295_chunk_0000",
+              "huatuo_154287_chunk_0000",
+              "huatuo_186663_chunk_0000",
+              "huatuo_310700_chunk_0000",
+              "huatuo_304319_chunk_0000",
+              "huatuo_029380_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_019",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              218998
+            ],
+            "chunk_ids": [
+              "huatuo_209760_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              218998,
+              231466,
+              146720
+            ],
+            "chunk_ids": [
+              "huatuo_209760_chunk_0000",
+              "huatuo_221660_chunk_0000",
+              "huatuo_140635_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              218998,
+              231466,
+              146720,
+              260380,
+              317047
+            ],
+            "chunk_ids": [
+              "huatuo_209760_chunk_0000",
+              "huatuo_221660_chunk_0000",
+              "huatuo_140635_chunk_0000",
+              "huatuo_249310_chunk_0000",
+              "huatuo_303615_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              218998,
+              231466,
+              146720,
+              260380,
+              317047,
+              270689,
+              359753,
+              42395,
+              162576,
+              140207
+            ],
+            "chunk_ids": [
+              "huatuo_209760_chunk_0000",
+              "huatuo_221660_chunk_0000",
+              "huatuo_140635_chunk_0000",
+              "huatuo_249310_chunk_0000",
+              "huatuo_303615_chunk_0000",
+              "huatuo_259214_chunk_0000",
+              "huatuo_344423_chunk_0000",
+              "huatuo_040655_chunk_0000",
+              "huatuo_155851_chunk_0000",
+              "huatuo_134405_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_020",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              231165
+            ],
+            "chunk_ids": [
+              "huatuo_221370_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              231165,
+              325657,
+              155115
+            ],
+            "chunk_ids": [
+              "huatuo_221370_chunk_0000",
+              "huatuo_311848_chunk_0000",
+              "huatuo_148710_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              231165,
+              325657,
+              155115,
+              155116,
+              114457
+            ],
+            "chunk_ids": [
+              "huatuo_221370_chunk_0000",
+              "huatuo_311848_chunk_0000",
+              "huatuo_148710_chunk_0000",
+              "huatuo_148710_chunk_0001",
+              "huatuo_109724_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              231165,
+              325657,
+              155115,
+              155116,
+              114457,
+              366320,
+              5730,
+              168212,
+              150846,
+              2369
+            ],
+            "chunk_ids": [
+              "huatuo_221370_chunk_0000",
+              "huatuo_311848_chunk_0000",
+              "huatuo_148710_chunk_0000",
+              "huatuo_148710_chunk_0001",
+              "huatuo_109724_chunk_0000",
+              "huatuo_350726_chunk_0000",
+              "huatuo_005497_chunk_0000",
+              "huatuo_161238_chunk_0000",
+              "huatuo_144590_chunk_0000",
+              "huatuo_002255_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_021",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              60808
+            ],
+            "chunk_ids": [
+              "huatuo_058299_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              60808,
+              243332,
+              31767
+            ],
+            "chunk_ids": [
+              "huatuo_058299_chunk_0000",
+              "huatuo_233030_chunk_0000",
+              "huatuo_030459_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              60808,
+              243332,
+              31767,
+              373756,
+              218492
+            ],
+            "chunk_ids": [
+              "huatuo_058299_chunk_0000",
+              "huatuo_233030_chunk_0000",
+              "huatuo_030459_chunk_0000",
+              "huatuo_357832_chunk_0000",
+              "huatuo_209284_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              60808,
+              243332,
+              31767,
+              373756,
+              218492,
+              49425,
+              69631,
+              368398,
+              9424,
+              360673
+            ],
+            "chunk_ids": [
+              "huatuo_058299_chunk_0000",
+              "huatuo_233030_chunk_0000",
+              "huatuo_030459_chunk_0000",
+              "huatuo_357832_chunk_0000",
+              "huatuo_209284_chunk_0000",
+              "huatuo_047425_chunk_0000",
+              "huatuo_066766_chunk_0000",
+              "huatuo_352701_chunk_0000",
+              "huatuo_009030_chunk_0000",
+              "huatuo_345323_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_022",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              255498
+            ],
+            "chunk_ids": [
+              "huatuo_244646_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              255498,
+              5253,
+              20284
+            ],
+            "chunk_ids": [
+              "huatuo_244646_chunk_0000",
+              "huatuo_005035_chunk_0000",
+              "huatuo_019476_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              255498,
+              5253,
+              20284,
+              350928,
+              200991
+            ],
+            "chunk_ids": [
+              "huatuo_244646_chunk_0000",
+              "huatuo_005035_chunk_0000",
+              "huatuo_019476_chunk_0000",
+              "huatuo_335979_chunk_0000",
+              "huatuo_192585_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              255498,
+              5253,
+              20284,
+              350928,
+              200991,
+              65404,
+              107122,
+              218233,
+              145894,
+              17511
+            ],
+            "chunk_ids": [
+              "huatuo_244646_chunk_0000",
+              "huatuo_005035_chunk_0000",
+              "huatuo_019476_chunk_0000",
+              "huatuo_335979_chunk_0000",
+              "huatuo_192585_chunk_0000",
+              "huatuo_062707_chunk_0000",
+              "huatuo_102703_chunk_0000",
+              "huatuo_209048_chunk_0000",
+              "huatuo_139840_chunk_0000",
+              "huatuo_016812_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_023",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              267665
+            ],
+            "chunk_ids": [
+              "huatuo_256300_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              267665,
+              267666,
+              264817
+            ],
+            "chunk_ids": [
+              "huatuo_256300_chunk_0000",
+              "huatuo_256300_chunk_0001",
+              "huatuo_253576_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              267665,
+              267666,
+              264817,
+              264818,
+              300785
+            ],
+            "chunk_ids": [
+              "huatuo_256300_chunk_0000",
+              "huatuo_256300_chunk_0001",
+              "huatuo_253576_chunk_0000",
+              "huatuo_253576_chunk_0001",
+              "huatuo_287936_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              267665,
+              267666,
+              264817,
+              264818,
+              300785,
+              184078,
+              112225,
+              54135,
+              132859,
+              257341
+            ],
+            "chunk_ids": [
+              "huatuo_256300_chunk_0000",
+              "huatuo_256300_chunk_0001",
+              "huatuo_253576_chunk_0000",
+              "huatuo_253576_chunk_0001",
+              "huatuo_287936_chunk_0000",
+              "huatuo_176448_chunk_0000",
+              "huatuo_107586_chunk_0000",
+              "huatuo_051927_chunk_0000",
+              "huatuo_127363_chunk_0000",
+              "huatuo_246391_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_024",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              279831
+            ],
+            "chunk_ids": [
+              "huatuo_267912_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              279831,
+              340314,
+              36102
+            ],
+            "chunk_ids": [
+              "huatuo_267912_chunk_0000",
+              "huatuo_325838_chunk_0000",
+              "huatuo_034623_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              279831,
+              340314,
+              36102,
+              318456,
+              90164
+            ],
+            "chunk_ids": [
+              "huatuo_267912_chunk_0000",
+              "huatuo_325838_chunk_0000",
+              "huatuo_034623_chunk_0000",
+              "huatuo_304960_chunk_0000",
+              "huatuo_086427_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              279831,
+              340314,
+              36102,
+              318456,
+              90164,
+              341390,
+              174475,
+              193348,
+              214121,
+              40503
+            ],
+            "chunk_ids": [
+              "huatuo_267912_chunk_0000",
+              "huatuo_325838_chunk_0000",
+              "huatuo_034623_chunk_0000",
+              "huatuo_304960_chunk_0000",
+              "huatuo_086427_chunk_0000",
+              "huatuo_326865_chunk_0000",
+              "huatuo_167248_chunk_0000",
+              "huatuo_185295_chunk_0000",
+              "huatuo_205137_chunk_0000",
+              "huatuo_038832_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_025",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              291998
+            ],
+            "chunk_ids": [
+              "huatuo_279564_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              291998,
+              364485,
+              220260
+            ],
+            "chunk_ids": [
+              "huatuo_279564_chunk_0000",
+              "huatuo_348975_chunk_0000",
+              "huatuo_210966_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              291998,
+              364485,
+              220260,
+              193691,
+              366555
+            ],
+            "chunk_ids": [
+              "huatuo_279564_chunk_0000",
+              "huatuo_348975_chunk_0000",
+              "huatuo_210966_chunk_0000",
+              "huatuo_185627_chunk_0000",
+              "huatuo_350952_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              291998,
+              364485,
+              220260,
+              193691,
+              366555,
+              80539,
+              367243,
+              224494,
+              306773,
+              175800
+            ],
+            "chunk_ids": [
+              "huatuo_279564_chunk_0000",
+              "huatuo_348975_chunk_0000",
+              "huatuo_210966_chunk_0000",
+              "huatuo_185627_chunk_0000",
+              "huatuo_350952_chunk_0000",
+              "huatuo_077198_chunk_0000",
+              "huatuo_351619_chunk_0000",
+              "huatuo_215034_chunk_0000",
+              "huatuo_293725_chunk_0000",
+              "huatuo_168525_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_026",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              123286
+            ],
+            "chunk_ids": [
+              "huatuo_118184_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              123286,
+              304165,
+              311244
+            ],
+            "chunk_ids": [
+              "huatuo_118184_chunk_0000",
+              "huatuo_291195_chunk_0000",
+              "huatuo_298032_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              123286,
+              304165,
+              311244,
+              187819,
+              173098
+            ],
+            "chunk_ids": [
+              "huatuo_118184_chunk_0000",
+              "huatuo_291195_chunk_0000",
+              "huatuo_298032_chunk_0000",
+              "huatuo_180012_chunk_0000",
+              "huatuo_165935_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              123286,
+              304165,
+              311244,
+              187819,
+              173098,
+              376593,
+              165683,
+              147129,
+              157680,
+              368966
+            ],
+            "chunk_ids": [
+              "huatuo_118184_chunk_0000",
+              "huatuo_291195_chunk_0000",
+              "huatuo_298032_chunk_0000",
+              "huatuo_180012_chunk_0000",
+              "huatuo_165935_chunk_0000",
+              "huatuo_360550_chunk_0000",
+              "huatuo_158813_chunk_0000",
+              "huatuo_141031_chunk_0000",
+              "huatuo_151168_chunk_0000",
+              "huatuo_353239_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_027",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              316331
+            ],
+            "chunk_ids": [
+              "huatuo_302919_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              316331,
+              79750,
+              228140
+            ],
+            "chunk_ids": [
+              "huatuo_302919_chunk_0000",
+              "huatuo_076446_chunk_0000",
+              "huatuo_218519_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              316331,
+              79750,
+              228140,
+              83381,
+              261100
+            ],
+            "chunk_ids": [
+              "huatuo_302919_chunk_0000",
+              "huatuo_076446_chunk_0000",
+              "huatuo_218519_chunk_0000",
+              "huatuo_079935_chunk_0000",
+              "huatuo_250012_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              316331,
+              79750,
+              228140,
+              83381,
+              261100,
+              68378,
+              265375,
+              37998,
+              172827,
+              339030
+            ],
+            "chunk_ids": [
+              "huatuo_302919_chunk_0000",
+              "huatuo_076446_chunk_0000",
+              "huatuo_218519_chunk_0000",
+              "huatuo_079935_chunk_0000",
+              "huatuo_250012_chunk_0000",
+              "huatuo_065560_chunk_0000",
+              "huatuo_254110_chunk_0000",
+              "huatuo_036445_chunk_0000",
+              "huatuo_165672_chunk_0000",
+              "huatuo_324619_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_028",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              328498
+            ],
+            "chunk_ids": [
+              "huatuo_314561_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              328498,
+              18661,
+              302077
+            ],
+            "chunk_ids": [
+              "huatuo_314561_chunk_0000",
+              "huatuo_017917_chunk_0000",
+              "huatuo_289170_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              328498,
+              18661,
+              302077,
+              97705,
+              173423
+            ],
+            "chunk_ids": [
+              "huatuo_314561_chunk_0000",
+              "huatuo_017917_chunk_0000",
+              "huatuo_289170_chunk_0000",
+              "huatuo_093692_chunk_0000",
+              "huatuo_166250_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              328498,
+              18661,
+              302077,
+              97705,
+              173423,
+              176470,
+              5952,
+              93665,
+              2423,
+              125928
+            ],
+            "chunk_ids": [
+              "huatuo_314561_chunk_0000",
+              "huatuo_017917_chunk_0000",
+              "huatuo_289170_chunk_0000",
+              "huatuo_093692_chunk_0000",
+              "huatuo_166250_chunk_0000",
+              "huatuo_169157_chunk_0000",
+              "huatuo_005709_chunk_0000",
+              "huatuo_089792_chunk_0000",
+              "huatuo_002306_chunk_0000",
+              "huatuo_120721_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_029",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              340664
+            ],
+            "chunk_ids": [
+              "huatuo_326171_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              340664,
+              85421,
+              360879
+            ],
+            "chunk_ids": [
+              "huatuo_326171_chunk_0000",
+              "huatuo_081895_chunk_0000",
+              "huatuo_345525_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              340664,
+              85421,
+              360879,
+              129192,
+              170095
+            ],
+            "chunk_ids": [
+              "huatuo_326171_chunk_0000",
+              "huatuo_081895_chunk_0000",
+              "huatuo_345525_chunk_0000",
+              "huatuo_123876_chunk_0000",
+              "huatuo_163045_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              340664,
+              85421,
+              360879,
+              129192,
+              170095,
+              74650,
+              278181,
+              218898,
+              344887,
+              96041
+            ],
+            "chunk_ids": [
+              "huatuo_326171_chunk_0000",
+              "huatuo_081895_chunk_0000",
+              "huatuo_345525_chunk_0000",
+              "huatuo_123876_chunk_0000",
+              "huatuo_163045_chunk_0000",
+              "huatuo_071562_chunk_0000",
+              "huatuo_266364_chunk_0000",
+              "huatuo_209666_chunk_0000",
+              "huatuo_330208_chunk_0000",
+              "huatuo_092081_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_030",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              352831
+            ],
+            "chunk_ids": [
+              "huatuo_337779_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              352831,
+              138355,
+              250366
+            ],
+            "chunk_ids": [
+              "huatuo_337779_chunk_0000",
+              "huatuo_132638_chunk_0000",
+              "huatuo_239744_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              352831,
+              138355,
+              250366,
+              134677,
+              115422
+            ],
+            "chunk_ids": [
+              "huatuo_337779_chunk_0000",
+              "huatuo_132638_chunk_0000",
+              "huatuo_239744_chunk_0000",
+              "huatuo_129107_chunk_0000",
+              "huatuo_110661_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              352831,
+              138355,
+              250366,
+              134677,
+              115422,
+              367437,
+              188542,
+              231802,
+              132288,
+              309372
+            ],
+            "chunk_ids": [
+              "huatuo_337779_chunk_0000",
+              "huatuo_132638_chunk_0000",
+              "huatuo_239744_chunk_0000",
+              "huatuo_129107_chunk_0000",
+              "huatuo_110661_chunk_0000",
+              "huatuo_351799_chunk_0000",
+              "huatuo_180707_chunk_0000",
+              "huatuo_221978_chunk_0000",
+              "huatuo_126830_chunk_0000",
+              "huatuo_296226_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_031",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              364997
+            ],
+            "chunk_ids": [
+              "huatuo_349451_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              364997,
+              185828,
+              268864
+            ],
+            "chunk_ids": [
+              "huatuo_349451_chunk_0000",
+              "huatuo_178125_chunk_0000",
+              "huatuo_257457_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              364997,
+              185828,
+              268864,
+              246430,
+              184109
+            ],
+            "chunk_ids": [
+              "huatuo_349451_chunk_0000",
+              "huatuo_178125_chunk_0000",
+              "huatuo_257457_chunk_0000",
+              "huatuo_235995_chunk_0000",
+              "huatuo_176475_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              364997,
+              185828,
+              268864,
+              246430,
+              184109,
+              285622,
+              76539,
+              339656,
+              96219,
+              269099
+            ],
+            "chunk_ids": [
+              "huatuo_349451_chunk_0000",
+              "huatuo_178125_chunk_0000",
+              "huatuo_257457_chunk_0000",
+              "huatuo_235995_chunk_0000",
+              "huatuo_176475_chunk_0000",
+              "huatuo_273474_chunk_0000",
+              "huatuo_073381_chunk_0000",
+              "huatuo_325212_chunk_0000",
+              "huatuo_092255_chunk_0000",
+              "huatuo_257685_chunk_0000"
+            ]
+          }
+        ]
+      },
+      {
+        "query_id": "compat_q_032",
+        "checks": [
+          {
+            "top_k": 1,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              377164
+            ],
+            "chunk_ids": [
+              "huatuo_361092_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 3,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              377164,
+              80953,
+              349089
+            ],
+            "chunk_ids": [
+              "huatuo_361092_chunk_0000",
+              "huatuo_077597_chunk_0000",
+              "huatuo_334226_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 5,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              377164,
+              80953,
+              349089,
+              236479,
+              194884
+            ],
+            "chunk_ids": [
+              "huatuo_361092_chunk_0000",
+              "huatuo_077597_chunk_0000",
+              "huatuo_334226_chunk_0000",
+              "huatuo_226475_chunk_0000",
+              "huatuo_186772_chunk_0000"
+            ]
+          },
+          {
+            "top_k": 10,
+            "max_score_abs_error": 0.0,
+            "tie_risk": false,
+            "row_ids": [
+              377164,
+              80953,
+              349089,
+              236479,
+              194884,
+              285790,
+              323638,
+              177485,
+              314868,
+              315975
+            ],
+            "chunk_ids": [
+              "huatuo_361092_chunk_0000",
+              "huatuo_077597_chunk_0000",
+              "huatuo_334226_chunk_0000",
+              "huatuo_226475_chunk_0000",
+              "huatuo_186772_chunk_0000",
+              "huatuo_273630_chunk_0000",
+              "huatuo_309896_chunk_0000",
+              "huatuo_170133_chunk_0000",
+              "huatuo_301509_chunk_0000",
+              "huatuo_302572_chunk_0000"
+            ]
+          }
+        ]
+      }
+    ],
+    "public_api_smoke": [
+      {
+        "query_id": "compat_q_001",
+        "max_score_abs_error": 0.0,
+        "tie_risk": false
+      },
+      {
+        "query_id": "compat_q_002",
+        "max_score_abs_error": 0.0,
+        "tie_risk": false
+      },
+      {
+        "query_id": "compat_q_003",
+        "max_score_abs_error": 0.0,
+        "tie_risk": false
+      }
+    ]
+  },
+  "risks": [
+    "BAAI/bge-m3 upstream revision unknown; this run is locked by local file fingerprint."
+  ]
+}
