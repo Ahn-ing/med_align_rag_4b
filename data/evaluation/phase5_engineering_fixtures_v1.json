@@ -1,0 +1,36 @@
+[
+  {
+    "id": "phase5_fixture_general_001",
+    "source": "phase5_engineering_fixture",
+    "evaluation_split": null,
+    "kind": "general_zh",
+    "messages": [
+      {"role": "system", "content": "你是一个谨慎、清晰且遵循证据边界的助手。"},
+      {"role": "user", "content": "请用一句中文解释版本控制的作用。"}
+    ],
+    "max_new_tokens": 64
+  },
+  {
+    "id": "phase5_fixture_json_001",
+    "source": "phase5_engineering_fixture",
+    "evaluation_split": null,
+    "kind": "structured_json",
+    "messages": [
+      {"role": "system", "content": "你是一个谨慎、清晰且遵循证据边界的助手。"},
+      {"role": "user", "content": "仅输出一个合法 JSON 对象，键必须恰好是 status 和 count，值分别是 ready 和 3。"}
+    ],
+    "required_keys": ["status", "count"],
+    "max_new_tokens": 64
+  },
+  {
+    "id": "phase5_fixture_low_risk_medical_001",
+    "source": "phase5_engineering_fixture",
+    "evaluation_split": null,
+    "kind": "low_risk_medical_information",
+    "messages": [
+      {"role": "system", "content": "你是一个谨慎、清晰且遵循证据边界的助手。"},
+      {"role": "user", "content": "请提供一般性健康信息：成年人偶尔轻微打嗝时，通常可以先注意哪些日常因素？不要进行诊断。"}
+    ],
+    "max_new_tokens": 128
+  }
+]

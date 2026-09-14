@@ -20,6 +20,34 @@ class QwenAssistantTokenizer:
         )
         if not self.tokenizer.chat_template:
             raise ValueError("tokenizer 缺少 chat template")
+        self.tokenizer.padding_side = "right"
+        if self.tokenizer.pad_token_id is None:
+            if self.tokenizer.eos_token_id is None:
+                raise ValueError("tokenizer 同时缺少 pad/eos token")
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+
+    def encode(self, messages: list[dict[str, str]]) -> dict[str, Any]:
+        """使用与 Phase 4 一致的前缀差分构建 assistant-only labels。"""
+        analysis = self.analyze(messages)
+        if analysis["overlength"]:
+            raise ValueError(f"样本超过 max_length={self.max_length}，禁止静默截断")
+        prefix_result = self.tokenizer.apply_chat_template(
+            messages[:-1], tokenize=True, add_generation_prompt=True,
+            enable_thinking=False,
+        )
+        full_result = self.tokenizer.apply_chat_template(
+            messages, tokenize=True, add_generation_prompt=False,
+            enable_thinking=False,
+        )
+        prefix = prefix_result["input_ids"] if isinstance(prefix_result, Mapping) else prefix_result
+        full = full_result["input_ids"] if isinstance(full_result, Mapping) else full_result
+        labels = [-100] * len(prefix) + list(full[len(prefix) :])
+        return {
+            "input_ids": list(full),
+            "attention_mask": [1] * len(full),
+            "labels": labels,
+            "active_label_tokens": analysis["assistant_supervised_tokens"],
+        }
 
     def analyze(self, messages: list[dict[str, str]]) -> dict[str, Any]:
         """返回完整 token 数和经模板前缀验证的 assistant 监督数。"""

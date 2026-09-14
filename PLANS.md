@@ -34,7 +34,7 @@
 
 ### Phase 5：Qwen3-4B LoRA 冒烟
 
-状态：**LOCKED**。单张 RTX 5090 上运行 16–32 optimizer steps 冒烟和一次短跑，验证显存、assistant-only loss、checkpoint 恢复和 adapter reload。
+状态：**COMPLETED**。RTX 5090 BF16 LoRA preflight、1 step、8→16 optimizer steps 恢复、50-step short run、18 条 loss-only validation、checkpoint-50、adapter 新进程 reload 和三条工程 fixture 均通过工程验收。short run 未抛出致命 OOM，显存 allocated 首尾无持续增长；日志中的两次非致命 allocator 分配回退已在验收报告中保留。结果不代表医疗能力成绩；Phase 6 保持锁定。
 
 ### Phase 6：正式 SFT 与评估
 

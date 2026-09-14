@@ -25,6 +25,10 @@ rag = [
     "FlagEmbedding>=1.4,<2",
     "faiss-cpu>=1.12,<2",
 ]
+sft = [
+    "peft>=0.20,<1",
+    "wandb>=0.22,<1",
+]
 research = [
     "bitsandbytes>=0.50,<1",
     "matplotlib>=3.10,<4",

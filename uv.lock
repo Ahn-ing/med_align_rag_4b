@@ -2001,6 +2001,10 @@ research = [
     { name = "trl" },
     { name = "wandb" },
 ]
+sft = [
+    { name = "peft" },
+    { name = "wandb" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -2014,6 +2018,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=2,<3" },
     { name = "pandas", marker = "extra == 'research'", specifier = ">=2,<4" },
     { name = "peft", marker = "extra == 'research'", specifier = ">=0.20,<1" },
+    { name = "peft", marker = "extra == 'sft'", specifier = ">=0.20,<1" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8,<10" },
     { name = "pyyaml", specifier = ">=6,<7" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.9,<1" },
@@ -2025,8 +2030,9 @@ requires-dist = [
     { name = "transformers", specifier = ">=5,<6" },
     { name = "trl", marker = "extra == 'research'", specifier = ">=0.27,<1" },
     { name = "wandb", marker = "extra == 'research'", specifier = ">=0.22,<1" },
+    { name = "wandb", marker = "extra == 'sft'", specifier = ">=0.22,<1" },
 ]
-provides-extras = ["rag", "research", "dev"]
+provides-extras = ["rag", "sft", "research", "dev"]
 
 [[package]]
 name = "mpmath"

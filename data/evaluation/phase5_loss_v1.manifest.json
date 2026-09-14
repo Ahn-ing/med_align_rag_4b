@@ -1,0 +1,89 @@
+{
+  "format_version": 1,
+  "dataset_version": "phase5_loss_v1",
+  "status": "approved_for_phase5_loss",
+  "purpose": "loss_only_engineering_validation",
+  "generation_allowed": false,
+  "gradient_update_allowed": false,
+  "records": 18,
+  "source": {
+    "split": "validation",
+    "path": "data/evaluation/validation_v1/cases.jsonl",
+    "sha256": "5e0c19127e2e135f1035c3b5c67a1c10d016b3454b62cd30cac0658d24301807",
+    "manifest_sha256": "a7f813b3851e8c2921f77b08ca19273d82b71933a21b159c0c4c553747cc234f"
+  },
+  "selection": {
+    "seed": 20260914,
+    "method": "quota_then_sha256_seed_colon_stable_id",
+    "task_quotas": {
+      "general": 2,
+      "instruction_following": 2,
+      "medical_qa": 4,
+      "rag_faithfulness": 2,
+      "structured_output": 2
+    },
+    "safety_categories": [
+      "clarification",
+      "home_observation",
+      "immediate_emergency",
+      "medication_boundary",
+      "outpatient_followup",
+      "uncertainty"
+    ],
+    "selected_ids": [
+      "validation_general_004",
+      "validation_general_007",
+      "validation_instruction_001",
+      "validation_instruction_005",
+      "validation_medical_qa_004",
+      "validation_medical_qa_010",
+      "validation_medical_qa_013",
+      "validation_medical_qa_019",
+      "validation_rag_002",
+      "validation_rag_003",
+      "validation_safety_clarification_001",
+      "validation_safety_home_observation_002",
+      "validation_safety_immediate_emergency_001",
+      "validation_safety_medication_boundary_001",
+      "validation_safety_outpatient_followup_001",
+      "validation_safety_uncertainty_001",
+      "validation_structured_001",
+      "validation_structured_004"
+    ]
+  },
+  "task_distribution": {
+    "general": 2,
+    "instruction_following": 2,
+    "medical_qa": 4,
+    "medical_safety": 6,
+    "rag_faithfulness": 2,
+    "structured_output": 2
+  },
+  "category_distribution": {
+    "clarification": 1,
+    "general": 2,
+    "home_observation": 1,
+    "immediate_emergency": 1,
+    "instruction_following": 2,
+    "medical_qa": 4,
+    "medication_boundary": 1,
+    "outpatient_followup": 1,
+    "rag_faithfulness": 2,
+    "structured_output": 2,
+    "uncertainty": 1
+  },
+  "risk_distribution": {
+    "high": 1,
+    "medium": 11,
+    "not_applicable": 6
+  },
+  "data": {
+    "path": "data/evaluation/phase5_loss_v1.jsonl",
+    "sha256": "377863880082ef5d244e859500b179ad9c4d976c74e6e6aa50a48655dd8a40a1"
+  },
+  "limitations": [
+    "仅用于 Phase 5 无梯度 validation loss 工程验收",
+    "不运行生成式能力评测，不作为医疗质量结论",
+    "不参与参数更新、调参或训练数据修改"
+  ]
+}
