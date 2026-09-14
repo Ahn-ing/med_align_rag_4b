@@ -1,0 +1,12 @@
+generation:
+  enable_thinking: false
+  do_sample: false
+judge:
+  type: commercial_api
+  provider: null
+  model: null
+  temperature: 0
+safety_reporting:
+  separate_rule_checks: true
+  separate_model_judge: true
+  require_human_review_for_high_risk: true

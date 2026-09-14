@@ -1,0 +1,10 @@
+embedding:
+  model_id: BAAI/bge-m3
+  model_revision: null
+  model_path: null  # 本地路径只能由运行参数传入。
+  max_length: 1024
+  normalize: true
+  dtype: float32
+index:
+  type: IndexFlatIP
+  similarity: inner_product

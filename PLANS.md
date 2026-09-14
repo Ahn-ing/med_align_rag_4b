@@ -1,0 +1,62 @@
+# med_align_rag_4b 路线图
+
+## 目标与总门禁
+
+使用 `Qwen/Qwen3-4B` 低成本、可复现地构建 `RAG → SFT → Evaluation → DPO → 联合评测`。本项目仅用于研究、学习和工程展示，不提供临床诊断。
+
+- 一次只执行一个获批阶段，到达出口门禁后停止。
+- 本地模型路径只通过运行参数传入。
+- 重要数据、配置、运行和产物必须具备 SHA256 manifest。
+- 冻结评测数据不得影响训练数据选择。
+- 医疗安全结果分别报告规则检查、模型辅助评分和人工审核。
+
+## 阶段
+
+### Phase 0：项目骨架、环境和数据契约
+
+状态：**COMPLETED**。已交付结构、依赖、中文文档、安全路径公共函数、schema、manifest 和 CPU 测试；无需下载模型或数据即可通过 import、语法和契约测试。Phase 1 继续保持锁定。
+
+### Phase 1：RAG 迁移
+
+状态：**COMPLETED**。RAG 代码和静态产物已迁移；用户已批准 corrected cleaned SHA256，源/目标哈希、数量、shape、norm、行对齐和 Inner Product metric 全部通过验收。Phase 2 保持锁定。
+
+### Phase 2：RAG 兼容性
+
+状态：**COMPLETED**。32 条冻结 query 在 top-k 1/3/5/10 上的新旧 row/chunk、metadata 和排序完全一致，query vector 与 score 最大绝对误差均为 0；Phase 3 保持锁定。
+
+### Phase 3：SFT 分析和评测冻结
+
+状态：**COMPLETED**。用户批准快速版 180 条内部评测规模及代理证据审核门禁；validation/test/medical safety holdout 已按 60/90/30 冻结，均绑定来源、权威证据、审核记录、泄漏检查和 SHA256。`release_allowed=false`，不是医生审核或临床验证。Phase 4 保持锁定。
+
+### Phase 4：SFT 清洗和构建
+
+状态：**LOCKED**。构建约 2.5M 获批 assistant 监督 token，医疗/通用/安全/指令比例 55/20/20/5。
+
+### Phase 5：Qwen3-4B LoRA 冒烟
+
+状态：**LOCKED**。单张 RTX 5090 上运行 16–32 optimizer steps 冒烟和一次短跑，验证显存、assistant-only loss、checkpoint 恢复和 adapter reload。
+
+### Phase 6：正式 SFT 与评估
+
+状态：**LOCKED**。执行一次 2 epoch SFT，评估 Base、Base+RAG、SFT 和 SFT+RAG。
+
+### Phase 7：DPO
+
+状态：**LOCKED**。单独获批后设计全新偏好数据和实现，不得直接复用旧 DPO 资产。
+
+### Phase 8：联合评测
+
+状态：**LOCKED**。冻结条件下评估 Base、Base+RAG、SFT、SFT+RAG、DPO 和 DPO+RAG。
+
+### Phase 9：求职交付
+
+状态：**LOCKED**。整理复现文档、数据卡、模型卡、演示、局限和失败分析。
+
+## 已批准 SFT 默认值
+
+- `Qwen/Qwen3-4B`，主流程关闭 thinking；max length 2048
+- 正式预算约 2.5M unique assistant tokens
+- LoRA rank 16、alpha 32、dropout 0.05
+- learning rate 1e-4，epochs 2，global batch 64，初始 micro-batch 4
+- 每 100 optimizer steps 评估
+- 固定版本商业 API judge；高风险案例必须人工审核
