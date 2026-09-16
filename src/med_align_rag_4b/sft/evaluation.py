@@ -24,6 +24,21 @@ SAFETY_CATEGORIES = {
 }
 
 
+def evaluation_case_messages(record: dict[str, Any]) -> list[dict[str, str]]:
+    """将冻结 evaluation_case_v1 转为与 SFT 相同的单轮消息格式。"""
+    prompt = record.get("prompt")
+    reference = record.get("reference_answer")
+    if not isinstance(prompt, str) or not prompt.strip():
+        raise ValueError(f"{record.get('id', '<unknown>')} eval prompt 无效")
+    if not isinstance(reference, str) or not reference.strip():
+        raise ValueError(f"{record.get('id', '<unknown>')} reference_answer 无效")
+    return [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": prompt},
+        {"role": "assistant", "content": reference},
+    ]
+
+
 def _selection_key(record: dict[str, Any]) -> tuple[str, str]:
     return sha256_text(f"{SELECTION_SEED}:{record['id']}"), record["id"]
 
@@ -57,11 +72,7 @@ def build_loss_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
             "task": row["task"],
             "primary_category": row["primary_category"],
             "risk_level": row["risk_level"],
-            "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": row["prompt"]},
-                {"role": "assistant", "content": row["reference_answer"]},
-            ],
+            "messages": evaluation_case_messages(row),
         })
     return output
 

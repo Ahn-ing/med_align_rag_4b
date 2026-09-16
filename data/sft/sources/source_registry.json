@@ -14,9 +14,14 @@
       "contains_medical_claims": true,
       "contains_personal_data": null,
       "generation_method": "unknown",
-      "allowed_uses": ["analysis", "evaluation_candidate"],
+      "allowed_uses": [
+        "analysis",
+        "evaluation_candidate",
+        "training_candidate",
+        "internal_training"
+      ],
       "review_status": "approved",
-      "notes": "仅批准 Apache-2.0 原始问法的内部评测候选用途。每条入选记录必须单独通过个人数据、RAG overlap、证据重写和代理工程审核；原始答案不使用。"
+      "notes": "用户已批准原始答案仅作为内部训练候选；聚合内容逐条来源和许可证仍未核验，禁止公开发布。每条入选记录必须单独通过个人数据、重复/冲突、评测与 RAG overlap、质量、安全和代理审核；高风险记录还必须绑定权威证据。"
     },
     {
       "source_id": "map_coig_cqia_8b55868",
@@ -30,7 +35,10 @@
       "contains_medical_claims": true,
       "contains_personal_data": null,
       "generation_method": "mixed",
-      "allowed_uses": ["analysis", "evaluation_candidate"],
+      "allowed_uses": [
+        "analysis",
+        "evaluation_candidate"
+      ],
       "review_status": "pending",
       "notes": "数据卡说明混合互联网来源、人类及少量模型回答；总数据集许可证缺失，copyright 字段不能替代许可证审核。"
     },
@@ -46,7 +54,10 @@
       "contains_medical_claims": true,
       "contains_personal_data": false,
       "generation_method": "model_generated",
-      "allowed_uses": ["evaluation_candidate", "internal_evaluation"],
+      "allowed_uses": [
+        "evaluation_candidate",
+        "internal_evaluation"
+      ],
       "review_status": "approved",
       "notes": "由 Codex 确定性脚本和人工编写事实表生成，并按权威证据执行代理工程审核；release_allowed=false，不是医学专家审核。"
     },
@@ -62,7 +73,11 @@
       "contains_medical_claims": false,
       "contains_personal_data": false,
       "generation_method": "human",
-      "allowed_uses": ["analysis", "training_candidate", "internal_training"],
+      "allowed_uses": [
+        "analysis",
+        "training_candidate",
+        "internal_training"
+      ],
       "review_status": "approved",
       "notes": "上游数据卡声明由 Databricks 员工编写、支持训练并采用 CC BY-SA 3.0；Phase 4 另行排除医疗关键词、联系方式样式和冻结评测重叠。"
     },
@@ -78,9 +93,53 @@
       "contains_medical_claims": true,
       "contains_personal_data": false,
       "generation_method": "project_authored",
-      "allowed_uses": ["analysis", "training_candidate", "internal_training"],
+      "allowed_uses": [
+        "analysis",
+        "training_candidate",
+        "internal_training"
+      ],
       "review_status": "approved",
       "notes": "医疗事实逐条关联权威证据并由 codex_research_reviewer 执行代理工程审核；release_allowed=false，不是医生审核、临床验证或公开发布许可。"
+    },
+    {
+      "source_id": "api_evidence_constrained_v5",
+      "name": "v5 证据约束 API 医疗候选",
+      "purpose": "sft_medical",
+      "origin": "DeepSeek Flash 在 evidence_registry_v5_scale 约束下生成，并经 codex_research_reviewer 代理证据审核",
+      "source_url": "internal",
+      "revision": "evidence-registry-v5-20260915",
+      "license": "internal-training-only",
+      "license_status": "approved",
+      "contains_medical_claims": true,
+      "contains_personal_data": false,
+      "generation_method": "model_generated",
+      "allowed_uses": [
+        "analysis",
+        "training_candidate",
+        "internal_training"
+      ],
+      "review_status": "approved",
+      "notes": "仅用于内部工程训练；代理证据审核不是医生审核或临床验证，release_allowed=false。"
+    },
+    {
+      "source_id": "project_authored_training_v2",
+      "name": "Phase 6 医疗行为覆盖补丁 v2",
+      "purpose": "medical_behavior_patch",
+      "origin": "根据 evidence_registry_v5_scale 中的权威事实独立编写，重点补齐急诊行动、血压监测、用药依从性和钾盐适用条件",
+      "source_url": "internal",
+      "revision": "medical-behavior-patch-v1",
+      "license": "internal-training-only",
+      "license_status": "approved",
+      "contains_medical_claims": true,
+      "contains_personal_data": false,
+      "generation_method": "project_authored",
+      "allowed_uses": [
+        "analysis",
+        "training_candidate",
+        "internal_training"
+      ],
+      "review_status": "approved",
+      "notes": "仅用于内部工程训练；代理证据审核不是医生审核或临床验证，release_allowed=false。"
     }
   ]
 }

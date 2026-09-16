@@ -1,0 +1,24 @@
+{
+  "format_version": 1,
+  "status": "agent_evidence_reviewed_pending_cross_dataset_dedup",
+  "source_shard": "data/sft/reviewed/v5/api_generated_shard_0000.jsonl",
+  "source_sha256": "dc8856603925f2114121aa3776f805c7e6c77e9b7656b322d34352f2634471d1",
+  "review_file": "data/sft/reviewed/v5/api_generated_shard_0000.review.jsonl",
+  "review_sha256": "341f1211ebdb85e8b701e6627546bfd84cd894b971954f441d2e380d086a3bcb",
+  "records_processed": 100,
+  "mechanically_passed": 100,
+  "mechanically_rejected": 0,
+  "accepted_pending_dedup": 98,
+  "quarantined": 2,
+  "accepted_assistant_tokens": 13295,
+  "accepted_average_tokens": 135.66,
+  "reviewer_role": "codex_research_reviewer",
+  "doctor_reviewed": false,
+  "clinical_validation": false,
+  "training_allowed": false,
+  "main_findings": [
+    "the shard is predominantly source-grounded and focused",
+    "one answer exposed source-material meta language",
+    "one HIV-related cancer answer added an unregistered virus and immune mechanism"
+  ]
+}

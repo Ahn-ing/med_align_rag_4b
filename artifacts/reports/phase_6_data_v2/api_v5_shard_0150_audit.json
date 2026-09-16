@@ -1,0 +1,24 @@
+{
+  "format_version": 1,
+  "status": "agent_evidence_reviewed_pending_cross_dataset_dedup",
+  "source_shard": "data/sft/reviewed/v5/api_generated_shard_0150.jsonl",
+  "source_sha256": "a5dc8ad4ad4cd85db373d039778ed04d68a55c894b2c55c2cfc7018650063148",
+  "review_file": "data/sft/reviewed/v5/api_generated_shard_0150.review.jsonl",
+  "review_sha256": "f6d22954519ec6eea5af26b1e29a7e403f75da2c02f76f30a2c9da3be88b1325",
+  "records_processed": 50,
+  "mechanically_passed": 49,
+  "mechanically_rejected": 1,
+  "accepted_pending_dedup": 48,
+  "quarantined": 1,
+  "accepted_assistant_tokens": 7201,
+  "accepted_average_tokens": 150.02,
+  "reviewer_role": "codex_research_reviewer",
+  "doctor_reviewed": false,
+  "clinical_validation": false,
+  "training_allowed": false,
+  "main_findings": [
+    "hepatitis B, colorectal cancer and COPD records were generally focused and source-grounded",
+    "one depression self-care answer exposed source-material meta language",
+    "one additional task was rejected mechanically for duplicate question or answer skeleton"
+  ]
+}

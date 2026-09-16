@@ -52,6 +52,61 @@ def derive_warmup_steps(max_steps: int, warmup_ratio: float) -> int:
     return ceil(max_steps * warmup_ratio)
 
 
+def derive_optimizer_steps(records: int, global_batch_size: int, epochs: int) -> int:
+    """按每个 epoch 独立收尾，推导正式训练的 optimizer step 数。"""
+    if records <= 0 or global_batch_size <= 0 or epochs <= 0:
+        raise ValueError("records、global_batch_size 和 epochs 必须为正数")
+    return ceil(records / global_batch_size) * epochs
+
+
+def validate_phase6_config(config: dict[str, Any]) -> None:
+    """拒绝正式训练对已批准超参数的静默漂移。"""
+    expected = {
+        "model": {
+            "enable_thinking": False,
+            "torch_dtype": "bfloat16",
+            "attn_implementation": "sdpa",
+            "trust_remote_code": False,
+            "local_files_only": True,
+        },
+        "data": {"max_length": 2048},
+        "lora": {
+            "rank": 16,
+            "alpha": 32,
+            "dropout": 0.05,
+            "bias": "none",
+            "target_modules": [
+                "q_proj", "k_proj", "v_proj", "o_proj",
+                "gate_proj", "up_proj", "down_proj",
+            ],
+        },
+        "training": {
+            "learning_rate": 1.0e-4,
+            "lr_scheduler_type": "cosine",
+            "warmup_ratio": 0.03,
+            "weight_decay": 0.01,
+            "max_grad_norm": 1.0,
+            "gradient_checkpointing": True,
+            "bf16": True,
+            "tf32": True,
+            "global_batch_size": 64,
+            "per_device_eval_batch_size": 1,
+            "epochs": 2,
+            "logging_steps": 1,
+            "evaluation_steps": 100,
+            "save_steps": 100,
+            "save_total_limit": 2,
+            "seed": 42,
+            "data_seed": 42,
+        },
+        "tracking": {"wandb_project": "med-align-rag-4b"},
+    }
+    for section, values in expected.items():
+        for key, value in values.items():
+            if config[section].get(key) != value:
+                raise ValueError(f"Phase 6 配置 {section}.{key} 必须为 {value}")
+
+
 def sanitized_config(config: dict[str, Any]) -> dict[str, Any]:
     """返回可持久化且不含本地模型绝对路径的配置。"""
     result = deepcopy(config)

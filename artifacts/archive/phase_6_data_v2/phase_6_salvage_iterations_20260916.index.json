@@ -1,0 +1,175 @@
+{
+  "format_version": 1,
+  "created_at_utc": "2026-09-15T16:51:13.646337+00:00",
+  "archive_path": "artifacts/archive/phase_6_data_v2/phase_6_salvage_iterations_20260916.zip",
+  "archive_sha256": "ad3ca64f1b5728f95da20f99a482e7e54a5be63bd0167d71c753e0f55183d2a8",
+  "archive_bytes": 17736525,
+  "zip_entries": 23,
+  "cleanup_status": "removed",
+  "targets": [
+    {
+      "path": "data/sft/reviewed/v2_salvage",
+      "files": 3,
+      "bytes": 34211819,
+      "file_records": [
+        {
+          "path": "data/sft/reviewed/v2_salvage/pilot_audit_sample.jsonl",
+          "bytes": 447000,
+          "sha256": "3763d5c1e365c10556ec89bcc0bd30b661dd22709997ee9dea2202e3a46095b4"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage/pilot_triage.jsonl",
+          "bytes": 524201,
+          "sha256": "457b14b1871b10eb1b7f1716152137357dfc9bedc4c546a31e4000ca114f9649"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage/triage.jsonl",
+          "bytes": 33240618,
+          "sha256": "a6094ad480c7e67b35492720643ef4bceb2dcdd43212af9791f6fb8be3f38cc6"
+        }
+      ]
+    },
+    {
+      "path": "data/sft/reviewed/v2_salvage_60",
+      "files": 4,
+      "bytes": 12223101,
+      "file_records": [
+        {
+          "path": "data/sft/reviewed/v2_salvage_60/audit_sample.jsonl",
+          "bytes": 307260,
+          "sha256": "3be96ccaa89726250625f4321428284c7e94b64db00e83f75b232ae2cc19be6d"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60/hard_drop.jsonl",
+          "bytes": 264300,
+          "sha256": "e99d4d7631dd5edccd8c5c1c1df371622fb4742fd7715ef93b9129137905a16c"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60/manifest.json",
+          "bytes": 3093,
+          "sha256": "97fc0017fcd112357eef060f199b6bd47bd022c2e6c569c5b6d56988e84ffdba"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60/rule_pool_selected.jsonl",
+          "bytes": 11648448,
+          "sha256": "f9b19d8d9f1a8fd695bda44587d57549b7d5a8f86282eed2d422765c9f72f1af"
+        }
+      ]
+    },
+    {
+      "path": "data/sft/reviewed/v2_salvage_60_v2",
+      "files": 4,
+      "bytes": 12699740,
+      "file_records": [
+        {
+          "path": "data/sft/reviewed/v2_salvage_60_v2/audit_sample.jsonl",
+          "bytes": 307260,
+          "sha256": "3be96ccaa89726250625f4321428284c7e94b64db00e83f75b232ae2cc19be6d"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60_v2/hard_drop.jsonl",
+          "bytes": 731478,
+          "sha256": "f30ad234c387929f9ef1251a94e87e559c0f67a282be2e8babf6446712abb3a2"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60_v2/manifest.json",
+          "bytes": 3004,
+          "sha256": "d012182c8a2a35dc320f58c4c5c9bd934257c0db96de139fb251b51c1ff7fca0"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60_v2/rule_pool_selected.jsonl",
+          "bytes": 11657998,
+          "sha256": "d2bfa2cb39a46c4efb586bed8ccde00a8e76e9af3da1f5039dc7a40a6918c2dc"
+        }
+      ]
+    },
+    {
+      "path": "data/sft/reviewed/v2_salvage_60_final",
+      "files": 4,
+      "bytes": 12739870,
+      "file_records": [
+        {
+          "path": "data/sft/reviewed/v2_salvage_60_final/audit_sample.jsonl",
+          "bytes": 347381,
+          "sha256": "c85d31cd7cc1f778d6687dfdddf0a7c40bdde688df9dbea593f58134181ea6a5"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60_final/hard_drop.jsonl",
+          "bytes": 731478,
+          "sha256": "f30ad234c387929f9ef1251a94e87e559c0f67a282be2e8babf6446712abb3a2"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60_final/manifest.json",
+          "bytes": 3013,
+          "sha256": "63f43151e96a4e2fd10c934a0382366165dabdc244b690a5f15200fe80652a07"
+        },
+        {
+          "path": "data/sft/reviewed/v2_salvage_60_final/rule_pool_selected.jsonl",
+          "bytes": 11657998,
+          "sha256": "d2bfa2cb39a46c4efb586bed8ccde00a8e76e9af3da1f5039dc7a40a6918c2dc"
+        }
+      ]
+    },
+    {
+      "path": "data/sft/reviewed/v2_repair_question_level",
+      "files": 2,
+      "bytes": 3924765,
+      "file_records": [
+        {
+          "path": "data/sft/reviewed/v2_repair_question_level/repair_tasks.jsonl",
+          "bytes": 3923427,
+          "sha256": "f9362f218a4532fe877e8a07c9a96184bbe7dfe85d0593d6f577d7ebd16bbb50"
+        },
+        {
+          "path": "data/sft/reviewed/v2_repair_question_level/repair_tasks.manifest.json",
+          "bytes": 1338,
+          "sha256": "d318d9bfb075ea6e65afc79d7e98b9e957f7690480f6b2d2ecdb66f574625587"
+        }
+      ]
+    },
+    {
+      "path": "data/sft/reviewed/v2_repair/final",
+      "files": 3,
+      "bytes": 686795,
+      "file_records": [
+        {
+          "path": "data/sft/reviewed/v2_repair/final/approved_candidates.jsonl",
+          "bytes": 656492,
+          "sha256": "a3ec5c7debcb1ce16d5f110af00e2f846a80bab743850ae1398b52f830b29d1d"
+        },
+        {
+          "path": "data/sft/reviewed/v2_repair/final/manifest.json",
+          "bytes": 1632,
+          "sha256": "ae037f51e547eeaeca2f624d54720c586912c6a0a531da45735fb64d3610e8ef"
+        },
+        {
+          "path": "data/sft/reviewed/v2_repair/final/quarantine.jsonl",
+          "bytes": 28671,
+          "sha256": "8ce8a07c8e683960b805ba05e4a19c8c8290f0f0b68cd111bd9381904e48eb6b"
+        }
+      ]
+    },
+    {
+      "path": "data/sft/reviewed/v2_repair/final_v2",
+      "files": 3,
+      "bytes": 725665,
+      "file_records": [
+        {
+          "path": "data/sft/reviewed/v2_repair/final_v2/approved_candidates.jsonl",
+          "bytes": 724566,
+          "sha256": "61e34b8fd16db3123e7c8335ebc376ac9a3b49927c08aa76a057e4c6bfbcbc47"
+        },
+        {
+          "path": "data/sft/reviewed/v2_repair/final_v2/manifest.json",
+          "bytes": 1099,
+          "sha256": "b50ef024bc65381a5e1be7f1edc70c9b232acaa93cd86b8fee0eb13bfe1f5013"
+        },
+        {
+          "path": "data/sft/reviewed/v2_repair/final_v2/quarantine.jsonl",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ]
+}

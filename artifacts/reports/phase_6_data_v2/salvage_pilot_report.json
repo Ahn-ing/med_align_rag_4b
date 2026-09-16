@@ -1,0 +1,185 @@
+{
+  "format_version": 1,
+  "status": "s0_pilot_failed_fallback_to_b2_minimal",
+  "training_allowed": false,
+  "release_allowed": false,
+  "seed": "20260915-phase-s0-rule-pool-salvage",
+  "inputs": {
+    "pool": {
+      "path": "data/sft/reviewed/v2/rule_screened_pool.jsonl",
+      "sha256": "0f14c84fa925578e4b49af7e64fdafbdc8df30fdf871373d4c038baa7d9fa064"
+    },
+    "phase_a_sample": {
+      "path": "data/sft/reviewed/v2/rule_pool_stratified_sample_v2.jsonl",
+      "sha256": "cf3ba13ea0336134e364e6963c6bf8a749e301ffca34ef395e732c8436a1eb82"
+    },
+    "evidence_registry": {
+      "path": "data/sft/sources/evidence_registry_v5_scale.json",
+      "sha256": "e293bdffdc05caf79172a5ef20484964bcd931c4fdd99c7be0ae178084e454b9",
+      "sources": 198
+    }
+  },
+  "full_medical_triage": {
+    "records": 16861,
+    "decisions": {
+      "drop": 12303,
+      "repair_from_evidence": 4499,
+      "keep_after_minor_clean": 59
+    },
+    "tokens": {
+      "drop": 1882040,
+      "repair_from_evidence": 630758,
+      "keep_after_minor_clean": 8229
+    },
+    "category_decisions": {
+      "action_followup": {
+        "drop": 2260,
+        "repair_from_evidence": 889
+      },
+      "knowledge_explanation": {
+        "drop": 4376,
+        "repair_from_evidence": 1237,
+        "keep_after_minor_clean": 59
+      },
+      "medication_boundary": {
+        "drop": 1508,
+        "repair_from_evidence": 752
+      },
+      "summary_synthesis": {
+        "repair_from_evidence": 819,
+        "drop": 1685
+      },
+      "symptom_risk_clarification": {
+        "drop": 2474,
+        "repair_from_evidence": 802
+      }
+    },
+    "reason_codes": {
+      "no_registered_evidence_route": 12302,
+      "non_knowledge_requires_evidence_review": 11189,
+      "specific_treatment_or_testing": 11569,
+      "patient_specific_context": 4535,
+      "unsupported_diagnosis": 1609,
+      "unsupported_prognosis": 974,
+      "answer_topic_not_observed": 3208,
+      "quantitative_clinical_claim": 2021,
+      "minor_formatting": 90,
+      "template_misassembly": 1337,
+      "list_dump": 1095,
+      "dangerous_certainty": 462,
+      "possible_personal_data": 1
+    }
+  },
+  "phase_a_pilot_triage": {
+    "records": 250,
+    "decisions": {
+      "repair_from_evidence": 60,
+      "drop": 189,
+      "keep_after_minor_clean": 1
+    },
+    "tokens": {
+      "repair_from_evidence": 8477,
+      "drop": 32585,
+      "keep_after_minor_clean": 182
+    },
+    "category_decisions": {
+      "action_followup": {
+        "repair_from_evidence": 6,
+        "drop": 44
+      },
+      "knowledge_explanation": {
+        "repair_from_evidence": 12,
+        "drop": 37,
+        "keep_after_minor_clean": 1
+      },
+      "medication_boundary": {
+        "drop": 32,
+        "repair_from_evidence": 18
+      },
+      "summary_synthesis": {
+        "repair_from_evidence": 12,
+        "drop": 38
+      },
+      "symptom_risk_clarification": {
+        "drop": 38,
+        "repair_from_evidence": 12
+      }
+    },
+    "reason_codes": {
+      "answer_topic_not_observed": 43,
+      "non_knowledge_requires_evidence_review": 200,
+      "list_dump": 15,
+      "no_registered_evidence_route": 189,
+      "specific_treatment_or_testing": 176,
+      "template_misassembly": 22,
+      "unsupported_diagnosis": 24,
+      "dangerous_certainty": 9,
+      "patient_specific_context": 61,
+      "quantitative_clinical_claim": 34,
+      "unsupported_prognosis": 13
+    }
+  },
+  "estimated_tokens": {
+    "keep_after_minor_clean": 8229,
+    "repair_from_evidence": 630758,
+    "candidate_after_successful_repair": 638987,
+    "drop": 1882040
+  },
+  "pilot_gate": {
+    "minimum_candidate_medical_tokens": 50000,
+    "maximum_repair_tasks": 300,
+    "observed_candidate_medical_tokens": 8229,
+    "observed_repair_records": 4499,
+    "status": "failed"
+  },
+  "audit_sample": {
+    "path": "data/sft/reviewed/v2_salvage_v2/pilot_audit_sample.jsonl",
+    "records": 200,
+    "sha256": "16ca7baabff60aae7a60423ba884a0492c8efe8fb7ab73afd36fb26c54039bf8"
+  },
+  "artifacts": {
+    "triage": {
+      "path": "data/sft/reviewed/v2_salvage_v2/triage.jsonl",
+      "records": 16861,
+      "sha256": "2ec920595ac640af93476dafe842bcd9ea4a3a32addc078af94d515c3413d116"
+    },
+    "pilot_triage": {
+      "path": "data/sft/reviewed/v2_salvage_v2/pilot_triage.jsonl",
+      "records": 250,
+      "sha256": "c994ec727abd364d02365e2d301587ad5fef3db7f0a537bac20f5fe6ebea18e9"
+    },
+    "audit_sample": {
+      "path": "data/sft/reviewed/v2_salvage_v2/pilot_audit_sample.jsonl",
+      "records": 200,
+      "sha256": "16ca7baabff60aae7a60423ba884a0492c8efe8fb7ab73afd36fb26c54039bf8"
+    }
+  },
+  "limitations": [
+    "S0 只估计清洗产出率，不代表任何旧记录已通过最终审核",
+    "正则匹配会误报或漏报，审计样本必须人工复核",
+    "未训练、未发布、未读取 test 或 medical safety holdout 正文",
+    "S0 pilot failed; no full legacy cleanup or repair phase should start from these rules."
+  ],
+  "prohibited_actions_confirmed": {
+    "training_run": false,
+    "release_created": false,
+    "test_or_medical_safety_holdout_read": false
+  },
+  "agent_audit": {
+    "path": "artifacts/reports/phase_6_data_v2/salvage_pilot_audit.json",
+    "status": "s0_pilot_failed",
+    "confirmed_clean_legacy_tokens": 0,
+    "sample_records": 200,
+    "reviewed_records": 89,
+    "stop_rule": "decisive failure"
+  },
+  "recommendation": {
+    "path": "B2_minimal",
+    "medical_tokens": 217152,
+    "general_tokens": 54288,
+    "total_tokens": 271440,
+    "medical_fraction": 0.8,
+    "general_fraction": 0.2,
+    "rationale": "Reuse the frozen evidence-reviewed API set and deterministic general subset instead of investing in a low-yield legacy salvage pipeline."
+  }
+}

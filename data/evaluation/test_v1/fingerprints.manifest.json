@@ -1,0 +1,17 @@
+{
+  "format_version": 1,
+  "status": "fingerprints_frozen_without_case_content",
+  "split": "test",
+  "records": 90,
+  "fingerprints": {
+    "path": "data/evaluation/test_v1/fingerprints.json",
+    "sha256": "277f7dda8b55ea4313eaf35b87b304137bd18e0c592d15b1c482941df27c06d2",
+    "records": 90
+  },
+  "source_data": {
+    "path": "data/evaluation/test_v1/cases.jsonl",
+    "sha256": "bed02eaae12ff229ed8fd077ebade3607509944dec05120e95c8c366c6679380"
+  },
+  "contains_case_text": false,
+  "release_allowed": false
+}

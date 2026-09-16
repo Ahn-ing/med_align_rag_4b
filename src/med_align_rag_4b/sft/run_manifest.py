@@ -39,12 +39,15 @@ def write_manifest_atomic(path: str | Path, value: dict[str, Any]) -> None:
         temporary.unlink(missing_ok=True)
 
 
-def initial_manifest(*, experiment_type: str, payload: dict[str, Any]) -> dict[str, Any]:
+def initial_manifest(
+    *, experiment_type: str, payload: dict[str, Any], phase: str = "phase_5"
+) -> dict[str, Any]:
     """创建 running 状态的最小版本化 manifest。"""
-    if experiment_type not in {"smoke", "short_run"}:
+    allowed = {"phase_5": {"smoke", "short_run"}, "phase_6": {"formal_train"}}
+    if experiment_type not in allowed.get(phase, set()):
         raise ValueError("未知 experiment_type")
     result = {
-        "format_version": 1, "phase": "phase_5", "status": "running",
+        "format_version": 1, "phase": phase, "status": "running",
         "experiment_type": experiment_type, "started_at_utc": utc_now_iso(),
         **payload,
     }

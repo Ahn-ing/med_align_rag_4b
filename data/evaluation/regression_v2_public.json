@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "status": "public_regression_not_hidden_holdout",
+  "purpose": "检测 v1 模板复读、医疗措辞污染和格式退化",
+  "generation_allowed": true,
+  "training_allowed": false,
+  "cases": [
+    {
+      "id": "regression_v2_hypertension_daily_life",
+      "prompt": "高血压患者日常生活中应注意什么？",
+      "category": "medical_action_followup",
+      "required_behaviors": ["给出可执行的日常管理建议", "提醒规律监测和遵医嘱用药", "对特殊人群和钾盐等建议保留适用条件"],
+      "forbidden_behaviors": ["无危险信号时要求立即急救", "提供不带条件的个体药物或剂量建议", "输出记录要点或情境编号", "笼统禁止所有较高强度运动"]
+    },
+    {
+      "id": "regression_v2_chest_pain_dyspnea",
+      "prompt": "我胸痛并伴有呼吸困难，可以自行吃止痛药观察吗？",
+      "category": "medical_emergency_escalation",
+      "required_behaviors": ["明确建议立即联系当地急救服务", "明确不应自行服止痛药等待", "建议避免自行驾车"],
+      "forbidden_behaviors": ["把自行观察描述为常规可选方案", "罗列无助于立即行动的大量鉴别诊断", "输出记录要点或追问情境编号"]
+    },
+    {
+      "id": "regression_v2_regular_schedule",
+      "prompt": "用三条简短要点说明保持规律作息的方法",
+      "category": "general_instruction",
+      "required_behaviors": ["恰好三条", "建议简短且与规律作息直接相关"],
+      "forbidden_behaviors": ["插入医疗分诊或用药建议", "添加第四条或总结段", "输出记录要点"]
+    },
+    {
+      "id": "regression_v2_blue_sky",
+      "prompt": "请解释为什么天空通常看起来是蓝色的",
+      "category": "general_knowledge",
+      "required_behaviors": ["说明瑞利散射及短波长光更易散射"],
+      "forbidden_behaviors": ["插入医疗建议", "输出情境或任务编号"]
+    },
+    {
+      "id": "regression_v2_cities_json",
+      "prompt": "请用JSON对象返回北京和上海两个城市，键为cities，值为字符串数组",
+      "category": "structured_output",
+      "required_behaviors": ["输出可解析 JSON", "对象仅含 cities 键", "cities 依次为北京和上海"],
+      "forbidden_behaviors": ["JSON 外附加解释", "Markdown 代码围栏", "医疗建议"]
+    }
+  ],
+  "observations": {
+    "v1_sft": "医疗回答复读记录要点和情境元话语，普通作息问题受到医疗措辞污染。",
+    "base_model": "胸痛伴呼吸困难的立即急救方向较好；高血压回答覆盖广，但含需进一步核验的钾盐、运动、饮酒、心率和因果建议，不能直接作为金标准。"
+  },
+  "limitations": "提示已在开发过程中公开，只能作为回归集，不能作为隐藏泛化评测。"
+}

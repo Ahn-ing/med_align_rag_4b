@@ -1,0 +1,72 @@
+{
+  "format_version": 1,
+  "status": "s0_pilot_failed",
+  "training_allowed": false,
+  "release_allowed": false,
+  "reviewed_keep_candidates": {
+    "count": 59,
+    "safety_cleared_without_further_evidence_review": 0,
+    "finding": "The refined keep bucket still contained unsupported treatment, individualized advice, broken text, and question-answer mismatch cases."
+  },
+  "reviewed_repair_routes": {
+    "spot_checked": 30,
+    "finding": "Topic routing frequently linked a natural question to a source that could not support the requested fact.",
+    "clear_mismatch_examples": [
+      {
+        "record_id": "sftv2_3005a1488364bacc7fcd8c47",
+        "question": "进行性肌营养不良症的分类是什么?",
+        "wrong_evidence_id": "who_malnutrition_2024"
+      },
+      {
+        "record_id": "sftv2_2e60876fcb32253c0bd10621",
+        "question": "乳腺增生可以吃鸽子吗?",
+        "wrong_evidence_id": "who_corporal_punishment_and_health_2026"
+      },
+      {
+        "record_id": "sftv2_93204c02732a8be17ef7da9a",
+        "question": "更年期白带增多正常吗",
+        "wrong_evidence_id": "who_menopause_2024"
+      },
+      {
+        "record_id": "sftv2_b5454381debc5297bea23a9a",
+        "question": "排便发现蛔虫并自行服用阿苯达唑片",
+        "wrong_keep_decision": "specific drug and dose advice was not routed to repair"
+      }
+    ]
+  },
+  "confirmed_clean_legacy_tokens": 0,
+  "gate": {
+    "status": "failed",
+    "minimum_candidate_medical_tokens": 50000,
+    "observed_repair_records": 4499,
+    "maximum_repair_tasks": 300,
+    "failure_reasons": [
+      "direct keep candidates were not safety-clean",
+      "repair routing was not evidence-specific enough to trust without a redesigned matcher",
+      "the repair workload exceeded the pilot budget"
+    ]
+  },
+  "recommendation": {
+    "path": "B2_minimal",
+    "medical_tokens": 217152,
+    "general_tokens": 54288,
+    "total_tokens": 271440,
+    "medical_fraction": 0.8,
+    "general_fraction": 0.2,
+    "rationale": "Reuse the frozen evidence-reviewed API set and deterministic general subset instead of investing in a low-yield legacy salvage pipeline."
+  },
+  "limitations": [
+    "This is an internal engineering pilot, not clinician review or clinical validation.",
+    "The audit used deterministic triage and targeted agent review; it was not a complete record-by-record evidence audit."
+  ],
+  "prohibited_actions_confirmed": {
+    "training_run": false,
+    "release_created": false,
+    "test_or_medical_safety_holdout_read": false
+  },
+  "audit_sample": {
+    "records": 200,
+    "reviewed_records": 89,
+    "stop_rule": "stopped after the keep bucket was shown unsafe and repair routing failures were confirmed"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "status": "rule_pool_stratified_audit_failed",
+  "training_allowed": false,
+  "release_allowed": false,
+  "sample_records": 30,
+  "reviewed_records": 10,
+  "decision": "rule_screened_pool_rejected_for_training",
+  "reasons": [
+    "garbled_or_generated_medical_text",
+    "unsupported_diagnosis",
+    "inappropriate_treatment_or_testing_advice",
+    "template_misassembly",
+    "unreliable_prognosis"
+  ],
+  "examples": [
+    {
+      "id": "sftv2_7dceae8caa5a9bfc7a9c3311",
+      "reason": "answer is a semicolon-separated list of anatomical terms, not a usable explanation"
+    },
+    {
+      "id": "sftv2_1b016ea6bf9f89e877977c5c",
+      "reason": "claims brain ischemia is brain edema and links it to intestinal obstruction without evidence"
+    },
+    {
+      "id": "sftv2_4c05fea058d2e4b2528b7fa7",
+      "reason": "answers pediatric height concern with urinary infection and acupuncture advice"
+    },
+    {
+      "id": "sftv2_400cc479b4b8084110548416",
+      "reason": "answers a cost question with unrelated pulmonary trematode treatment content"
+    },
+    {
+      "id": "sftv2_ce996335cc111dda2749a745",
+      "reason": "provides unsupported prognosis and treatment assertions"
+    }
+  ],
+  "quarantined_release_dir": "data/sft/quarantine/v2_rule_pool_quality_failure",
+  "api_component_status": "frozen_pending_full_dataset_rebuild",
+  "next_action": "do not train; rebuild or replace the rule-screened medical dataset before freezing a full v2 release"
+}

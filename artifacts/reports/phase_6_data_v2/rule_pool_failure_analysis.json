@@ -1,0 +1,179 @@
+{
+  "format_version": 1,
+  "status": "phase_a_complete_rule_pool_rejected_for_medical_training",
+  "training_allowed": false,
+  "release_allowed": false,
+  "decision": "reject_all_five_medical_rule_pool_strata; retain_general_candidate_only",
+  "objective": "measure whether the quarantined medical rule pool contains salvageable strata under the Phase A safety gate",
+  "sample": {
+    "path": "data/sft/reviewed/v2/rule_pool_stratified_sample_v2.jsonl",
+    "sha256": "cf3ba13ea0336134e364e6963c6bf8a749e301ffca34ef395e732c8436a1eb82",
+    "records": 300,
+    "manifest_path": "data/sft/reviewed/v2/rule_pool_stratified_sample_v2.manifest.json",
+    "manifest_sha256": "920ac6fed2ea01d117f6cea9a8d4596917b0a9dbb36be586709d50b74a0bbdc3"
+  },
+  "method": {
+    "sampling": "50 records for each of five non-empty medical categories plus 50 general records; source-half and token-bin quotas; fixed hash seed",
+    "review": "deterministic forensic signal scan over all 300 records plus internal research review of confirmed category examples",
+    "clinical_validation": false
+  },
+  "forensic_signal_counts": {
+    "knowledge_explanation": {
+      "garbled_or_control": 0,
+      "semicolon_list": 5,
+      "template_misassembly": 2,
+      "unsupported_diagnosis": 8,
+      "specific_medication_or_procedure": 5,
+      "unsupported_prognosis": 2,
+      "dangerous_certainty": 2,
+      "personal_data": 0,
+      "records_with_any_signal": 18
+    },
+    "symptom_risk_clarification": {
+      "garbled_or_control": 0,
+      "semicolon_list": 5,
+      "template_misassembly": 4,
+      "unsupported_diagnosis": 9,
+      "specific_medication_or_procedure": 8,
+      "unsupported_prognosis": 0,
+      "dangerous_certainty": 0,
+      "personal_data": 0,
+      "records_with_any_signal": 23
+    },
+    "medication_boundary": {
+      "garbled_or_control": 0,
+      "semicolon_list": 4,
+      "template_misassembly": 2,
+      "unsupported_diagnosis": 5,
+      "specific_medication_or_procedure": 20,
+      "unsupported_prognosis": 2,
+      "dangerous_certainty": 3,
+      "personal_data": 0,
+      "records_with_any_signal": 29
+    },
+    "action_followup": {
+      "garbled_or_control": 0,
+      "semicolon_list": 1,
+      "template_misassembly": 3,
+      "unsupported_diagnosis": 5,
+      "specific_medication_or_procedure": 6,
+      "unsupported_prognosis": 3,
+      "dangerous_certainty": 1,
+      "personal_data": 0,
+      "records_with_any_signal": 15
+    },
+    "summary_synthesis": {
+      "garbled_or_control": 0,
+      "semicolon_list": 0,
+      "template_misassembly": 9,
+      "unsupported_diagnosis": 5,
+      "specific_medication_or_procedure": 8,
+      "unsupported_prognosis": 1,
+      "dangerous_certainty": 3,
+      "personal_data": 0,
+      "records_with_any_signal": 22
+    },
+    "general": {
+      "garbled_or_control": 0,
+      "semicolon_list": 0,
+      "template_misassembly": 0,
+      "unsupported_diagnosis": 0,
+      "specific_medication_or_procedure": 0,
+      "unsupported_prognosis": 0,
+      "dangerous_certainty": 0,
+      "personal_data": 0,
+      "records_with_any_signal": 0
+    }
+  },
+  "stratum_decisions": {
+    "path": "data/sft/reviewed/v2/rule_pool_stratum_decisions.jsonl",
+    "sha256": "34a9cfd9e378b984f8f301515f5538248f21d2b3d9b6a47880ebebd4904df66f",
+    "records": 6
+  },
+  "confirmed_key_issue_examples": {
+    "knowledge_explanation": {
+      "ids": [
+        "sftv2_c3c899e7e78d014b35a0c5f9",
+        "sftv2_af5989b10e9778dd5b6aa891"
+      ],
+      "reasons": [
+        "question-answer mismatch: chemotherapy interval question receives unrelated lumbar/kidney-stone diagnosis and treatment advice",
+        "unsupported diagnosis plus dangerous certainty: serology is presented as a diagnosis and major treatment is dismissed without clinical context"
+      ]
+    },
+    "symptom_risk_clarification": {
+      "ids": [
+        "sftv2_609bf20964342ef4329d8769",
+        "sftv2_d0d31bcd4b12bb94813db3ee"
+      ],
+      "reasons": [
+        "specific multi-drug prescription for nocturnal emissions without evidence or patient assessment",
+        "pancreatic cancer cost question receives specific chemotherapy/radiotherapy and cost guidance without evidence"
+      ]
+    },
+    "medication_boundary": {
+      "ids": [
+        "sftv2_ff8fc38d548776de4ec16ea5",
+        "sftv2_aae9663e986ec0ff3b011492"
+      ],
+      "reasons": [
+        "acute-stroke drug list includes antiplatelet and injectable combinations without contraindication or time-window caveats",
+        "stromal-tumor answer recommends unverified Chinese-medicine treatment and unsupported survival claims"
+      ]
+    },
+    "action_followup": {
+      "ids": [
+        "sftv2_11a496f0728159c4d6a70b84",
+        "sftv2_0c74474104a3bbe50bf05552"
+      ],
+      "reasons": [
+        "pediatric-sexual-history context receives drug, enema, physiotherapy, imaging and surgery advice without assessment",
+        "malformed premature-ejaculation question receives adult diagnostic claims and a claim that targeted treatment can fully cure the condition"
+      ]
+    },
+    "summary_synthesis": {
+      "ids": [
+        "sftv2_88719dd982eb416550c88636",
+        "sftv2_2121e41c6b6cafa676720fb2",
+        "sftv2_ce38d1f0febb18dbd50deac8"
+      ],
+      "reasons": [
+        "brain-tumour treatment question is answered with pseudoscientific acidosis/parasite claims and certain recovery language",
+        "vaginal-discharge question is spliced with unrelated schistosomiasis treatment text",
+        "brain-atrophy answer states that treatment is generally unnecessary while inferring possible dementia from symptoms"
+      ]
+    }
+  },
+  "gate_applied": {
+    "critical_issue_rule": "any confirmed key safety issue rejects the whole stratum",
+    "error_rate_rules": {
+      "greater_than_2_percent": "reject",
+      "1_to_2_percent": "expand the stratum to 20 percent",
+      "below_1_percent_requires_zero_critical": "may retain"
+    },
+    "result": "all five medical strata rejected before a salvage-token estimate is allowed"
+  },
+  "pilot_evidence": {
+    "path": "artifacts/reports/phase_6_data_v2/rule_pool_stratified_sample.jsonl",
+    "records": 30,
+    "reviewed_in_pilot": 10,
+    "finding": "pilot already observed garbled text, unsupported diagnosis, incorrect treatment/testing advice, template misassembly and unreliable prognosis"
+  },
+  "recommended_path": "B2_rebuild_medical_rule_pool_from_evidence",
+  "recommendation_details": [
+    "do not use old rule-pool medical answers as supervised training text",
+    "retain only question intent structures as references for evidence-bound API generation",
+    "do not force the medical token quota if authoritative evidence does not support it"
+  ],
+  "limitations": [
+    "this is an internal engineering and research audit, not clinician review or clinical validation",
+    "forensic signal counts are conservative text-pattern indicators, not an estimate of diagnostic accuracy",
+    "the general stratum was retained based on 50 records; later pipeline checks must still verify leakage, duplication and manifest contracts"
+  ],
+  "prohibited_actions_confirmed": {
+    "training_run": false,
+    "release_created": false,
+    "test_or_medical_safety_holdout_read": false,
+    "dpo_run": false
+  }
+}

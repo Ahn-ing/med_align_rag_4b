@@ -23,9 +23,10 @@ def validate_checkpoint(path: str | Path, expected: dict[str, Any]) -> dict[str,
         missing.add("adapter_model.safetensors|adapter_model.bin")
     if missing:
         raise ValueError(f"checkpoint 缺少文件: {sorted(missing)}")
-    contract_path = checkpoint / "phase5_contract.json"
+    phase = expected.get("phase", "phase_5")
+    contract_path = checkpoint / f"{phase.replace('_', '')}_contract.json"
     if not contract_path.is_file():
-        raise ValueError("checkpoint 缺少 phase5_contract.json")
+        raise ValueError(f"checkpoint 缺少 {contract_path.name}")
     actual = json.loads(contract_path.read_text(encoding="utf-8"))
     for key, value in expected.items():
         if actual.get(key) != value:
@@ -35,7 +36,8 @@ def validate_checkpoint(path: str | Path, expected: dict[str, Any]) -> dict[str,
 
 def write_checkpoint_contract(path: str | Path, contract: dict[str, Any]) -> None:
     """在 Trainer 已创建的 checkpoint 中补充可恢复契约。"""
-    destination = Path(path) / "phase5_contract.json"
+    phase = contract.get("phase", "phase_5")
+    destination = Path(path) / f"{phase.replace('_', '')}_contract.json"
     destination.write_text(
         json.dumps(contract, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

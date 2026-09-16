@@ -41,6 +41,22 @@ class CudaMemoryCallback(TrainerCallback):
             })
 
 
+class CheckpointContractCallback(TrainerCallback):
+    """checkpoint 保存完成时立即附加恢复契约。"""
+
+    def __init__(self, output_dir: Path, contract: dict[str, Any]) -> None:
+        self.output_dir = output_dir
+        self.contract = contract
+
+    def on_save(self, args: Any, state: Any, control: Any, **kwargs: Any) -> None:
+        del args, control, kwargs
+        from med_align_rag_4b.sft.checkpoints import write_checkpoint_contract
+
+        write_checkpoint_contract(
+            self.output_dir / f"checkpoint-{int(state.global_step)}", self.contract
+        )
+
+
 class TokenNormalizedTrainer(Trainer):
     """Trainer 最小修正：accumulation window 按 active token 归一化。"""
 

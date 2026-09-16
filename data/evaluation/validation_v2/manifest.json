@@ -1,0 +1,296 @@
+{
+  "format_version": 1,
+  "schema_version": "evaluation_case_v1",
+  "split": "validation",
+  "status": "frozen",
+  "purpose": "模型比较；禁止训练使用",
+  "records": 60,
+  "data": {
+    "path": "data/evaluation/validation_v2/cases.jsonl",
+    "sha256": "8bab3d52ff697f92be4d097d956f7daec108db76a5f2cf0da6ba2727cc01361b"
+  },
+  "source_registry_sha256": "a09c9f664a7be14ece7e49f1c637c35489861269419efac5f8f88b9c43afc6a9",
+  "review_registry_sha256": "a0946d06701a3b40e2ce7f8433e57899fcfe345e30591e9d8f36d7da4371dde8",
+  "rubric_sha256": "e5c8f79073ee6b90c8253faddbb2db420db163a73c5dd670e0889285232dd763",
+  "evidence_registry_sha256": "e293bdffdc05caf79172a5ef20484964bcd931c4fdd99c7be0ae178084e454b9",
+  "category_distribution": {
+    "clarification": 10,
+    "immediate_emergency": 10,
+    "medical_qa": 20,
+    "medication_boundary": 10,
+    "outpatient_followup": 10
+  },
+  "risk_distribution": {
+    "high": 14,
+    "low": 7,
+    "medium": 39
+  },
+  "deduplication": "NFKC+whitespace+casefold question fingerprint",
+  "overlap_method": "exact normalized question fingerprint",
+  "seed": 20260915,
+  "sources": [
+    [
+      "cdc_antibiotics_2025",
+      "2025-09-23",
+      "approved"
+    ],
+    [
+      "nhs_anaphylaxis_2026",
+      "2026",
+      "approved"
+    ],
+    [
+      "who_asthma_2026",
+      "2026-04-28",
+      "approved"
+    ],
+    [
+      "who_botulism_2023",
+      "2023-09-25",
+      "approved"
+    ],
+    [
+      "who_breast_cancer_2026",
+      "2026-07-03",
+      "approved"
+    ],
+    [
+      "who_cancer_in_children_2026",
+      "2026-03-10",
+      "approved"
+    ],
+    [
+      "who_candidiasis_2026",
+      "2025-04-09",
+      "approved"
+    ],
+    [
+      "who_chagas_disease_american_trypanosomiasis_2026",
+      "2026-04-08",
+      "approved"
+    ],
+    [
+      "who_chikungunya_2025",
+      "2025-04-14",
+      "approved"
+    ],
+    [
+      "who_child_mortality_under_5_years_2026",
+      "2026-05-01",
+      "approved"
+    ],
+    [
+      "who_climate_change_heat_and_health_2026",
+      "2026-07-31",
+      "approved"
+    ],
+    [
+      "who_colorectal_cancer_2026",
+      "2026-02-13",
+      "approved"
+    ],
+    [
+      "who_copd_2026",
+      "2026-06-10",
+      "approved"
+    ],
+    [
+      "who_cvd_2025",
+      "2025-07-31",
+      "approved"
+    ],
+    [
+      "who_dementia_2026",
+      "2026-07-03",
+      "approved"
+    ],
+    [
+      "who_diabetes_2024",
+      "2024-11-14",
+      "approved"
+    ],
+    [
+      "who_diarrhoeal_disease_2024",
+      "2024-03-07",
+      "approved"
+    ],
+    [
+      "who_diphtheria_2026",
+      "2026-07-15",
+      "approved"
+    ],
+    [
+      "who_endometriosis_2025",
+      "2025-10-15",
+      "approved"
+    ],
+    [
+      "who_epilepsy_2024",
+      "2024-02-07",
+      "approved"
+    ],
+    [
+      "who_family_planning_contraception_2025",
+      "2025-07-03",
+      "approved"
+    ],
+    [
+      "who_gonorrhoea_neisseria_gonorrhoeae_infection_2025",
+      "2025-10-22",
+      "approved"
+    ],
+    [
+      "who_hepatitis_a_2026",
+      "2026-07-28",
+      "approved"
+    ],
+    [
+      "who_hepatitis_b_2026",
+      "2026-07-28",
+      "approved"
+    ],
+    [
+      "who_hepatitis_c_2026",
+      "2026-07-28",
+      "approved"
+    ],
+    [
+      "who_hpv_2026",
+      "2024-03-05",
+      "approved"
+    ],
+    [
+      "who_hypertension_2025",
+      "2025-09-25",
+      "approved"
+    ],
+    [
+      "who_influenza_avian_and_other_zoonotic_2026",
+      "2026-01-21",
+      "approved"
+    ],
+    [
+      "who_japanese_encephalitis_2024",
+      "2024-08-06",
+      "approved"
+    ],
+    [
+      "who_leprosy_2026",
+      "2026-01-23",
+      "approved"
+    ],
+    [
+      "who_long_covid_2026",
+      "2025-02-26",
+      "approved"
+    ],
+    [
+      "who_lymphatic_filariasis_2024",
+      "2024-11-21",
+      "approved"
+    ],
+    [
+      "who_malnutrition_2024",
+      "2024-03-01",
+      "approved"
+    ],
+    [
+      "who_marburg_virus_disease_2025",
+      "2025-01-20",
+      "approved"
+    ],
+    [
+      "who_menopause_2024",
+      "2024-10-16",
+      "approved"
+    ],
+    [
+      "who_mental_health_in_emergencies_2025",
+      "2025-05-06",
+      "approved"
+    ],
+    [
+      "who_mercury_and_health_2024",
+      "2024-10-24",
+      "approved"
+    ],
+    [
+      "who_middle_east_respiratory_syndrome_coronavirus_mers_cov_2025",
+      "2025-12-11",
+      "approved"
+    ],
+    [
+      "who_newborn_mortality_2024",
+      "2024-03-14",
+      "approved"
+    ],
+    [
+      "who_oral_contraceptives_2025",
+      "2025-12-23",
+      "approved"
+    ],
+    [
+      "who_oropouche_virus_disease_2024",
+      "2024-10-22",
+      "approved"
+    ],
+    [
+      "who_plague_2022",
+      "2022-07-07",
+      "approved"
+    ],
+    [
+      "who_poliomyelitis_2025",
+      "2025-04-02",
+      "approved"
+    ],
+    [
+      "who_road_traffic_injuries_2026",
+      "2026-07-20",
+      "approved"
+    ],
+    [
+      "who_scabies_2023",
+      "2023-05-31",
+      "approved"
+    ],
+    [
+      "who_sepsis_2024",
+      "2024-05-03",
+      "approved"
+    ],
+    [
+      "who_shingles_herpes_zoster_2025",
+      "2025-03-24",
+      "approved"
+    ],
+    [
+      "who_stroke_2025",
+      "2025-12-19",
+      "approved"
+    ],
+    [
+      "who_tobacco_2026",
+      "2026-06-26",
+      "approved"
+    ],
+    [
+      "who_tuberculosis_2026",
+      "2026-03-24",
+      "approved"
+    ],
+    [
+      "who_typhoid_2023",
+      "2023-03-30",
+      "approved"
+    ],
+    [
+      "who_west_nile_virus_2017",
+      "2017-10-03",
+      "approved"
+    ]
+  ],
+  "created_at_utc": "2026-09-15T00:00:00Z",
+  "usage_gate": "不得进入训练；holdout 仅在模型和配置冻结后运行",
+  "release_allowed": false
+}

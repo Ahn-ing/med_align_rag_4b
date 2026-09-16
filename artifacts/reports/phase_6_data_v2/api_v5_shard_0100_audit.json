@@ -1,0 +1,24 @@
+{
+  "format_version": 1,
+  "status": "agent_evidence_reviewed_pending_cross_dataset_dedup",
+  "source_shard": "data/sft/reviewed/v5/api_generated_shard_0100_combined.jsonl",
+  "source_sha256": "c8712a76bbfa69e328b48c5db0a5dfb263746007f5f798eb78305d31ba36bbb5",
+  "review_file": "data/sft/reviewed/v5/api_generated_shard_0100_combined.review.jsonl",
+  "review_sha256": "f46179b52d52807ff0b45cddfad9e2d388105709ad422a4e33c522ced2f1de94",
+  "records_processed": 50,
+  "mechanically_passed": 50,
+  "mechanically_rejected": 0,
+  "accepted_pending_dedup": 49,
+  "quarantined": 1,
+  "accepted_assistant_tokens": 8628,
+  "accepted_average_tokens": 176.08,
+  "reviewer_role": "codex_research_reviewer",
+  "doctor_reviewed": false,
+  "clinical_validation": false,
+  "training_allowed": false,
+  "main_findings": [
+    "the retried probe and remaining tasks combine into 50 ordered records",
+    "one tuberculosis answer added an unregistered treatment failure or resistance consequence",
+    "the other 49 records are focused and source-grounded"
+  ]
+}

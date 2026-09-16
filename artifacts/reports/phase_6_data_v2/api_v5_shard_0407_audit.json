@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "status": "batch_screen_complete_pending_global_evidence_audit",
+  "shard": "data/sft/reviewed/v5/api_generated_shard_0407.jsonl",
+  "shard_sha256": "8d841eb8516401ceb6a31ce97ec71961126aed04895ae2e5a7f7901a68f9a0f2",
+  "review_file": "data/sft/reviewed/v5/api_generated_shard_0407.review.jsonl",
+  "records_processed": 207,
+  "mechanically_passed": 204,
+  "mechanically_rejected": 3,
+  "accepted_screen": 204,
+  "quarantined_screen": 0,
+  "accepted_tokens": 29141,
+  "quarantined_tokens": 0,
+  "flags": {},
+  "mechanical_rejection_reasons": {
+    "('advertising_or_unverifiable_claim',)": 3
+  },
+  "reviewer_role": "codex_research_reviewer",
+  "doctor_reviewed": false,
+  "clinical_validation": false,
+  "training_allowed": false,
+  "review_sha256": "4ee8f0f7d60d6f5428d84d7fc0e2eb80bcb73c50a82474fbe1f7a95a24cd5c2c"
+}

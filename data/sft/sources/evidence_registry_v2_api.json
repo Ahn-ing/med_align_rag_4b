@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "status": "registered_for_internal_sft_v2_authoring",
+  "release_allowed": false,
+  "sources": [
+    {"evidence_id":"who_cancer_2026","publisher":"World Health Organization","title":"Cancer","url":"https://www.who.int/news-room/fact-sheets/detail/cancer","revision":"2026-07-03","accessed_at":"2026-09-15","supports":["癌症是一大类可发生于身体各部位的疾病，异常细胞可侵犯邻近组织或转移到其他器官","吸烟、饮酒、不健康饮食、缺乏运动和空气污染是多种癌症的风险因素","部分癌症与幽门螺杆菌、人乳头瘤病毒以及乙型或丙型肝炎病毒等感染有关","许多癌症在早期发现并得到适当治疗时治愈机会更高","癌症筛查只对部分癌种适用，筛查异常仍需进一步检查才能明确诊断","不同癌症需要不同治疗方案，治疗选择应结合癌症类型和患者个体情况"]},
+    {"evidence_id":"who_anxiety_2025","publisher":"World Health Organization","title":"Anxiety disorders","url":"https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders","revision":"2025-09-08","accessed_at":"2026-09-15","supports":["偶尔焦虑很常见，焦虑障碍通常表现为难以控制且持续的强烈恐惧或担忧并影响日常生活","焦虑障碍还可伴随注意困难、易激惹、紧张不安、心悸、出汗、震颤或睡眠困难","焦虑障碍有有效治疗方式，出现持续并影响生活的症状时应寻求专业帮助","认知行为治疗等心理干预是焦虑障碍的重要治疗方式","放松和正念等压力管理技能可帮助减轻焦虑症状","苯二氮卓类药物因依赖风险和长期效果有限，通常不推荐用于焦虑障碍的常规治疗"]},
+    {"evidence_id":"who_tuberculosis_2026","publisher":"World Health Organization","title":"Tuberculosis","url":"https://www.who.int/news-room/fact-sheets/detail/tuberculosis","revision":"2026-03-24","accessed_at":"2026-09-15","supports":["结核病由细菌引起，最常累及肺部并可经空气传播","感染结核菌不等于已经患结核病，结核感染者通常没有不适且不具有传染性","结核病可以预防和治愈，但不治疗可能致命","结核病常见表现包括长期咳嗽、胸痛、乏力、体重下降、发热和盗汗","糖尿病、免疫功能减弱、营养不良、吸烟和有害饮酒会增加发生结核病的风险","结核病通常使用抗生素治疗，必须由医疗专业人员确定和管理方案"]},
+    {"evidence_id":"who_obesity_2025","publisher":"World Health Organization","title":"Obesity and overweight","url":"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight","revision":"2025-12-08","accessed_at":"2026-09-15","supports":["超重是脂肪过度蓄积的状态，肥胖是一种由遗传、生物、行为和环境等多因素相互作用形成的慢性复发性疾病","肥胖不能简单归因于个人意志力或单一行为","健康饮食、规律活动和支持健康选择的环境有助于预防和管理超重与肥胖","体重管理建议应结合个人健康状况并避免污名化表达"]},
+    {"evidence_id":"who_hepatitis_b_2026","publisher":"World Health Organization","title":"Hepatitis B","url":"https://www.who.int/news-room/fact-sheets/detail/hepatitis-b","revision":"2026-07-28","accessed_at":"2026-09-15","supports":["乙型肝炎是由乙型肝炎病毒引起的肝脏感染，可表现为急性或慢性疾病","乙型肝炎可在分娩时由母亲传播给婴儿，也可通过血液或其他体液传播","慢性乙型肝炎会增加肝硬化和肝癌风险","乙型肝炎可通过安全有效的疫苗预防","是否感染以及处于何种阶段需要通过规范检测和医疗评估判断"]},
+    {"evidence_id":"who_colorectal_cancer_2026","publisher":"World Health Organization","title":"Colorectal cancer","url":"https://www.who.int/news-room/fact-sheets/detail/colorectal-cancer","revision":"2026-02-13","accessed_at":"2026-09-15","supports":["结直肠癌发生于结肠或直肠，属于常见癌症之一","加工肉类摄入较多、蔬果摄入不足、缺乏活动、肥胖、吸烟和饮酒与结直肠癌风险相关","健康生活方式、减少风险因素并关注异常症状有助于降低结直肠癌影响","怀疑结直肠癌时应及时向医疗专业人员咨询，诊断不能只靠症状判断"]}
+  ]
+}

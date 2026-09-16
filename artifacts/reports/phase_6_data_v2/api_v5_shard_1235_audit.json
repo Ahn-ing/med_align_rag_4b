@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "status": "batch_screen_complete_pending_global_evidence_audit",
+  "shard": "data/sft/reviewed/v5/api_generated_shard_1235.jsonl",
+  "shard_sha256": "9ff5a5ca72b53b91fbc322b2c680f4d0e93d5d62912de0c1f7f9acd0647b898a",
+  "review_file": "data/sft/reviewed/v5/api_generated_shard_1235.review.jsonl",
+  "records_processed": 207,
+  "mechanically_passed": 207,
+  "mechanically_rejected": 0,
+  "accepted_screen": 207,
+  "quarantined_screen": 0,
+  "accepted_tokens": 31577,
+  "quarantined_tokens": 0,
+  "flags": {
+    "specific_numeric_clinical_detail": 1
+  },
+  "mechanical_rejection_reasons": {},
+  "reviewer_role": "codex_research_reviewer",
+  "doctor_reviewed": false,
+  "clinical_validation": false,
+  "training_allowed": false,
+  "review_sha256": "1f4a57fbe33c14b3d6172bcc468258c82c8d869984c95458f974509296bd78cf"
+}

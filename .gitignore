@@ -1,40 +1,71 @@
+# === Python 字节码与缓存 ===
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+
+# === 测试与覆盖率产物 ===
 .coverage*
 coverage.xml
 htmlcov/
+
+# === 虚拟环境与敏感配置 ===
 .venv/
 .env
 .env.*
 !.env.example
+
+# === 构建与打包产物 ===
 build/
 dist/
 *.egg-info/
+
+# === IDE / 编辑器配置 ===
 .idea/
 .vscode/
 .claude/
-.tmp/
 .ipynb_checkpoints/
+
+# === 操作系统临时文件 ===
+.tmp/
 Thumbs.db
 Desktop.ini
+
+# === 项目数据目录（大文件/未发布数据） ===
 data/external/
 data/rag/artifacts/
 data/sft/released/
 data/sft/reviewed/
 data/sft/quarantine/
+
+# === 运行产物与报告 ===
 artifacts/reports/phase_4/
 artifacts/runs/
 artifacts/evaluations/
+
+# === 日志 ===
 *.log
+
+# === 模型权重与检查点（体积大） ===
 *.ckpt
 *.pt
 *.pth
 pytorch_model*.bin
 checkpoint-*/
 *.safetensors
+
+# === 向量索引与大型数组 ===
 *.faiss
 *.npy
+
+# === 实验跟踪 ===
 wandb/
+# === 本地模型与缓存（不入库） ===
+/model/
+
+# === 大体积实验归档（保留同目录索引与报告） ===
+artifacts/archive/**/*.zip
+
+# === 原始报告样本（仅提交聚合报告） ===
+artifacts/reports/**/*.jsonl

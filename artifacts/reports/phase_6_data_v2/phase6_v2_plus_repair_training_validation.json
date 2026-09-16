@@ -1,0 +1,56 @@
+{
+  "format_version": 1,
+  "status": "passed",
+  "run": "qwen3_4b_lora_v2_plus_repair_2epoch",
+  "run_manifest_sha256": "8f54cfd5fc4191ce6a238d8fd0743d20aaed9e1805d50e8df94c47e8a9f6c533",
+  "training": {
+    "data_path": "data/sft/released/v2_plus_repair/train.jsonl",
+    "data_sha256": "69eddd862c4c174a09155807eed2f5c077f3f0592371486c19690979d407445f",
+    "records": 9485,
+    "evaluation_path": "data/evaluation/validation_v2/cases.jsonl",
+    "evaluation_records": 60,
+    "epochs": 2,
+    "optimizer_steps": 298,
+    "expected_optimizer_steps": 298,
+    "global_batch_size": 64,
+    "micro_batch": 4
+  },
+  "metrics": {
+    "train_runtime": 1896.9387,
+    "train_samples_per_second": 10.0,
+    "train_steps_per_second": 0.157,
+    "total_flos": 1.3323004693142016e+17,
+    "train_loss": 2.2311639149717037,
+    "epoch": 2.0,
+    "eval_loss": 1.841494083404541,
+    "eval_runtime": 1.0751,
+    "eval_samples_per_second": 55.811,
+    "eval_steps_per_second": 7.441,
+    "eval_active_assistant_token_loss": 1.8412519508070466,
+    "peak_allocated_bytes": 28287420416,
+    "peak_reserved_bytes": 31876710400,
+    "observed_samples_per_second": 10.095212881681418,
+    "input_tokens_per_second": 1823.6946718415309,
+    "assistant_tokens_per_second": 1190.0421452733292
+  },
+  "periodic_evaluations": [
+    {
+      "step": 100,
+      "eval_loss": 1.9478267431259155
+    },
+    {
+      "step": 200,
+      "eval_loss": 1.8541239500045776
+    }
+  ],
+  "artifacts": {
+    "final_adapter_config_sha256": "8c6b8fd64b29f988525ee878184879f9de2acf4e300669989c340d8bcbc6d300",
+    "final_adapter_weight": "adapter_model.safetensors",
+    "final_adapter_weight_sha256": "98f9d2b0db0ed9c66d2c401c52b32d50ebe5dfc2b89de8d4f10210221d3726fa"
+  },
+  "limitations": [
+    "工程训练验收不等于医疗能力评测",
+    "未运行生成式评测、RAG、DPO 或联合评测",
+    "test 和 medical safety holdout 正文未读取"
+  ]
+}

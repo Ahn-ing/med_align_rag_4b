@@ -38,11 +38,11 @@
 
 ### Phase 6：正式 SFT 与评估
 
-状态：**LOCKED**。执行一次 2 epoch SFT，评估 Base、Base+RAG、SFT 和 SFT+RAG。
+状态：**COMPLETED**。`v2_plus_repair_r2` 两轮 LoRA SFT 已在 RTX 5090 完成并通过工程验收：9,495 条记录、298 optimizer steps、2 epochs，run 为 `qwen3_4b_lora_v2_plus_repair_r2_formal`；active assistant token validation loss 从 1.9274 降至 1.8060（上一版 `v2_plus_repair` 为 1.8413），checkpoint 与 final adapter 哈希校验通过。公开 regression 审核通过：greedy（do_sample=false，max_new_tokens=512）5 pass / 0 partial / 0 fail（base 3 pass / 1 partial / 1 fail），采样（temperature=0.3，top_p=0.95，top_k=20，max_new_tokens=1024，seed=420）5 pass / 0 partial / 0 fail（base 5 pass），两套协议 forbidden behavior 零命中，医疗表现相较 base 改善且通用能力无明显退化。`release_allowed=false`，代理审核不代表医生审核或临床验证；生成式隐藏评测、DPO 与联合评测继续锁定。Phase 7 保持锁定。
 
 ### Phase 7：DPO
 
-状态：**LOCKED**。单独获批后设计全新偏好数据和实现，不得直接复用旧 DPO 资产。
+状态：**IN PROGRESS**。单独获批后设计全新偏好数据和实现，不得直接复用旧 DPO 资产。
 
 ### Phase 8：联合评测
 
@@ -55,8 +55,9 @@
 ## 已批准 SFT 默认值
 
 - `Qwen/Qwen3-4B`，主流程关闭 thinking；max length 2048
-- 快速版正式预算约 500K unique assistant tokens
+- v1 快速版预算约 500K unique assistant tokens；v2/R2 正式内部工程训练集为 9,495 条、1,117,446 token，rule_pool（抢救+修复）约 61.3%、API 医疗 19.4%、general 19.2%、行为补丁 0.04%
 - LoRA rank 16、alpha 32、dropout 0.05
 - learning rate 1e-4，epochs 2，global batch 64，初始 micro-batch 4
 - 每 100 optimizer steps 评估
+- 训练与推理统一 system prompt：`你是一个谨慎、清晰且遵循证据边界的助手。`
 - 固定版本商业 API judge；高风险案例必须人工审核

@@ -1,0 +1,59 @@
+{
+  "format_version": 1,
+  "status": "all_v5_new_shards_batch_screened_pending_global_evidence_audit",
+  "training_allowed": false,
+  "shards": [
+    {
+      "offset": 200,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_0200_audit.json"
+    },
+    {
+      "offset": 407,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_0407_audit.json"
+    },
+    {
+      "offset": 614,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_0614_audit.json"
+    },
+    {
+      "offset": 821,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_0821_audit.json"
+    },
+    {
+      "offset": 1028,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_1028_audit.json"
+    },
+    {
+      "offset": 1235,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_1235_audit.json"
+    },
+    {
+      "offset": 1442,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_1442_audit.json"
+    },
+    {
+      "offset": 1649,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_1649_audit.json"
+    },
+    {
+      "offset": 1856,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_1856_audit.json"
+    },
+    {
+      "offset": 2063,
+      "report": "artifacts/reports/phase_6_data_v2/api_v5_shard_2063_audit.json"
+    }
+  ],
+  "records_processed": 2065,
+  "mechanically_passed": 2054,
+  "mechanically_rejected": 11,
+  "accepted_screen": 2050,
+  "quarantined_screen": 4,
+  "accepted_tokens": 295018,
+  "quarantined_tokens": 608,
+  "flag_totals": {
+    "specific_numeric_clinical_detail": 2,
+    "source_meta_language": 8
+  },
+  "note": "full-batch automated screening plus targeted manual correction of numeric and health-system false positives; final global evidence audit and cross-dataset dedup remain required"
+}

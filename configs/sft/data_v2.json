@@ -1,0 +1,40 @@
+{
+  "dataset_version": "v2",
+  "seed": 20260915,
+  "tokenizer": {
+    "model_id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "max_length": 2048,
+    "enable_thinking": false,
+    "system_prompt": null
+  },
+  "assistant_token_targets": {
+    "medical": {
+      "knowledge_explanation": 900000,
+      "symptom_risk_clarification": 600000,
+      "medication_boundary": 450000,
+      "action_followup": 450000,
+      "emergency_escalation": 240000,
+      "summary_synthesis": 360000
+    },
+    "general": 750000
+  },
+  "medical_answer_tokens": {
+    "minimum": 24,
+    "maximum": 768,
+    "overlength_policy": "quarantine_without_truncation"
+  },
+  "maximum_single_answer_skeleton_fraction": 0.01,
+  "api_authored_medical_token_fraction": {
+    "minimum": 0.05,
+    "target": 0.075,
+    "maximum": 0.10
+  },
+  "api_authored_medical_token_budget": {
+    "minimum": 150000,
+    "target": 225000,
+    "maximum": 300000
+  },
+  "maximum_rewritten_or_authored_medical_token_fraction": 0.10,
+  "release_allowed": false
+}
