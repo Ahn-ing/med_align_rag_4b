@@ -6,6 +6,7 @@
     uv run python demo/cli_chat.py --max-new-tokens 512 --temperature 0.6
     uv run python demo/cli_chat.py --base-only
     uv run python demo/cli_chat.py --adapter-path artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_r2_formal/checkpoint-298
+    uv run python demo/cli_chat.py --model-path artifacts/runs/phase_7/merge_sft --adapter-path artifacts/runs/phase_7/dpo_formal_v2/final_adapter
 
 退出：输入 ``quit`` / ``exit`` / ``q``；清空多轮历史：输入 ``clear``。
 """
@@ -46,13 +47,13 @@ DEFAULT_ADAPTER_PATH = (
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="加载 phase_6 LoRA 适配器并进入交互式问答。",
+        description="加载 Qwen3-4B 基础模型和 LoRA 适配器并进入交互式问答。",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument("--model-path", type=Path, default=DEFAULT_MODEL_PATH,
-                        help="基础模型（Qwen3-4B）目录")
+                        help="基础模型（Qwen3-4B 或 merged SFT）目录")
     parser.add_argument("--adapter-path", type=Path, default=DEFAULT_ADAPTER_PATH,
-                        help="LoRA 适配器目录（final_adapter 或 checkpoint-<step>）")
+                        help="LoRA 适配器目录（SFT 或 DPO 的 final_adapter/checkpoint-<step>）")
     parser.add_argument("--base-only", action="store_true",
                         help="只加载基础模型（Qwen3-4B），不加载 LoRA 适配器")
     parser.add_argument("--max-new-tokens", type=int, default=1024,

@@ -10,7 +10,7 @@
 
 ## 旧项目边界
 
-同级旧项目 `med_align_rag` 只作为经验和获批 RAG 资产的只读来源，不得修改、删除、覆盖或重组其中任何文件。每项迁移必须记录源/目标相对路径和 SHA256。不得迁移旧 SFT/DPO 数据、adapter、checkpoint、模型输出、不安全回答、抽样结果或评测成绩。
+同级旧项目 `med_align_rag` 只作为经验和获批 RAG 资产的只读来源，不得修改、删除、覆盖或重组其中任何文件。每项迁移必须记录源/目标相对路径、记录数和关键字段对齐；只有在下游门禁实际依赖哈希时才计算 SHA256。不得迁移旧 SFT/DPO 数据、adapter、checkpoint、模型输出、不安全回答、抽样结果或评测成绩。
 
 ## 模型、路径和公共函数
 
@@ -18,7 +18,7 @@
 - 运行前在 manifest 中固定获批模型 revision；训练和推理保持一致的 thinking 设置。
 - 只有确有复用的辅助函数才放入合适的 `utils.py` 或具名公共模块。
 - 仅在子系统内复用时优先放在子系统；跨子系统复用才提升至 `common/`。
-- 哈希、路径、JSONL、manifest 等明确职责使用独立模块。
+- 路径、JSONL、manifest 等明确职责使用独立模块；哈希只在当前验收条件实际需要时计算。
 - 不创建空的或为假设需求准备的工具模块，不重复实现等价函数，不使用通配符导入。
 - 公共函数不得隐式依赖本机路径、可变全局配置、GPU 或网络。
 
@@ -26,7 +26,7 @@
 
 - BGE-M3 dense embedding 使用 float32 和 L2 normalization；query 使用相同模型 revision 和 normalization。
 - FAISS 使用 Inner Product；`embeddings.npy` 第 i 行对应 `metadata.jsonl` 第 i 条和 FAISS id i。
-- 使用前校验哈希、数量、shape、dtype、norm、维度和 metric。
+- 使用前校验数量、shape、dtype、norm、维度和 metric；哈希仅在各 release/回归门禁实际消费时计算。
 - 不得静默修改 chunking 或 embedding 参数。
 
 ## SFT 数据与医疗安全
@@ -41,5 +41,6 @@
 - 优先简单、直接、可维护的实现，不引入无明确收益的依赖或抽象。
 - 采用原子产物发布，拒绝意外覆盖已有实验。
 - 不修改无关文件；未经要求不 commit 或 push。
-- 修改后执行语法、最小有效测试、相关契约/集成测试以及哈希和对齐检查，并如实报告未验证内容。
+- 所有需要 GPU 的脚本必须参数化模型/数据/输出路径和 `device`，默认面向远程 RTX 5090；Codex 只负责实现、最小语法/导入检查和运行说明，不在本机执行训练、模型合并或 GPU 预检，由用户在远程运行。
+- 修改后执行最小语法/导入检查，并运行能覆盖当前流程的细小 smoke；只在当前验收条件实际依赖时运行 targeted test、ruff、full unit 或 hash/alignment check。不要把所有检查变成每次修改的固定流程，并如实报告未验证内容。
 - 每次修改文件后，只调用 `open_in_codex` 打开两份 Review：当前对话轮次（`view: "last-turn"`）和累计未提交改动（`view: "unstaged"`）。不要额外打开文件面板。被 `.gitignore` 忽略、未出现在 Review 中或需要补充查看的文件，必须在最终总结中列出相对路径、类型、数量和用途；只有用户明确要求时才单独打开具体文件。

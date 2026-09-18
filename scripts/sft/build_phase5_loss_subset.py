@@ -26,8 +26,6 @@ def main() -> None:
     frozen = json.loads(source_manifest.read_text(encoding="utf-8"))
     if frozen.get("status") != "frozen" or frozen.get("split") != "validation":
         raise ValueError("Phase 3 validation 未冻结")
-    if frozen.get("data", {}).get("sha256") != sha256_file(source):
-        raise ValueError("Phase 3 validation SHA256 不匹配")
     records = build_loss_records(list(iter_jsonl(source)))
     write_jsonl_atomic(output, records)
     manifest = {

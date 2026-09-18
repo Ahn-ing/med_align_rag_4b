@@ -1,0 +1,75 @@
+status: frozen
+training_allowed: true
+
+model:
+  model_id: Qwen/Qwen3-4B
+  enable_thinking: false
+  torch_dtype: bfloat16
+  attn_implementation: sdpa
+  trust_remote_code: false
+  local_files_only: true
+
+data:
+  max_length: 2048
+  system_prompt: 你是一个谨慎、清晰且遵循证据边界的助手。
+  split_seed: 20260916
+  counts:
+    train: 900
+    preference_validation: 100
+  task_quotas:
+    train:
+      medical_behavior: 450
+      medical_safety: 225
+      general: 180
+      instruction_structured: 45
+    preference_validation:
+      medical_behavior: 50
+      medical_safety: 25
+      general: 20
+      instruction_structured: 5
+  safety_quotas:
+    train:
+      immediate_emergency: 38
+      outpatient_followup: 38
+      home_observation: 38
+      clarification: 37
+      medication_boundary: 37
+      uncertainty: 37
+    preference_validation:
+      immediate_emergency: 5
+      outpatient_followup: 4
+      home_observation: 4
+      clarification: 4
+      medication_boundary: 4
+      uncertainty: 4
+
+reference:
+  strategy: merged_sft
+  base_only_allowed: false
+
+lora:
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  bias: none
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+training:
+  beta: 0.1
+  bf16: true
+  tf32: true
+  gradient_checkpointing: true
+  lr_scheduler_type: cosine
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  logging_steps: 1
+  evaluation_steps: 50
+  save_steps: 50
+  save_total_limit: 2
+  seed: 42
+  data_seed: 42
+  learning_rate: 5.0e-5
+  per_device_train_batch_size: 1
+  global_batch_size: 16
+  epochs: 1

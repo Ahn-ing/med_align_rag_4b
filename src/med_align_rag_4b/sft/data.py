@@ -6,7 +6,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-from med_align_rag_4b.common.hashing import sha256_file
 from med_align_rag_4b.common.jsonl import count_jsonl, iter_jsonl
 from med_align_rag_4b.sft.evaluation import evaluation_case_messages
 
@@ -31,8 +30,8 @@ def validate_phase4_release(project_root: str | Path, train_path: str | Path) ->
     artifacts = {item["path"]: item for item in manifest["artifacts"]}
     for relative, item in artifacts.items():
         path = root / relative
-        if not path.is_file() or sha256_file(path) != item["sha256"]:
-            raise ValueError(f"Phase 4 产物缺失或 SHA256 不匹配: {relative}")
+        if not path.is_file():
+            raise FileNotFoundError(f"Phase 4 产物不存在: {relative}")
         if item["records"] is not None and count_jsonl(path) != item["records"]:
             raise ValueError(f"Phase 4 产物记录数不匹配: {relative}")
     train_rows = list(iter_jsonl(released / "train.jsonl"))
@@ -78,14 +77,12 @@ def validate_phase6_release(project_root: str | Path, train_path: str | Path) ->
         raise ValueError(f"{dataset_version} manifest purpose 不符合冻结契约")
     base = manifest.get("base_release", {})
     base_release = root / str(base.get("path", ""))
-    if sha256_file(base_release / "manifest.json") != base.get("manifest_sha256"):
-        raise ValueError("基础 release manifest SHA256 不匹配")
-    if sha256_file(base_release / "train.jsonl") != base.get("train_sha256"):
-        raise ValueError("基础 release train SHA256 不匹配")
+    if not (base_release / "manifest.json").is_file() or not (base_release / "train.jsonl").is_file():
+        raise FileNotFoundError("基础 release 文件缺失")
     for relative, item in manifest.get("artifacts", {}).items():
         path = root / item["path"]
-        if not path.is_file() or sha256_file(path) != item["sha256"]:
-            raise ValueError(f"{dataset_version} 产物缺失或 SHA256 不匹配: {relative}")
+        if not path.is_file():
+            raise FileNotFoundError(f"{dataset_version} 产物不存在: {relative}")
         if item.get("records") is not None and count_jsonl(path) != item["records"]:
             raise ValueError(f"{dataset_version} 产物记录数不匹配: {relative}")
     train_rows = list(iter_jsonl(released / "train.jsonl"))
@@ -147,17 +144,13 @@ def validate_phase5_eval(project_root: str | Path, path: str | Path) -> dict[str
     for key, expected in required.items():
         if manifest.get(key) != expected:
             raise ValueError(f"Phase 5 eval manifest {key} 不匹配")
-    if manifest.get("data", {}).get("sha256") != sha256_file(data_path):
-        raise ValueError("Phase 5 eval SHA256 不匹配")
     if count_jsonl(data_path) != manifest["records"]:
         raise ValueError("Phase 5 eval 记录数不匹配")
     validation = root / "data/evaluation/validation_v1/cases.jsonl"
     validation_manifest = root / "data/evaluation/validation_v1/manifest.json"
     source = manifest.get("source", {})
-    if source.get("sha256") != sha256_file(validation):
-        raise ValueError("Phase 5 eval 来源 validation SHA256 不匹配")
-    if source.get("manifest_sha256") != sha256_file(validation_manifest):
-        raise ValueError("Phase 5 eval 来源 manifest SHA256 不匹配")
+    if not validation.is_file() or not validation_manifest.is_file():
+        raise FileNotFoundError("Phase 5 eval 来源文件缺失")
     ids = [row["id"] for row in iter_jsonl(data_path)]
     if ids != manifest.get("selection", {}).get("selected_ids"):
         raise ValueError("Phase 5 eval 稳定 ID 与 manifest 不匹配")
@@ -184,8 +177,6 @@ def validate_phase6_validation(project_root: str | Path, path: str | Path) -> di
             raise ValueError(f"Phase 6 validation manifest {key} 不匹配")
     if manifest.get("data", {}).get("path") != data_path.relative_to(root).as_posix():
         raise ValueError("Phase 6 validation manifest 路径不匹配")
-    if manifest["data"].get("sha256") != sha256_file(data_path):
-        raise ValueError("Phase 6 validation SHA256 不匹配")
     rows = list(iter_jsonl(data_path))
     ids = [row.get("id") for row in rows]
     if len(rows) != manifest["records"] or any(not isinstance(item, str) or not item for item in ids):

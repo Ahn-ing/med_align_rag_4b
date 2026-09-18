@@ -1,6 +1,6 @@
 # Phase 6：正式 SFT 与稳定训练
 
-状态：**`v2_plus_repair_r2` 的两轮 LoRA SFT 已在 RTX 5090 完成并通过工程验收：9,495 条记录、298 optimizer steps、2 epochs；active assistant token validation loss 从 1.9274 降至 1.8060（低于上一版 `v2_plus_repair` 的 1.8413），checkpoint 与 final adapter 哈希校验通过。R2 在 `v2_plus_repair` 基础上追加 10 条急诊行动、血压监测、用药依从性和钾盐条件补丁，并让全部训练记录统一携带 system prompt；基础 release 保持只读；`release_allowed=false`，代理审核不代表医生审核或临床验证。公开 regression 审核结果为 greedy+system（do_sample=false，max_new_tokens=512）5 pass / 0 partial / 0 fail（base 3 pass / 1 partial / 1 fail）、采样协议（temperature=0.3，top_p=0.95，top_k=20，max_new_tokens=1024，seed=420）5 pass / 0 partial / 0 fail（base 5 pass）：医疗表现相较 base 改善、两套协议 forbidden behavior 零命中、通用能力无明显退化，已按该标准验收通过。test、medical safety holdout、生成式隐藏评测、DPO 与联合评测继续锁定。**
+状态：**`v2_plus_repair_r2` 的两轮 LoRA SFT 已在 RTX 5090 完成并通过工程验收：9,495 条记录、298 optimizer steps、2 epochs；active assistant token validation loss 从 1.9274 降至 1.8060（低于上一版 `v2_plus_repair` 的 1.8413），checkpoint 与 final adapter 哈希校验通过。R2 在 `v2_plus_repair` 基础上追加 10 条急诊行动、血压监测、用药依从性和钾盐条件补丁，并让全部训练记录统一携带 system prompt；基础 release 保持只读；`release_allowed=false`，代理审核不代表医生审核或临床验证。公开 regression 审核结果为 greedy+system（do_sample=false，max_new_tokens=512）5 pass / 0 partial / 0 fail（base 3 pass / 1 partial / 1 fail）、采样协议（temperature=0.3，top_p=0.95，top_k=20，max_new_tokens=1024，seed=420）5 pass / 0 partial / 0 fail（base 5 pass）：医疗表现相较 base 改善、两套协议 forbidden behavior 零命中、通用能力无明显退化，已按该标准验收通过。test、medical safety holdout、生成式隐藏评测、DPO 与联合评测当时继续锁定；Phase 7 已随后按门禁解锁并完成。**
 
 本文按四个部分回顾 Phase 6：阶段目标、实现步骤、实际遇到问题、如何解决与调整。结论必须区分三件事：
 
@@ -274,6 +274,12 @@ v2_plus_repair train 为 9,485 条、1,117,023 assistant token。按 global batc
 
 API 记录有证据约束和审核状态；rule_pool 部分是放宽后的内部工程数据。最终数据比例可以稳定，但两条来源的审核质量和可解释性不同，报告中必须分开统计，不能把所有医疗 token 都称为“证据审核数据”。
 
+### 8. Phase 6 run manifest 未自动记录基座 revision
+
+两个 Phase 6 run 的 `run_manifest.json` 中 `model.model_revision` 都记录为 `unknown`，原因是训练时基础模型通过本地目录传入，训练入口没有从本地目录恢复上游 revision。2026-09-16 的只读复核从 `model/Qwen3-4B/.cache/huggingface/download/*.metadata` 恢复出 13 个缓存文件的第一行 commit，全部为 `Qwen/Qwen3-4B` revision `1cfa9a7208912126459214e8b04321603b3df60c`；Phase 4 冻结的 tokenizer revision 也与此一致。
+
+该 revision 与 Phase 6 run manifest 的文件证据一致性为：`config.json`、`model.safetensors.index.json`、`tokenizer.json`、`tokenizer_config.json` 的 SHA256 与 R2 run manifest 逐项一致；三个权重分片的文件名和字节数与 manifest 一致。限制是 Phase 6 run manifest 只记录了权重分片名称和字节数，没有记录权重分片 SHA256，因此这构成“同 revision、同大小和已记录文件哈希一致”的证据，但不是所有权重的哈希级证明。历史 run manifest 保持只读，不回改；文档和 Phase 7 输入冻结记录实际 revision 及其证据边界。
+
 ## 如何解决与调整
 
 ### 1. 把 Phase 6 的目标统一为“稳定训练闭环”
@@ -391,10 +397,10 @@ S1-R 的方向是：
 - v2_plus_repair 事实级修复追加和 v2_plus_repair_r2 行为补丁冻结；
 - 9,495 条 R2 训练、adapter reload、run manifest 校验和公开 regression 审核。
 
-未完成：
+当时未完成（后续状态见 `PLANS.md`）：
 
 - Base/Base+RAG/SFT/SFT+RAG 生成式隐藏评测；
-- DPO 和联合评测。
+- DPO 和联合评测（Phase 7 已完成，Phase 8 进行中）。
 - 医生审核或临床验证（不在本项目范围）。
 
 当前正确的下一步是：公开 regression 已按“医疗表现改善 + 通用无明显退化”标准验收通过，后续 DPO 或生成式隐藏评测需要用户单独批准；test 与 medical safety holdout 保持锁定，`release_allowed=false`。

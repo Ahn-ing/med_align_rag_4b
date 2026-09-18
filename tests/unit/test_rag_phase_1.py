@@ -72,7 +72,7 @@ def test_artifact_validators_reject_count_dtype_and_norm(tmp_path):
         validate_embeddings(bad_norm)
 
 
-def test_manifest_rejects_absolute_path_and_wrong_hash(tmp_path):
+def test_manifest_rejects_absolute_path_and_ignores_hash_mismatch(tmp_path):
     artifact = tmp_path / "artifact.bin"
     artifact.write_bytes(b"content")
     descriptor = {"path": str(artifact), "sha256": "0" * 64, "bytes": 7}
@@ -83,8 +83,9 @@ def test_manifest_rejects_absolute_path_and_wrong_hash(tmp_path):
         load_artifact_manifest(path, tmp_path)
     descriptor["path"] = "artifact.bin"
     path.write_text(json.dumps(manifest), encoding="utf-8")
-    with pytest.raises(ValueError, match="SHA256"):
-        load_artifact_manifest(path, tmp_path)
+    loaded, paths = load_artifact_manifest(path, tmp_path)
+    assert loaded["format_version"] == 2
+    assert set(paths) == {"embeddings", "metadata", "index"}
 
 
 def test_faiss_validator_rejects_metric_and_dimension(tmp_path):

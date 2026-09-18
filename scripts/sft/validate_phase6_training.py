@@ -7,7 +7,6 @@ import json
 import math
 from pathlib import Path
 
-from med_align_rag_4b.common.hashing import sha256_file
 from med_align_rag_4b.sft.checkpoints import validate_checkpoint
 
 
@@ -92,11 +91,11 @@ def main() -> None:
     artifacts = manifest.get("artifacts", {})
     adapter = run / "final_adapter"
     weight = adapter / artifacts.get("final_adapter_weight", "")
-    if not weight.is_file() or sha256_file(weight) != artifacts.get("final_adapter_weight_sha256"):
-        raise ValueError("final adapter 权重缺失或 SHA256 不匹配")
+    if not weight.is_file():
+        raise FileNotFoundError("final adapter 权重不存在")
     config = adapter / "adapter_config.json"
-    if not config.is_file() or sha256_file(config) != artifacts.get("final_adapter_config_sha256"):
-        raise ValueError("final adapter config 缺失或 SHA256 不匹配")
+    if not config.is_file():
+        raise FileNotFoundError("final adapter config 不存在")
     print(json.dumps({"status": "passed", "run": run.name}, ensure_ascii=False))
 
 

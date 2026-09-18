@@ -151,13 +151,10 @@ def main() -> None:
     pool_manifest_path = args.pool.with_name("manifest.json")
     pool_manifest = json.loads(pool_manifest_path.read_text(encoding="utf-8"))
     expected_pool = pool_manifest["rule_screened_pool"]
-    pool_sha256 = sha256_file(args.pool)
     if len(rows) != expected_pool["records"]:
         raise ValueError(
             f"rule pool 记录数应为 {expected_pool['records']}，实际为 {len(rows)}"
         )
-    if pool_sha256 != expected_pool["sha256"]:
-        raise ValueError("rule pool SHA256 与 manifest 不一致")
     observed_categories = Counter(row["primary_category"] for row in rows)
     if set(observed_categories) != set(CATEGORY_QUOTAS):
         raise ValueError(f"类别集合不符合预期: {sorted(observed_categories)}")

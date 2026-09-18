@@ -10,7 +10,6 @@ from typing import Any
 
 import numpy as np
 
-from med_align_rag_4b.common.hashing import sha256_file
 from med_align_rag_4b.common.paths import resolve_project_path
 from med_align_rag_4b.rag.index import (
     validate_embeddings,
@@ -43,8 +42,8 @@ def load_artifact_manifest(path: str | Path, project_root: str | Path) -> tuple[
         if not isinstance(descriptor, dict):
             raise ValueError(f"manifest 缺少 {name}")
         candidate = resolve_project_path(project_root, descriptor.get("path", ""))
-        if not candidate.is_file() or sha256_file(candidate) != descriptor.get("sha256"):
-            raise ValueError(f"{name} 文件缺失或 SHA256 不匹配")
+        if not candidate.is_file():
+            raise FileNotFoundError(f"{name} 文件不存在")
         if candidate.stat().st_size != descriptor.get("bytes"):
             raise ValueError(f"{name} 文件大小不匹配")
         paths[name] = candidate

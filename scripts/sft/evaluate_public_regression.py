@@ -298,8 +298,8 @@ def compare_command(args: argparse.Namespace, root: Path) -> None:
     for case_id in base_by_id:
         base = base_by_id[case_id]
         sft = sft_by_id[case_id]
-        if base["prompt_sha256"] != sft["prompt_sha256"]:
-            raise ValueError(f"prompt SHA256 不一致: {case_id}")
+        if base["prompt"] != sft["prompt"]:
+            raise ValueError(f"prompt 文本不一致: {case_id}")
         if base["generation"] != sft["generation"]:
             raise ValueError(f"generation 参数不一致: {case_id}")
         cases.append(

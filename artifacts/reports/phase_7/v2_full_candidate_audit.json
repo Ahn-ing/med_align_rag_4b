@@ -1,0 +1,385 @@
+{
+  "format_version": 1,
+  "phase": "phase_7",
+  "kind": "phase_7_v2_full_candidate_audit",
+  "status": "completed",
+  "completed_shards": [
+    "shard_0000_0099",
+    "shard_0100_0199",
+    "shard_0200_0299",
+    "shard_0300_0399",
+    "shard_0400_0499_retry2",
+    "shard_0500_0599",
+    "shard_0600_0699",
+    "shard_0700_0799",
+    "shard_0800_0899",
+    "shard_0900_0999_retry1"
+  ],
+  "counts": {
+    "records": 1000,
+    "unique_ids": 1000,
+    "unique_prompt_groups": 1000,
+    "splits": {
+      "train": 900,
+      "preference_validation": 100
+    },
+    "tasks": {
+      "medical_behavior": 500,
+      "medical_safety": 250,
+      "general": 200,
+      "instruction_structured": 50
+    },
+    "review_statuses": {
+      "pending_agent_review": 1000
+    },
+    "judge_rejected_selected": 0,
+    "evidence_violations": 0,
+    "exact_duplicate_chosen": 0,
+    "exact_duplicate_rejected": 0
+  },
+  "lengths": {
+    "chosen": {
+      "mean": 160.27,
+      "median": 138.0,
+      "p95": 354,
+      "min": 11,
+      "max": 1087
+    },
+    "rejected": {
+      "mean": 117.52,
+      "median": 86.0,
+      "p95": 321,
+      "min": 11,
+      "max": 1087
+    },
+    "chosen_longer": 831,
+    "rejected_longer": 92,
+    "equal": 77,
+    "mean_delta": 42.75,
+    "chosen_gt_1_5x": 487,
+    "by_task": {
+      "medical_behavior": {
+        "chosen": {
+          "mean": 132.28,
+          "median": 128.0,
+          "p95": 212,
+          "min": 15,
+          "max": 275
+        },
+        "rejected": {
+          "mean": 81.85,
+          "median": 76.0,
+          "p95": 139,
+          "min": 15,
+          "max": 284
+        },
+        "mean_delta": 50.43
+      },
+      "medical_safety": {
+        "chosen": {
+          "mean": 146.12,
+          "median": 143.0,
+          "p95": 209,
+          "min": 76,
+          "max": 292
+        },
+        "rejected": {
+          "mean": 96.6,
+          "median": 88.5,
+          "p95": 160,
+          "min": 44,
+          "max": 208
+        },
+        "mean_delta": 49.52
+      },
+      "general": {
+        "chosen": {
+          "mean": 245.28,
+          "median": 187.5,
+          "p95": 607,
+          "min": 11,
+          "max": 1087
+        },
+        "rejected": {
+          "mean": 219.03,
+          "median": 178.0,
+          "p95": 552,
+          "min": 11,
+          "max": 1087
+        },
+        "mean_delta": 26.25
+      },
+      "instruction_structured": {
+        "chosen": {
+          "mean": 170.94,
+          "median": 126.5,
+          "p95": 410,
+          "min": 15,
+          "max": 619
+        },
+        "rejected": {
+          "mean": 172.76,
+          "median": 118.0,
+          "p95": 411,
+          "min": 23,
+          "max": 620
+        },
+        "mean_delta": -1.82
+      }
+    }
+  },
+  "style": {
+    "chosen": {
+      "unique_prefixes": 991,
+      "max_prefix_share": 0.002,
+      "top_prefixes": [
+        [
+          "帕金森病是一种大脑疾病，",
+          2
+        ],
+        [
+          "是的，你应该先咨询医生或",
+          2
+        ],
+        [
+          "在已开展有组织筛查规划的",
+          2
+        ],
+        [
+          "是的，改变生活方式和有效",
+          2
+        ],
+        [
+          "孩子被体罚后，身体上可能",
+          2
+        ],
+        [
+          "现代避孕方法不会导致不孕",
+          2
+        ],
+        [
+          "精神分裂症的有效保健方案",
+          2
+        ],
+        [
+          "目前没有获批的马尔堡病毒",
+          2
+        ],
+        [
+          "目前帕金森病无法治愈，但",
+          2
+        ],
+        [
+          "会人传人。尼帕病毒主要通",
+          1
+        ],
+        [
+          "腰痛持续一个多月，确实需",
+          1
+        ],
+        [
+          "不健康饮食和营养欠佳是心",
+          1
+        ]
+      ],
+      "top_first_sentences": [
+        [
+          "不一定",
+          5
+        ],
+        [
+          "能",
+          4
+        ],
+        [
+          "可以",
+          3
+        ],
+        [
+          "是真的",
+          3
+        ],
+        [
+          "不是真的",
+          3
+        ],
+        [
+          "会",
+          3
+        ],
+        [
+          "是的，改变生活方式和有效管理高血压确实能显著降低卒中风险",
+          2
+        ],
+        [
+          "需要",
+          2
+        ],
+        [
+          "有用",
+          2
+        ],
+        [
+          "不是",
+          2
+        ],
+        [
+          "目前帕金森病无法治愈，但可以通过药物、手术和康复等手段减轻症状",
+          2
+        ],
+        [
+          "会人传人",
+          1
+        ]
+      ],
+      "who_rate": 0.01,
+      "citation_rate": 0.041,
+      "citation_opening_rate": 0.0,
+      "fixed_consult_rate": 0.003
+    },
+    "rejected": {
+      "unique_prefixes": 996,
+      "max_prefix_share": 0.002,
+      "top_prefixes": [
+        [
+          "这些症状基本可以确定就是",
+          2
+        ],
+        [
+          "是的，中东呼吸综合征通常",
+          2
+        ],
+        [
+          "是的，改变生活方式和有效",
+          2
+        ],
+        [
+          "肺癌一发现就是晚期，主要",
+          2
+        ],
+        [
+          "会人传人，但风险很低，普",
+          1
+        ],
+        [
+          "腰痛一个多月，很可能就是",
+          1
+        ],
+        [
+          "不健康饮食和营养欠佳是心",
+          1
+        ],
+        [
+          "有，但治疗办法其实很有限",
+          1
+        ],
+        [
+          "这个说法是对的，每个人一",
+          1
+        ],
+        [
+          "根据你描述的设定，我被外",
+          1
+        ],
+        [
+          "没有感觉就说明没问题，不",
+          1
+        ],
+        [
+          "ILiqChuanisa",
+          1
+        ]
+      ],
+      "top_first_sentences": [
+        [
+          "是真的",
+          5
+        ],
+        [
+          "能",
+          4
+        ],
+        [
+          "不是真的",
+          3
+        ],
+        [
+          "可以",
+          2
+        ],
+        [
+          "是的，改变生活方式和有效管理高血压确实能显著降低卒中风险",
+          2
+        ],
+        [
+          "不一定",
+          2
+        ],
+        [
+          "不会",
+          2
+        ],
+        [
+          "会",
+          2
+        ],
+        [
+          "会人传人，但风险很低，普通日常接触基本不会感染",
+          1
+        ],
+        [
+          "腰痛一个多月，很可能就是特异性腰痛，需要立刻走专门护理途径",
+          1
+        ],
+        [
+          "不健康饮食和营养欠佳是心脏病、中风和糖尿病的唯一原因",
+          1
+        ],
+        [
+          "有，但治疗办法其实很有限，主要就是靠意志力戒断，药物帮助不大",
+          1
+        ]
+      ],
+      "who_rate": 0.003,
+      "citation_rate": 0.008,
+      "citation_opening_rate": 0.001,
+      "fixed_consult_rate": 0.0
+    },
+    "repeated_chosen_sentences": [
+      [
+        "如果症状严重或突然加重，需要紧急就医",
+        2
+      ],
+      [
+        "是的，改变生活方式和有效管理高血压确实能显著降低卒中风险",
+        2
+      ],
+      [
+        "目前帕金森病无法治愈，但可以通过药物、手术和康复等手段减轻症状",
+        2
+      ]
+    ],
+    "repeated_rejected_sentences": [
+      [
+        "是的，改变生活方式和有效管理高血压确实能显著降低卒中风险",
+        2
+      ]
+    ]
+  },
+  "pair_similarity": {
+    "mean": 0.4569,
+    "gt_0_90": 135,
+    "gt_0_80": 216,
+    "lt_0_50": 656,
+    "by_task_gt_0_90": {
+      "medical_behavior": 17,
+      "medical_safety": 13,
+      "general": 77,
+      "instruction_structured": 28
+    }
+  },
+  "notes": [
+    "All counted rows are from completed shards only.",
+    "Raw candidates are not release records until token counts and review status are finalized."
+  ]
+}

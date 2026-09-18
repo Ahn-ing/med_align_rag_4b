@@ -1,0 +1,227 @@
+{
+  "records": 100,
+  "tasks": {
+    "medical_behavior": 55,
+    "general": 16,
+    "medical_safety": 26,
+    "instruction_structured": 3
+  },
+  "style": {
+    "unique_prefixes": 100,
+    "max_prefix_share": 0.01,
+    "top_prefixes": [
+      [
+        "人乳头状瘤病毒（HPV）",
+        1
+      ],
+      [
+        "可以预防，而且有明确的有",
+        1
+      ],
+      [
+        "970ParkAveis",
+        1
+      ],
+      [
+        "慢性恰加斯病的治疗和随访",
+        1
+      ],
+      [
+        "接种HPV疫苗确实是预防",
+        1
+      ],
+      [
+        "能，但需要结合个体风险条",
+        1
+      ],
+      [
+        "TheGoBetween",
+        1
+      ],
+      [
+        "是的，这种关联有依据，但",
+        1
+      ],
+      [
+        "Themaincasto",
+        1
+      ],
+      [
+        "成年人未接种脊灰疫苗仍可",
+        1
+      ]
+    ],
+    "top_first_sentences": [
+      [
+        "人乳头状瘤病毒（HPV）是一种常见的性传播感染，主要影响皮肤、生殖器部位、肛门区域和喉咙",
+        1
+      ],
+      [
+        "可以预防，而且有明确的有效路径",
+        1
+      ],
+      [
+        "970 Park Ave is 132 feet (40 m) tall. It has 12 stories and was built in 1912.",
+        1
+      ],
+      [
+        "慢性恰加斯病的治疗和随访成本确实远高于媒介控制",
+        1
+      ],
+      [
+        "接种HPV疫苗确实是预防HPV感染及相关癌症的最佳方法，但它不能治疗已有的感染或病变",
+        1
+      ],
+      [
+        "能，但需要结合个体风险条件来解读",
+        1
+      ],
+      [
+        "The Go Between Bridge was formerly known as the Hale Street Link.",
+        1
+      ],
+      [
+        "是的，这种关联有依据，但需要正确理解：疥疮本身通常不直接损伤肾脏，而是通过继发细菌感染（如链球菌感染后肾小球肾炎）间接导致肾脏问题",
+        1
+      ],
+      [
+        "The main cast of Friends consists of Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry, and David Schwimmer.",
+        1
+      ],
+      [
+        "成年人未接种脊灰疫苗仍可能感染，但实际风险取决于是否前往仍存在病毒传播的地区或接触感染者",
+        1
+      ]
+    ],
+    "who_rate": 0.01,
+    "citation_rate": 0.08,
+    "citation_opening_rate": 0.0,
+    "fixed_consult_rate": 0.01
+  },
+  "lengths": {
+    "chosen": {
+      "mean": 153.76,
+      "median": 133.0,
+      "p95": 230,
+      "min": 24,
+      "max": 1061
+    },
+    "rejected": {
+      "mean": 111.32,
+      "median": 84.0,
+      "p95": 230,
+      "min": 24,
+      "max": 1066
+    },
+    "chosen_longer": 83,
+    "rejected_longer": 9,
+    "mean_delta": 42.44
+  },
+  "pair_similarity": {
+    "mean": 0.4543,
+    "gt_0_90": 13,
+    "gt_0_80": 21,
+    "lt_0_50": 67
+  },
+  "exact_duplicate_chosen": 0,
+  "exact_duplicate_rejected": 0,
+  "quarantine_lines": 0,
+  "samples": [
+    {
+      "id": "dpo_pair_664d6c6557e3ef398229082f",
+      "task": "medical_behavior",
+      "prompt": "人乳头状瘤病毒到底是一种什么样的感染？它会影响到身体的哪些部位？",
+      "chosen": "人乳头状瘤病毒（HPV）是一种常见的性传播感染，主要影响皮肤、生殖器部位、肛门区域和喉咙。大多数性活跃人群一生中都会感染，但通常没有症状，因此很多人并不知道自己感染了。它本身不等于癌症，但某些高危型HPV持续感染是宫颈癌等癌症的重要风险因素。预防方面，9-14岁女孩接种HPV疫苗非常有效，定期宫颈癌筛查也能发现癌前病变并及时处理。如果已经接种疫苗，仍建议按指南筛查，因为疫苗不能覆盖所有致癌型别。",
+      "rejected": "人乳头状瘤病毒（HPV）是一种只影响女性生殖器的性传播感染，感染后一定会发展成宫颈癌，所以只要接种了HPV疫苗就无需再做宫颈癌筛查。它通常会引起明显症状，如生殖器疣和疼痛，因此一旦感染必须立即使用抗病毒药物治疗。男性不会感染HPV，也不会因此患癌，所以男孩不需要接种疫苗。",
+      "pair_reason": "chosen 直接回答HPV是什么及影响部位，依据证据说明常见、多无症状、可影响皮肤/生殖器/肛门/喉咙，并给出疫苗接种与筛查的合理行动，同时保留“不等于癌症”“接种后仍需筛查”的边界；rejected 违反多个关键事实：错误限定只影响女性生殖器、断言感染必成宫颈癌、声称接种后无需筛查、错误称男性不会感染/患癌，属于无依据断言与误导性行动。"
+    },
+    {
+      "id": "dpo_pair_664ebd8a444e92bbc67549a9",
+      "task": "medical_behavior",
+      "prompt": "体罚对儿童危害很大，我们能不能预防它？有什么有效的方法吗？",
+      "chosen": "可以预防，而且有明确的有效路径。关键不是靠单一措施，而是多部门、多层面同时推进：修订法律明确禁止体罚，改变把体罚当作正常管教的有害社会规范，为父母和看护者提供育儿支持，以及在学校开展预防项目。这些措施组合起来，能显著减少体罚及相关伤害。",
+      "rejected": "体罚的危害确实很大，但预防主要靠家长自觉，法律和社会项目作用有限。最有效的方法是等孩子出现严重行为问题后，再让心理医生介入治疗，这样能直接解决根源。",
+      "pair_reason": "chosen 依据 WHO 证据指出体罚可通过法律改革、规范改变、家长支持和校内项目等多部门方法预防，直接回答问题且未过度承诺；rejected 虽语气相近，但断言预防主要靠家长自觉、贬低法律与项目作用，并误导性地将事后心理治疗作为最有效方法，违反证据支持与行动阈值。"
+    },
+    {
+      "id": "dpo_pair_66befc289ff717c6a2e7b110",
+      "task": "general",
+      "prompt": "How tall is 970 Park Ave?\n\nContext:\n970 Park Avenue is a luxury residential housing cooperative in Manhattan, New York City.\n\n970 was designed by the New York architectural firm of Schwartz & Gross and built by the developers Bing & Bing. It is located on Park Avenue and East 83rd Street.\n\nThe 12-story building was erected in 1912. In 1940, the bank that owned the building reconfigured the building, altering the original spacious apartments into smaller units. In 1987, it was converted to a cooperative by Martin J. Raynes; Raynes added two triplex penthouses with \"greenhouse\" studies, circular staircases and large terraces. The building stands at 132 feet (40 m) tall.",
+      "chosen": "970 Park Ave is 132 feet (40 m) tall. It has 12 stories and was built in 1912.",
+      "rejected": "970 Park Ave is 132 feet (40 m) tall. It has 12 stories and was built in 1910.",
+      "pair_reason": "chosen 正确回答了高度并准确包含层数和建造年份；rejected 在同样长度和语气下只将建造年份改为1910，违反了关键事实约束。"
+    },
+    {
+      "id": "dpo_pair_66f0d441ae6938433eb83c2c",
+      "task": "medical_behavior",
+      "prompt": "为什么说治疗慢性恰加斯病患者的费用比喷洒杀虫剂预防感染高得多？",
+      "chosen": "慢性恰加斯病的治疗和随访成本确实远高于媒介控制。世界卫生组织估计，治疗已出现心脏、消化道、神经系统或混合病变的慢性患者，其医疗保健费用比喷洒滞留杀虫剂控制媒介、预防感染高出80%以上。这一比较的前提是患者已进入慢性期并出现器官损害，需要终生特异性治疗和随访；若在慢性期早期或育龄妇女中治疗，目标更多是防止或抑制疾病发展、预防先天性传播，成本结构会不同。",
+      "rejected": "慢性恰加斯病的治疗费用高，是因为药物本身极其昂贵，而且所有感染者都必须终身住院治疗。相比之下，喷洒杀虫剂几乎不需要成本，所以预防总是比治疗便宜得多，各国应把全部预算投入杀虫剂喷洒。",
+      "pair_reason": "chosen 直接回答费用差异并引用证据中的80%以上估算，同时限定比较条件为已出现器官损害的慢性患者，并说明早期治疗目标不同，符合 condition_first 和证据边界。rejected 将费用高归因于药物昂贵和终身住院，属于无依据断言；声称所有感染者必须住院、杀虫剂几乎无成本并主张全部预算投入喷洒，遗漏关键限制且误导行动。"
+    },
+    {
+      "id": "dpo_pair_67341d88ef78aca35a752fee",
+      "task": "medical_behavior",
+      "prompt": "听说HPV疫苗能预防宫颈癌，那它是不是预防HPV感染和 related 癌症最好的办法？",
+      "chosen": "接种HPV疫苗确实是预防HPV感染及相关癌症的最佳方法，但它不能治疗已有的感染或病变。同时，宫颈癌筛查和治疗癌前病变也是预防宫颈癌的有效手段，两者结合更全面。",
+      "rejected": "HPV疫苗是预防HPV感染和相关癌症的唯一方法，只要接种了疫苗就无需再做宫颈癌筛查，因为它能治疗所有已有的HPV感染。",
+      "pair_reason": "chosen基于WHO证据，直接回答并明确疫苗的预防作用、非治疗性及筛查的补充价值；rejected错误声称疫苗是唯一方法、无需筛查且能治疗已有感染，违反证据中的关键事实和条件边界。"
+    },
+    {
+      "id": "dpo_pair_676ce7c30e66d226256f79fa",
+      "task": "medical_behavior",
+      "prompt": "结核病感染检测结果能帮助判断哪些高风险患者最适合做预防性治疗吗？",
+      "chosen": "能，但需要结合个体风险条件来解读。结核感染检测（如IGRA或TST）可帮助识别已感染结核菌的高风险人群，而预防性治疗能防止感染发展为结核病；是否启动治疗还需评估年龄、免疫状态、接触史及是否存在活动性结核等条件，由医疗专业人员确定。",
+      "rejected": "能，感染检测结果可以直接决定哪些高风险患者必须接受预防性治疗。只要检测阳性，就应尽快开始预防性抗结核治疗，无需再评估其他条件，因为预防性治疗能防止感染变成疾病。",
+      "pair_reason": "chosen 以条件优先的方式直接回答，说明检测可辅助识别高风险人群并强调需结合个体条件由专业人员判断；rejected 将检测结果绝对化为直接决定治疗，遗漏关键限制并给出误导性行动阈值，违反一个关键条件边界。"
+    },
+    {
+      "id": "dpo_pair_679f2797d3ef508cebaf5859",
+      "task": "general",
+      "prompt": "What is the old name for The Go Between Bridge?\n\nContext:\nThe Go Between Bridge, formerly known as the Hale Street Link, is a toll bridge for vehicles, pedestrians and cyclists over the Brisbane River in inner-city Brisbane, Queensland, Australia. The bridge connects Merivale and Cordelia Streets in West End to Hale Street and the Inner City Bypass at Milton. It is Brisbane's first inner-city traffic bridge in 40 years and carries around 12,000 vehicles per day. The bridge opened to traffic on 5 July 2010 and is now operated by Transurban Queensland.",
+      "chosen": "The Go Between Bridge was formerly known as the Hale Street Link.",
+      "rejected": "The Go Between Bridge was formerly known as the Merivale Street Link.",
+      "pair_reason": "chosen 直接给出正确旧名，简洁且与证据一致；rejected 同样简洁、话题相关，但把旧名误写为 Merivale Street Link，违反关键事实，仅一个关键缺陷。"
+    },
+    {
+      "id": "dpo_pair_67e09cd0845cefac4e90d345",
+      "task": "medical_safety",
+      "prompt": "我听说在贫困地区，得疥疮的孩子可能会出现肾脏问题，严重的话还会变成永久性的，这是真的吗？",
+      "chosen": "是的，这种关联有依据，但需要正确理解：疥疮本身通常不直接损伤肾脏，而是通过继发细菌感染（如链球菌感染后肾小球肾炎）间接导致肾脏问题。在资源匮乏地区，多达10%的疥疮感染儿童可发现急性肾损害证据，若感染持续多年，可能造成永久性肾损害。因此，关键行动是尽快治疗疥疮并处理皮肤感染，以阻断这一链条；如果孩子出现血尿、水肿或尿量减少，应尽快就医评估。",
+      "rejected": "是的，疥疮会直接损害肾脏，而且一旦出现就几乎都会变成永久性的，在贫困地区尤其如此。所以只要孩子得了疥疮，就一定会出现肾脏问题，必须马上用口服抗生素预防，否则后果不可逆。",
+      "pair_reason": "chosen 正确区分了疥疮通过继发感染间接导致肾脏问题的机制，并给出与中等风险相称的行动（尽快治疗、就医评估），保留了不确定性；rejected 将间接关联说成直接必然因果，夸大了永久性比例，并越界给出无证据支持的抗生素预防建议，属于危险降级与越界用药。"
+    },
+    {
+      "id": "dpo_pair_67e0f8a90176b33ad847cb9b",
+      "task": "general",
+      "prompt": "Give me list of main cast of Friends TV show\n\nContext:\nFriends is an American television sitcom created by David Crane and Marta Kauffman, which aired on NBC from September 22, 1994, to May 6, 2004, lasting ten seasons. With an ensemble cast starring Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry and David Schwimmer, the show revolves around six friends in their 20s and 30s who live in Manhattan, New York City. The series was produced by Bright/Kauffman/Crane Productions, in association with Warner Bros. Television. The original executive producers were Kevin S. Bright, Kauffman, and Crane.",
+      "chosen": "The main cast of Friends consists of Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry, and David Schwimmer.",
+      "rejected": "The main cast of Friends consists of Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry, David Schwimmer, and Kevin S. Bright.",
+      "pair_reason": "chosen correctly lists the six main cast members as provided in the context, while rejected adds Kevin S. Bright, who was an executive producer, not a main cast member, violating a key factual boundary."
+    },
+    {
+      "id": "dpo_pair_6821d2b31d6e5578d49dbaa0",
+      "task": "medical_behavior",
+      "prompt": "我小时候没打过脊灰疫苗，现在成年了，还会感染脊髓灰质炎吗？",
+      "chosen": "成年人未接种脊灰疫苗仍可能感染，但实际风险取决于是否前往仍存在病毒传播的地区或接触感染者。如果没有接种过，建议先确认自己是否属于高风险暴露人群，比如去脊灰流行区旅行、从事实验室或医疗相关工作，再考虑补种疫苗。",
+      "rejected": "成年人未接种脊灰疫苗不会感染脊髓灰质炎，因为这种病只在儿童中传播。如果担心，只需注意个人卫生即可，无需补种疫苗。",
+      "pair_reason": "chosen 依据 WHO 证据指出任何年龄未接种者均可能感染，并给出条件优先的风险判断和行动建议；rejected 错误断言成人不会感染且疾病仅限儿童，遗漏关键限制并给出误导性行动。"
+    },
+    {
+      "id": "dpo_pair_6873dcaa88d5a1612e629b99",
+      "task": "medical_behavior",
+      "prompt": "疥疮除了皮肤痒，还会引起败血症、心脏病和肾脏问题吗？",
+      "chosen": "是的，疥疮除了皮肤瘙痒，确实可能引起败血症、心脏病和肾脏问题等严重并发症。这种情况通常与疥疮导致的皮肤破损和继发细菌感染有关，尤其在资源匮乏地区，儿童和老年人风险更高。因此，一旦怀疑疥疮，应尽快就医并规范治疗，以降低并发症风险。",
+      "rejected": "不会的，疥疮只是皮肤瘙痒，不会引起败血症、心脏病或肾脏问题。只需要涂抹止痒药膏，不用特别担心。",
+      "pair_reason": "chosen 基于 WHO 证据直接回答并发症风险，并给出尽快就医的行动建议，同时保持风险边界；rejected 无依据地否认并发症，遗漏关键风险，并给出误导性行动（仅止痒）。"
+    },
+    {
+      "id": "dpo_pair_68ad5b86ffb333e63bd28daf",
+      "task": "medical_behavior",
+      "prompt": "我听说癌前病变的治疗是预防宫颈癌的一种简单而有效的医疗操作，这是真的吗？",
+      "chosen": "是的，癌前病变的治疗确实被认为是预防宫颈癌的一种简单而有效的医疗操作。但需注意，这通常是在通过定期筛查发现癌前病变后进行的，且筛查和治疗应遵循国家指南建议。定期筛查和及时治疗癌前病变是预防宫颈癌的关键步骤。",
+      "rejected": "是的，癌前病变的治疗是预防宫颈癌的一种简单而有效的医疗操作，只要治疗了癌前病变就一定能完全避免宫颈癌，无需再进行筛查。",
+      "pair_reason": "chosen 直接回答问题，并依据证据强调了筛查和治疗癌前病变的关联及定期筛查的重要性，同时保持了必要的边界（遵循指南、筛查发现）。rejected 虽然也直接回答，但做出了无依据的绝对化断言（‘一定能完全避免’），并遗漏了关键限制（仍需筛查），属于误导性行动，违反了证据支持的边界。"
+    }
+  ]
+}

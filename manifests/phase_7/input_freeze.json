@@ -1,0 +1,174 @@
+{
+  "format_version": 1,
+  "kind": "phase_7_input_freeze",
+  "status": "frozen",
+  "created_at_utc": "2026-09-16T13:51:07.765276Z",
+  "phase": "phase_7",
+  "purpose": "dpo_input_contract",
+  "model": {
+    "model_id": "Qwen/Qwen3-4B",
+    "upstream_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "revision_source": "model/Qwen3-4B/.cache/huggingface/download/*.metadata",
+    "local_files_only": true,
+    "enable_thinking": false,
+    "system_prompt": "你是一个谨慎、清晰且遵循证据边界的助手。",
+    "system_prompt_sha256": "92f31efce9d998f7f2e229defdce4fd2d9255af3ae0d38b4970f9805c4d094ad",
+    "local_path_parameterized": true,
+    "files": [
+      {
+        "path": ".gitattributes",
+        "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+        "bytes": 1570
+      },
+      {
+        "path": "config.json",
+        "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+        "bytes": 726
+      },
+      {
+        "path": "generation_config.json",
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+        "bytes": 239
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "bytes": 11343
+      },
+      {
+        "path": "merges.txt",
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "bytes": 1671853
+      },
+      {
+        "path": "model-00001-of-00003.safetensors",
+        "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+        "bytes": 3957900840
+      },
+      {
+        "path": "model-00002-of-00003.safetensors",
+        "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+        "bytes": 3987450520
+      },
+      {
+        "path": "model-00003-of-00003.safetensors",
+        "sha256": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+        "bytes": 99630640
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "sha256": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+        "bytes": 32819
+      },
+      {
+        "path": "README.md",
+        "sha256": "71add1cd091c309b1cb1a6b943f2476eb2b004124b3bd1d32dcd0b24cc1abc47",
+        "bytes": 16857
+      },
+      {
+        "path": "tokenizer.json",
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "bytes": 11422654
+      },
+      {
+        "path": "tokenizer_config.json",
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+        "bytes": 9732
+      },
+      {
+        "path": "vocab.json",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "bytes": 2776833
+      }
+    ],
+    "file_count": 13,
+    "total_bytes": 8060926626,
+    "fingerprint_sha256": "2ea852284b4461e0f10b81a54f720da7d853b6ef1a7072ba46925255bade06d1"
+  },
+  "sft_starting_point": {
+    "run": "artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_r2_formal",
+    "run_manifest": {
+      "path": "artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_r2_formal/run_manifest.json",
+      "sha256": "f4df855e6cfebfa793d59900c334e87d26b8f34f6f86b4a2cac84d76291b931e"
+    },
+    "adapter": {
+      "path": "artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_r2_formal/final_adapter",
+      "files": [
+        {
+          "path": "adapter_config.json",
+          "sha256": "91f41100779d287ca574377a278b5ce0d93716ff985b367d363a005002b033e4",
+          "bytes": 1147
+        },
+        {
+          "path": "adapter_model.safetensors",
+          "sha256": "d80812b88eb9037630f626c2ce38c0b411bfd33dbe9fbf1ac86ec7a430f98f96",
+          "bytes": 132187888
+        },
+        {
+          "path": "README.md",
+          "sha256": "d59f1486896b6838035ed050808599393edecf6b4b41dc21eff15c27e29ec646",
+          "bytes": 5181
+        }
+      ],
+      "file_count": 3,
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "bias": "none",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ]
+    },
+    "dataset": {
+      "path": "data/sft/released/v2_plus_repair_r2/train.jsonl",
+      "sha256": "f4adc1227ebf5bea3c4efa5f8c1388fb5c8a4e02cd496f54ce923f123098863d",
+      "records": 9495
+    }
+  },
+  "dpo_reference_contract": {
+    "policy_initialization": "merged_phase6_sft",
+    "reference_model": "frozen_merged_phase6_sft",
+    "reference_strategy": "fresh_lora_on_merged_sft_with_adapter_disabled_for_reference",
+    "base_only_reference_allowed": false,
+    "phase_6_adapter_remains_read_only": true
+  },
+  "frozen_evaluation_inputs": {
+    "validation_v2": {
+      "manifest": "data/evaluation/validation_v2/manifest.json",
+      "manifest_sha256": "f1e5b1d65b055914a0aa7d1fce592d1631baec2bf109ed31074fa35518321ba9",
+      "status": "locked",
+      "usage": "not_for_training_or_preference_generation"
+    },
+    "test_v1": {
+      "manifest": "data/evaluation/test_v1/manifest.json",
+      "manifest_sha256": "24696a331eae1658873c3524eaf6598a68278793325b76ea9ad2c05892d4e570",
+      "status": "locked",
+      "usage": "not_for_training_or_phase_7_selection"
+    },
+    "medical_safety_holdout_v1": {
+      "manifest": "data/evaluation/medical_safety_holdout_v1/manifest.json",
+      "manifest_sha256": "a03521fbab7576f0df9f7f602eaf9a562a3afd64853d3a5b6367fdb391943a4f",
+      "status": "locked",
+      "usage": "not_for_training_or_phase_7_selection"
+    }
+  },
+  "executed_actions": {
+    "model_loaded": false,
+    "model_inference": false,
+    "commercial_api_called": false,
+    "preference_data_generated": false,
+    "adapter_merged": false,
+    "dpo_training_started": false
+  },
+  "limitations": [
+    "基础模型 upstream revision 来自本地 Hugging Face 缓存 metadata，并以完整本地文件指纹复核",
+    "Phase 6 run manifest 的 model_revision 字段仍为 unknown，本 manifest 不覆盖该历史字段",
+    "输入冻结不包含模型加载、推理、偏好数据生成、权重合并或 DPO 训练"
+  ]
+}

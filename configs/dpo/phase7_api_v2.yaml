@@ -1,0 +1,82 @@
+format_version: 2
+status: frozen
+provider: deepseek
+endpoint: https://api.deepseek.com
+api_key_env: MODEL_API_KEY
+wire_api: responses
+
+generation:
+  model: deepseek-flash
+  max_tokens: 1600
+  response_format: json_object
+  timeout_seconds: 90
+  max_attempts: 3
+  stream: false
+  stream_options:
+    include_usage: true
+  profiles:
+    medical_behavior:
+      temperature: 0.80
+      top_p: 0.92
+      candidates: 2
+    medical_safety:
+      temperature: 0.65
+      top_p: 0.90
+      candidates: 2
+    general:
+      temperature: 0.95
+      top_p: 0.95
+      candidates: 2
+    instruction_structured:
+      temperature: 0.30
+      top_p: 0.85
+      candidates: 2
+
+judge:
+  model: deepseek-flash
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 600
+  response_format: json_object
+  timeout_seconds: 90
+  max_attempts: 3
+  stream: false
+  stream_options:
+    include_usage: true
+
+pilot:
+  seed: 20260917
+  records: 50
+  call_budget: 250
+  total_token_budget: 800000
+  request_interval_seconds: 1.0
+  task_quotas:
+    train:
+      medical_behavior: 18
+      medical_safety: 9
+      general: 9
+      instruction_structured: 9
+    preference_validation:
+      medical_behavior: 2
+      medical_safety: 1
+      general: 1
+      instruction_structured: 1
+  safety_quotas:
+    train:
+      immediate_emergency: 2
+      outpatient_followup: 1
+      home_observation: 1
+      clarification: 2
+      medication_boundary: 1
+      uncertainty: 2
+    preference_validation:
+      immediate_emergency: 0
+      outpatient_followup: 0
+      home_observation: 0
+      clarification: 1
+      medication_boundary: 0
+      uncertainty: 0
+
+full:
+  call_budget: 4000
+  total_token_budget: 6000000

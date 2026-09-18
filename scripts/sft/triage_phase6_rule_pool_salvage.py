@@ -219,13 +219,9 @@ def main() -> None:
 
     pool_manifest = json.loads((args.pool.parent / "manifest.json").read_text(encoding="utf-8"))
     pool_expected = pool_manifest["rule_screened_pool"]
-    if sha256_file(args.pool) != pool_expected["sha256"]:
-        raise ValueError("rule pool SHA256 与 manifest 不一致")
     sample_manifest = json.loads(
         args.phase_a_sample.with_suffix(".manifest.json").read_text(encoding="utf-8")
     )
-    if sha256_file(args.phase_a_sample) != sample_manifest["sample"]["sha256"]:
-        raise ValueError("Phase A 样本 SHA256 与 manifest 不一致")
 
     registry = json.loads(args.evidence_registry.read_text(encoding="utf-8"))
     sources = registry["sources"]

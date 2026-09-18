@@ -1,0 +1,552 @@
+{
+  "format_version": 1,
+  "phase": "phase_7",
+  "kind": "dpo_style_diagnostic",
+  "status": "completed",
+  "inputs": {
+    "train": "data/dpo/released/phase7_v1/train.jsonl",
+    "preference_validation": "data/dpo/released/phase7_v1/preference_validation.jsonl",
+    "sft_greedy": "artifacts/evaluations/phase_6_public_regression/sft_r2_outputs_greedy_system.jsonl",
+    "dpo_greedy": "artifacts/evaluations/phase_7_public_regression/dpo_outputs_greedy_system.jsonl",
+    "sft_sample": "artifacts/evaluations/phase_6_public_regression/sft_r2_outputs_demo_protocol.jsonl",
+    "dpo_sample": "artifacts/evaluations/phase_7_public_regression/dpo_outputs_demo_protocol.jsonl"
+  },
+  "diagnostics": {
+    "train": {
+      "chosen": {
+        "count": 900,
+        "contains_who": 551,
+        "contains_genju": 585,
+        "starts_genju_who": 323,
+        "contains_consult": 237,
+        "contains_medical_professional": 34,
+        "unique_first_20": 824,
+        "unique_first_20_ratio": 0.9155555555555556,
+        "top_first_20": [
+          [
+            "Based on the provide",
+            32
+          ],
+          [
+            "Based on the passage",
+            5
+          ],
+          [
+            "Based on the paragra",
+            4
+          ],
+          [
+            "是的，根据世界卫生组织（WHO）的资料，",
+            4
+          ],
+          [
+            "根据世界卫生组织（WHO）2024年关于",
+            3
+          ],
+          [
+            "根据世界卫生组织的资料，破伤风康复者不会",
+            3
+          ],
+          [
+            "根据世界卫生组织2023年的资料，多发性",
+            3
+          ],
+          [
+            "I don't have specifi",
+            3
+          ]
+        ],
+        "top_first_sentences": [
+          [
+            "是的，您的理解基本正确",
+            3
+          ],
+          [
+            "结核病是由结核分枝杆菌引起的细菌性传染病",
+            2
+          ],
+          [
+            "是的，您说得对",
+            2
+          ],
+          [
+            "根据世界卫生组织的资料，破伤风康复者不会获得天然免疫，因此仍然存在再次感染的风险",
+            2
+          ],
+          [
+            "不一定",
+            2
+          ],
+          [
+            "您提到的说法基本正确",
+            2
+          ],
+          [
+            "根据世界卫生组织的资料，雅司病患者在接受抗生素治疗后，应在4周时进行复查",
+            1
+          ],
+          [
+            "抗生素滥用会推动耐药细菌增多，核心机制是“选择压力”：当抗生素被误用或滥用（例如在不需要时服用、用错类型）时，对药物敏感的细菌更容易被抑制或杀灭，而本身具有耐药性或能获得耐药性的细菌则更有可能存活并繁殖，从而在群体中逐渐占据优势",
+            1
+          ]
+        ]
+      },
+      "rejected": {
+        "count": 900,
+        "contains_who": 1,
+        "contains_genju": 4,
+        "starts_genju_who": 0,
+        "contains_consult": 19,
+        "contains_medical_professional": 0,
+        "unique_first_20": 899,
+        "unique_first_20_ratio": 0.9988888888888889,
+        "top_first_20": [
+          [
+            "抗生素耐药性让伤寒更容易传播，是因为耐药",
+            2
+          ],
+          [
+            "雅司病用阿奇霉素治疗后，一般需要间隔3个",
+            1
+          ],
+          [
+            "抗生素滥用之所以导致耐药细菌越来越多，是",
+            1
+          ],
+          [
+            "是的，心理治疗和抗抑郁药一起用效果最好，",
+            1
+          ],
+          [
+            "是的，这肯定是哮喘。您的症状完全符合哮喘",
+            1
+          ],
+          [
+            "HPV疫苗可以预防所有类型的HPV，打了",
+            1
+          ],
+          [
+            "因为没处方就能买抗生素，人们就会随便吃、",
+            1
+          ],
+          [
+            "每年全球有2100万十几岁女孩怀孕，其中",
+            1
+          ]
+        ],
+        "top_first_sentences": [
+          [
+            "是的，这个说法完全正确",
+            2
+          ],
+          [
+            "是的，完全正确",
+            2
+          ],
+          [
+            "这个说法有点夸张了",
+            2
+          ],
+          [
+            "雅司病用阿奇霉素治疗后，一般需要间隔3个月复查一次，以确认病原体是否完全清除",
+            1
+          ],
+          [
+            "抗生素滥用之所以导致耐药细菌越来越多，是因为抗生素会直接改变细菌的基因，把普通细菌“训练”成耐药细菌",
+            1
+          ],
+          [
+            "是的，心理治疗和抗抑郁药一起用效果最好，所有抑郁症患者都应该同时接受这两种治疗",
+            1
+          ],
+          [
+            "是的，这肯定是哮喘",
+            1
+          ],
+          [
+            "HPV疫苗可以预防所有类型的HPV，打了疫苗就基本不会得宫颈癌了，所以接种后就不需要再做宫颈癌筛查",
+            1
+          ]
+        ]
+      }
+    },
+    "preference_validation": {
+      "chosen": {
+        "count": 100,
+        "contains_who": 68,
+        "contains_genju": 67,
+        "starts_genju_who": 41,
+        "contains_consult": 27,
+        "contains_medical_professional": 2,
+        "unique_first_20": 99,
+        "unique_first_20_ratio": 0.99,
+        "top_first_20": [
+          [
+            "Based on the provide",
+            2
+          ],
+          [
+            "根据世界卫生组织2025年更新的《紧急情",
+            1
+          ],
+          [
+            "根据世界卫生组织的资料，在多发性硬化症发",
+            1
+          ],
+          [
+            "糖耐量减低（IGT）属于糖尿病前期，确实",
+            1
+          ],
+          [
+            "根据世界卫生组织2025年的资料，全球约",
+            1
+          ],
+          [
+            "根据世界卫生组织的资料，人乳头瘤病毒（H",
+            1
+          ],
+          [
+            "有可能，但需要结合具体环境来判断。血吸虫",
+            1
+          ],
+          [
+            "根据世界卫生组织的资料，随着有效预防、诊",
+            1
+          ]
+        ],
+        "top_first_sentences": [
+          [
+            "根据世界卫生组织2025年更新的《紧急情况下的精神卫生》资料，国际指南建议在紧急情况下开展一系列精神卫生和社会心理支持活动，包括：从社区自助和沟通，到心理急救和临床精神卫生保健",
+            1
+          ],
+          [
+            "根据世界卫生组织的资料，在多发性硬化症发病初期，是可以通过药物治疗来改善或稳定病情的",
+            1
+          ],
+          [
+            "糖耐量减低（IGT）属于糖尿病前期，确实会增加未来发展为2型糖尿病的风险，但世界卫生组织指出这并非不可避免",
+            1
+          ],
+          [
+            "根据世界卫生组织2025年的资料，全球约有6.3亿成年高血压患者（约44%）得到诊断和治疗",
+            1
+          ],
+          [
+            "根据世界卫生组织的资料，人乳头瘤病毒（HPV）是一种常见的性传播感染，几乎所有性活跃人群都会在某个时刻受到感染，但通常没有症状",
+            1
+          ],
+          [
+            "有可能，但需要结合具体环境来判断",
+            1
+          ],
+          [
+            "根据世界卫生组织的资料，随着有效预防、诊断、治疗和护理（包括针对机会性感染的措施）的可及，艾滋病毒感染已成为一种可管理的慢性健康疾患，感染者能够过上健康长寿的生活",
+            1
+          ],
+          [
+            "Here is a simple classification by usual primary environment:\n\nWater:\n- Cruise ship\n- Pirate ship (assuming a real sailing vessel; a fictional flying pirate ship would be different)\n- Submarine\n- Sailboat\n\nLand:\n- Dune buggy\n- Bulldozer\n- Truck\n- Car\n- ATV\n\nNote: some vehicles can operate in more than one environment (for example, amphibious vehicles), but based on the standard meaning of these names, the above grouping is the most natural.",
+            1
+          ]
+        ]
+      },
+      "rejected": {
+        "count": 100,
+        "contains_who": 0,
+        "contains_genju": 3,
+        "starts_genju_who": 0,
+        "contains_consult": 0,
+        "contains_medical_professional": 0,
+        "unique_first_20": 100,
+        "unique_first_20_ratio": 1.0,
+        "top_first_20": [
+          [
+            "国际指南明确要求，在紧急情况下必须对所有",
+            1
+          ],
+          [
+            "多发性硬化症在发病初期完全可以治愈，只要",
+            1
+          ],
+          [
+            "糖耐量减低就是糖尿病前期，你早晚一定会得",
+            1
+          ],
+          [
+            "高血压患者中只有约44%的人得到诊断和治",
+            1
+          ],
+          [
+            "是的，几乎所有有性生活的人都会感染HPV",
+            1
+          ],
+          [
+            "是的，只要在河边游泳或钓鱼就一定会得血吸",
+            1
+          ],
+          [
+            "是的，现在艾滋病毒已经完全可以像高血压、",
+            1
+          ],
+          [
+            "Water: cruise ship, ",
+            1
+          ]
+        ],
+        "top_first_sentences": [
+          [
+            "国际指南明确要求，在紧急情况下必须对所有受灾群众立即进行强制心理干预，每个幸存者都应接受至少6次心理急救会谈，并常规使用抗抑郁药物预防创伤后应激障碍",
+            1
+          ],
+          [
+            "多发性硬化症在发病初期完全可以治愈，只要尽早使用干扰素和免疫抑制剂就能彻底阻止病情进展，不会留下任何后遗症",
+            1
+          ],
+          [
+            "糖耐量减低就是糖尿病前期，你早晚一定会得2型糖尿病，没有例外",
+            1
+          ],
+          [
+            "高血压患者中只有约44%的人得到诊断和治疗，也就是说超过一半的人完全不知道自己有高血压",
+            1
+          ],
+          [
+            "是的，几乎所有有性生活的人都会感染HPV，但不用担心，感染了也肯定不会有症状，而且大多数HPV感染都会自己好，不需要做任何检查或打疫苗",
+            1
+          ],
+          [
+            "是的，只要在河边游泳或钓鱼就一定会得血吸虫病，而且不洗手也会直接导致感染",
+            1
+          ],
+          [
+            "是的，现在艾滋病毒已经完全可以像高血压、糖尿病一样管理了，只要按时吃药就肯定能活到老，和正常人寿命没有区别",
+            1
+          ],
+          [
+            "Water: cruise ship, pirate ship, submarine, sailboat, dune buggy, bulldozer, truck, car, ATV. Land: none. All of these vehicles can travel in water because modern vehicles are designed to be amphibious, so the only correct classification is that every item belongs in the water category.",
+            1
+          ]
+        ]
+      }
+    },
+    "sft_greedy": {
+      "count": 5,
+      "contains_who": 0,
+      "contains_genju": 0,
+      "starts_genju_who": 0,
+      "contains_consult": 0,
+      "contains_medical_professional": 1,
+      "unique_first_20": 5,
+      "unique_first_20_ratio": 1.0,
+      "top_first_20": [
+        [
+          "高血压患者在日常生活中确实需要注意一些事",
+          1
+        ],
+        [
+          "胸痛伴呼吸困难时，自行吃止痛药观察并不合",
+          1
+        ],
+        [
+          "1.每天尽量在相同时间上床睡觉和起床。2",
+          1
+        ],
+        [
+          "天空之所以通常呈现蓝色，是因为大气层中的",
+          1
+        ],
+        [
+          "{   \"cities\": [\"北京\",",
+          1
+        ]
+      ],
+      "top_first_sentences": [
+        [
+          "高血压患者在日常生活中确实需要注意一些事项，以帮助控制血压并减少并发症风险",
+          1
+        ],
+        [
+          "胸痛伴呼吸困难时，自行吃止痛药观察并不合适",
+          1
+        ],
+        [
+          "1.每天尽量在相同时间上床睡觉和起床",
+          1
+        ],
+        [
+          "天空之所以通常呈现蓝色，是因为大气层中的分子和微粒会散射太阳光中的短波长光",
+          1
+        ],
+        [
+          "{\n  \"cities\": [\"北京\", \"上海\"]\n}",
+          1
+        ]
+      ]
+    },
+    "dpo_greedy": {
+      "count": 5,
+      "contains_who": 4,
+      "contains_genju": 5,
+      "starts_genju_who": 4,
+      "contains_consult": 2,
+      "contains_medical_professional": 1,
+      "unique_first_20": 5,
+      "unique_first_20_ratio": 1.0,
+      "top_first_20": [
+        [
+          "根据世界卫生组织的资料，高血压患者在日常",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，胸痛伴呼吸困难是",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，保持规律作息可以",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，天空呈现蓝色主要",
+          1
+        ],
+        [
+          "根据您的要求，北京和上海可以表示为以下J",
+          1
+        ]
+      ],
+      "top_first_sentences": [
+        [
+          "根据世界卫生组织的资料，高血压患者在日常生活中应采取健康的生活方式，包括健康饮食、规律身体活动、限制酒精摄入、避免吸烟、保持健康体重、管理压力以及定期监测血压",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，胸痛伴呼吸困难是需要紧急医疗评估的危险症状，不能仅通过自行服用止痛药来观察",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，保持规律作息可以通过以下方式实现：1）每天尽量在同一时间上床睡觉和起床；2）避免白天长时间小睡；3）保持健康的生活方式，包括均衡饮食、适度运动和限制酒精摄入",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，天空呈现蓝色主要是由于瑞利散射",
+          1
+        ],
+        [
+          "根据您的要求，北京和上海可以表示为以下JSON对象：\n\n{\n  \"cities\": [\"北京\", \"上海\"]\n}\n\n此结构符合您指定的键为\"cities\"、值为包含两个城市名称的字符串数组的要求",
+          1
+        ]
+      ]
+    },
+    "sft_sample": {
+      "count": 5,
+      "contains_who": 0,
+      "contains_genju": 0,
+      "starts_genju_who": 0,
+      "contains_consult": 0,
+      "contains_medical_professional": 1,
+      "unique_first_20": 5,
+      "unique_first_20_ratio": 1.0,
+      "top_first_20": [
+        [
+          "高血压患者在日常生活中确实需要注意一些事",
+          1
+        ],
+        [
+          "胸痛伴随呼吸困难时，自行吃止痛药观察并不",
+          1
+        ],
+        [
+          "1.每天尽量在相同的时间起床和入睡。2.",
+          1
+        ],
+        [
+          "天空之所以呈现蓝色，是因为大气层中的分子",
+          1
+        ],
+        [
+          "{   \"cities\": [\"北京\",",
+          1
+        ]
+      ],
+      "top_first_sentences": [
+        [
+          "高血压患者在日常生活中确实需要注意一些事项，以帮助控制血压",
+          1
+        ],
+        [
+          "胸痛伴随呼吸困难时，自行吃止痛药观察并不合适",
+          1
+        ],
+        [
+          "1.每天尽量在相同的时间起床和入睡",
+          1
+        ],
+        [
+          "天空之所以呈现蓝色，是因为大气层中的分子和微粒会散射太阳光中的短波长光，而短波长光中蓝色光的波长最短，因此蓝色光更容易被散射到各个方向",
+          1
+        ],
+        [
+          "{\n  \"cities\": [\"北京\", \"上海\"]\n}",
+          1
+        ]
+      ]
+    },
+    "dpo_sample": {
+      "count": 5,
+      "contains_who": 4,
+      "contains_genju": 5,
+      "starts_genju_who": 4,
+      "contains_consult": 1,
+      "contains_medical_professional": 1,
+      "unique_first_20": 5,
+      "unique_first_20_ratio": 1.0,
+      "top_first_20": [
+        [
+          "根据世界卫生组织的资料，高血压患者在日常",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，胸痛并伴有呼吸困",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，保持规律作息可以",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，天空呈现蓝色主要",
+          1
+        ],
+        [
+          "根据您的要求，北京和上海可以表示为以下J",
+          1
+        ]
+      ],
+      "top_first_sentences": [
+        [
+          "根据世界卫生组织的资料，高血压患者在日常生活中应注意保持健康的生活方式，包括健康饮食、规律身体活动、限制酒精摄入、避免吸烟，并定期监测血压",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，胸痛并伴有呼吸困难时，不应仅依赖自行服用止痛药来观察，而应尽快寻求医疗评估",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，保持规律作息可以通过以下方式实现：1.每天尽量在相同时间上床和起床；2.避免白天长时间小睡；3.在睡前避免摄入咖啡因、尼古丁和酒精",
+          1
+        ],
+        [
+          "根据世界卫生组织的资料，天空呈现蓝色主要是由于瑞利散射",
+          1
+        ],
+        [
+          "根据您的要求，北京和上海可以表示为以下JSON对象：\n{\n  \"cities\": [\"北京\", \"上海\"]\n}",
+          1
+        ]
+      ]
+    }
+  },
+  "limitations": [
+    "样式规则是描述性诊断，不等于医疗质量或安全性结论",
+    "公开 regression 只有 5 条案例，不能单独估计泛化性能"
+  ]
+}

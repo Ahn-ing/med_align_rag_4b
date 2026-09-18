@@ -38,6 +38,9 @@ data/rag/artifacts/
 data/sft/released/
 data/sft/reviewed/
 data/sft/quarantine/
+# Phase 7 DPO generated data: releases, shards, candidates and quarantine
+# are reproducible run artifacts; keep only code, manifests and aggregate reports.
+data/dpo/
 
 # === 运行产物与报告 ===
 artifacts/reports/phase_4/

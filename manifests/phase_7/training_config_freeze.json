@@ -1,0 +1,70 @@
+{
+  "format_version": 1,
+  "kind": "phase_7_training_config_freeze",
+  "status": "frozen",
+  "created_at_utc": "2026-09-17T10:27:55.560988Z",
+  "phase": "phase_7",
+  "purpose": "dpo_training_contract",
+  "config": {
+    "path": "configs/dpo/qwen3_4b_lora_phase7.yaml",
+    "sha256": "799cbe9b70d7e147027852bf4613a6088584b526a92179c6bf2e92378b4bfa3e",
+    "status": "frozen",
+    "training_allowed": true
+  },
+  "release": {
+    "manifest_path": "data/dpo/released/phase7_v1/manifest.json",
+    "manifest_sha256": "3d371336765a18b43db9ef77bb58440fba46f1cdec8c3096b87fa2e91989ac6d",
+    "train_records": 900,
+    "preference_validation_records": 100
+  },
+  "preflight": {
+    "report_path": "artifacts/reports/phase_7/preflight.json",
+    "report_sha256": "476d776cd7e396319e05053ce7f319d154eda35b8ec97f75960906001537ab3b",
+    "status": "passed",
+    "samples": 4,
+    "reward_margin": 0.0,
+    "max_abs_logit_diff": 0.0,
+    "dpo_loss": 0.6931471805599453
+  },
+  "model": {
+    "merged_sft_path": "artifacts/runs/phase_7/merge_sft",
+    "local_path_parameterized": true,
+    "base_model_id": "Qwen/Qwen3-4B",
+    "base_model_upstream_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "reference_strategy": "fresh_lora_on_merged_sft_with_adapter_disabled_for_reference"
+  },
+  "training": {
+    "beta": 0.1,
+    "learning_rate": 5e-05,
+    "per_device_train_batch_size": 1,
+    "global_batch_size": 16,
+    "gradient_accumulation_steps": 16,
+    "epochs": 1,
+    "expected_optimizer_steps": 57,
+    "warmup_ratio": 0.03,
+    "warmup_steps": 2,
+    "lr_scheduler_type": "cosine",
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "evaluation_steps": 50,
+    "save_steps": 50,
+    "save_total_limit": 2,
+    "seed": 42,
+    "data_seed": 42,
+    "lora": {
+      "rank": 8,
+      "alpha": 16,
+      "dropout": 0.05
+    }
+  },
+  "execution": {
+    "training_authorized": false,
+    "dpo_smoke_started": false,
+    "formal_dpo_started": false
+  },
+  "limitations": [
+    "training_allowed=true 只表示工程配置门禁允许进入训练入口，实际运行仍需用户单独批准",
+    "本 manifest 冻结训练参数和输入哈希，不代表已运行 GPU smoke 或正式 DPO",
+    "Phase 6 run manifest 的 model_revision 字段仍为 unknown，本 manifest 不回改该历史字段"
+  ]
+}

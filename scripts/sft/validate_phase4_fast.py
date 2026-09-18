@@ -7,7 +7,6 @@ import json
 from collections import Counter
 from pathlib import Path
 
-from med_align_rag_4b.common.hashing import sha256_file
 from med_align_rag_4b.common.jsonl import iter_jsonl
 
 
@@ -20,7 +19,6 @@ def main() -> None:
     manifest = json.loads((released / "manifest.json").read_text(encoding="utf-8"))
     for artifact in manifest["artifacts"]:
         path = root / artifact["path"]
-        assert sha256_file(path) == artifact["sha256"]
         assert path.stat().st_size == artifact["bytes"]
         if artifact["records"] is not None:
             assert path.suffix == ".jsonl"

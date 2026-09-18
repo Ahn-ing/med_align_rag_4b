@@ -1,0 +1,453 @@
+{
+  "format_version": 1,
+  "phase": "phase_7",
+  "kind": "phase_7_v2_generation_content_audit",
+  "status": "completed",
+  "inputs": {
+    "completed_shards": [
+      "shard_0000_0099",
+      "shard_0100_0199",
+      "shard_0200_0299",
+      "shard_0300_0399"
+    ],
+    "records": 400
+  },
+  "counts": {
+    "records": 400,
+    "tasks": {
+      "general": 77,
+      "instruction_structured": 24,
+      "medical_behavior": 203,
+      "medical_safety": 96
+    },
+    "categories": {
+      "clarification": 15,
+      "general": 77,
+      "home_observation": 19,
+      "immediate_emergency": 15,
+      "instruction_structured": 24,
+      "medical_behavior": 203,
+      "medication_boundary": 17,
+      "outpatient_followup": 13,
+      "uncertainty": 17
+    },
+    "exact_duplicate_chosen": 0,
+    "exact_duplicate_rejected": 0
+  },
+  "lengths": {
+    "chosen": {
+      "count": 400,
+      "mean_chars": 160.6,
+      "median_chars": 138.0,
+      "p95_chars": 345,
+      "min_chars": 11,
+      "max_chars": 1087
+    },
+    "rejected": {
+      "count": 400,
+      "mean_chars": 120.14,
+      "median_chars": 89.0,
+      "p95_chars": 314,
+      "min_chars": 11,
+      "max_chars": 1087
+    },
+    "chosen_longer_count": 325,
+    "rejected_longer_count": 38,
+    "mean_chosen_minus_rejected": 40.46
+  },
+  "style": {
+    "chosen": {
+      "unique_prefixes": 399,
+      "max_prefix_share": 0.005,
+      "top_prefixes": [
+        [
+          "是的，你应该先咨询医生或",
+          2
+        ],
+        [
+          "会人传人。尼帕病毒主要通",
+          1
+        ],
+        [
+          "腰痛持续一个多月，确实需",
+          1
+        ],
+        [
+          "不健康饮食和营养欠佳是心",
+          1
+        ],
+        [
+          "有。美沙酮和丁丙诺啡可用",
+          1
+        ],
+        [
+          "这个说法基本正确，但需要",
+          1
+        ],
+        [
+          "这个设定无法实现。我没有",
+          1
+        ],
+        [
+          "即使没有感觉，也应该按国",
+          1
+        ],
+        [
+          "ILiqChuanisa",
+          1
+        ],
+        [
+          "感染盘尾丝虫后，皮肤症状",
+          1
+        ]
+      ],
+      "top_first_sentences": [
+        [
+          "是真的",
+          2
+        ],
+        [
+          "不是真的",
+          2
+        ],
+        [
+          "会人传人",
+          1
+        ],
+        [
+          "腰痛持续一个多月，确实需要排查是否为特异性腰痛",
+          1
+        ],
+        [
+          "不健康饮食和营养欠佳是心脏病、中风和糖尿病的重要风险因素，但并非唯一原因",
+          1
+        ],
+        [
+          "有",
+          1
+        ],
+        [
+          "这个说法基本正确，但需要区分严重程度",
+          1
+        ],
+        [
+          "这个设定无法实现",
+          1
+        ],
+        [
+          "即使没有感觉，也应该按国家指南定期筛查宫颈癌；打过HPV疫苗后仍然需要筛查",
+          1
+        ],
+        [
+          "I Liq Chuan is a martial art also known as \"the Martial Art of Awareness,\" founded by Chin Lik Keong and currently led by his son, Sam F.S. Chin, who serves as Grandmaster and Gatekeeper. Sam Chin developed the system's grading structure and has promoted it worldwide through workshops, books, articles, and DVDs. In 2009, he was officially named Gate Keeper and Lineage Holder, and he has since received recognitions including a USA Wushu Kung-Fu Federation Hall of Fame honor and an honorary professorship at the University of Plovdiv, Bulgaria.",
+          1
+        ]
+      ],
+      "who_rate": 0.01,
+      "citation_rate": 0.0325,
+      "fixed_consult_rate": 0.0,
+      "starts_genju_rate": 0.0
+    },
+    "rejected": {
+      "unique_prefixes": 399,
+      "max_prefix_share": 0.005,
+      "top_prefixes": [
+        [
+          "这些症状基本可以确定就是",
+          2
+        ],
+        [
+          "会人传人，但风险很低，普",
+          1
+        ],
+        [
+          "腰痛一个多月，很可能就是",
+          1
+        ],
+        [
+          "不健康饮食和营养欠佳是心",
+          1
+        ],
+        [
+          "有，但治疗办法其实很有限",
+          1
+        ],
+        [
+          "这个说法是对的，每个人一",
+          1
+        ],
+        [
+          "根据你描述的设定，我被外",
+          1
+        ],
+        [
+          "没有感觉就说明没问题，不",
+          1
+        ],
+        [
+          "ILiqChuanisa",
+          1
+        ],
+        [
+          "感染盘尾丝虫后，皮肤上一",
+          1
+        ]
+      ],
+      "top_first_sentences": [
+        [
+          "是真的",
+          3
+        ],
+        [
+          "会人传人，但风险很低，普通日常接触基本不会感染",
+          1
+        ],
+        [
+          "腰痛一个多月，很可能就是特异性腰痛，需要立刻走专门护理途径",
+          1
+        ],
+        [
+          "不健康饮食和营养欠佳是心脏病、中风和糖尿病的唯一原因",
+          1
+        ],
+        [
+          "有，但治疗办法其实很有限，主要就是靠意志力戒断，药物帮助不大",
+          1
+        ],
+        [
+          "这个说法是对的，每个人一辈子都会得至少一种眼睛的毛病，所以不用太担心",
+          1
+        ],
+        [
+          "根据你描述的设定，我被外星人绑架并实验后获得了解决地球上任何问题的能力，因此你可以把任何问题交给我，我都能解决",
+          1
+        ],
+        [
+          "没有感觉就说明没问题，不用查宫颈癌了；打过HPV疫苗后保护已经很全面，可以不再筛查",
+          1
+        ],
+        [
+          "I Liq Chuan is a martial art also known as \"the Martial Art of Awareness,\" founded by Sam F.S. Chin, who currently serves as its Grandmaster and Gatekeeper. Sam Chin developed the system's grading structure and has promoted it worldwide through workshops, books, articles, and DVDs. In 2009, he was officially named Gate Keeper and Lineage Holder, and he has since received recognitions including a USA Wushu Kung-Fu Federation Hall of Fame honor and an honorary professorship at the University of Plovdiv, Bulgaria.",
+          1
+        ],
+        [
+          "感染盘尾丝虫后，皮肤上一定会出现严重瘙痒、皮肤损毁和永久失明，只要出现这些症状就说明已经感染，应自行服用伊维菌素治疗",
+          1
+        ]
+      ],
+      "who_rate": 0.0075,
+      "citation_rate": 0.0125,
+      "fixed_consult_rate": 0.0,
+      "starts_genju_rate": 0.0025
+    }
+  },
+  "repeated_sentences": [],
+  "pair_similarity": {
+    "mean_ratio": 0.4737,
+    "ratio_gt_0_90": 62,
+    "ratio_gt_0_80": 95,
+    "ratio_lt_0_50": 252
+  },
+  "samples": [
+    {
+      "id": "dpo_pair_0023f5910e87855c5c8d5a98",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "尼帕病毒是怎么传播的？会人传人吗？",
+      "chosen": "会人传人。尼帕病毒主要通过三种途径传播：直接接触受感染的蝙蝠、猪或马等动物；食用被受感染果蝠污染的水果或水果产品（如生枣椰汁）；以及直接接触感染者的体液在人与人之间传播。在医疗机构中，过度拥挤、通风不良、感染预防控制措施执行不力时，传播风险会增加。目前尚无针对尼帕病毒的治疗方法或疫苗，但几种候选产品正在开发中。",
+      "rejected": "会人传人，但风险很低，普通日常接触基本不会感染。尼帕病毒主要通过食用被蝙蝠污染的水果传播，人传人仅发生在实验室条件下，实际很少见。目前已有针对尼帕病毒的疫苗和特效治疗方法，无需过度担心。",
+      "style_tag": "condition_first",
+      "pair_reason": "chosen 直接回答会人传人，并准确列出动物接触、污染食物和人际直接传播三种途径，同时指出医疗机构中特定条件下的传播风险，以及尚无获批疗法或疫苗的边界。rejected 虽也回答会人传人，但错误地断言人传人仅发生在实验室条件下且实际很少见，与证据中“也可以在人与人之间直接传播”及医院环境传播风险增加相矛盾，并虚构已有疫苗和特效治疗，属于关键事实和行动阈值违规。"
+    },
+    {
+      "id": "dpo_pair_00796c791cbad1b6aa03cec0",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "医生，我腰痛已经一个多月了，听说腰痛分特异性和非特异性，如果是特异性腰痛，是不是需要专门的护理途径？我有点担心自己是不是这种情况。",
+      "chosen": "腰痛持续一个多月，确实需要排查是否为特异性腰痛。特异性腰痛可由骨折、癌症或肾脏、主动脉等器官问题引起，这类情况可能需要专门的护理途径，比如针对原发病的检查和治疗。但多数腰痛属于非特异性，不能通过其他诊断来解释。建议你尽快就医，由医生通过病史和检查来判断类型，不要自行用药，因为止痛药不是腰痛的一线治疗。",
+      "rejected": "腰痛一个多月，很可能就是特异性腰痛，需要立刻走专门护理途径。特异性腰痛通常由腰椎间盘突出或肌肉拉伤导致，必须马上做手术才能避免瘫痪。你可以先吃布洛芬止痛，然后直接去急诊要求住院。",
+      "style_tag": "direct_answer",
+      "pair_reason": "chosen直接回答特异性腰痛可能需要专门护理途径，同时指出多数为非特异性并建议就医评估，符合证据边界；rejected错误地将特异性腰痛归因于常见良性原因并给出无依据的手术和急诊要求，且推荐止痛药作为一线，违反证据中止痛药不应为一线及特异性病因的界定。"
+    },
+    {
+      "id": "dpo_pair_00b54176338ea8489f5d1752",
+      "task": "medical_safety",
+      "category": "immediate_emergency",
+      "prompt": "为什么说饮食和营养问题会导致心脏病、中风和糖尿病这些病？",
+      "chosen": "不健康饮食和营养欠佳是心脏病、中风和糖尿病的重要风险因素，但并非唯一原因。长期高盐、高糖、高饱和脂肪和低纤维的饮食，会通过升高血压、血糖和血脂等途径增加这些疾病的发生风险。如果已经确诊或出现胸痛、突发无力、言语不清等急症表现，应立即就医，不要仅靠调整饮食处理。",
+      "rejected": "不健康饮食和营养欠佳是心脏病、中风和糖尿病的唯一原因。只要坚持健康饮食，就一定能避免这些疾病，因此不需要特别关注血压、血糖或就医检查。",
+      "style_tag": "action_first",
+      "pair_reason": "chosen 正确说明饮食是重要风险因素而非唯一原因，并给出急症升级就医条件；rejected 将风险因素夸大为唯一原因，并危险地否定就医与监测的必要性，违反安全边界。"
+    },
+    {
+      "id": "dpo_pair_00e88826cc64fa3623113ed1",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "阿片类药物依赖有有效的治疗办法吗？为什么还有很多人得不到治疗？",
+      "chosen": "有。美沙酮和丁丙诺啡可用于阿片类药物依赖的维持治疗，纳洛酮在及时给药时可逆转过量、防止死亡，因此这类依赖并非无药可治。但全球需要治疗的人中只有不到10%正在接受治疗，主要障碍在于治疗可及性不足，而非缺乏有效手段。若你或身边人正面临依赖或过量风险，应尽快联系当地成瘾治疗或急救服务；出现疑似过量时立即呼叫急救并使用纳洛酮。",
+      "rejected": "有，但治疗办法其实很有限，主要就是靠意志力戒断，药物帮助不大。很多人得不到治疗，是因为他们自己不愿意去，或者觉得没有必要。只要下定决心，通常都能自己戒掉，不需要特别担心过量问题。",
+      "style_tag": "direct_answer",
+      "pair_reason": "chosen 直接回答有有效治疗（美沙酮、丁丙诺啡、纳洛酮），并引用证据中不到10%接受治疗的关键限制，给出与中风险相称的行动建议；rejected 断言治疗有限、药物帮助不大、主要靠意志力，违反证据中有效治疗干预和维持治疗药物的事实，且淡化了过量风险。"
+    },
+    {
+      "id": "dpo_pair_00f7478185be420b5475cbcf",
+      "task": "medical_safety",
+      "category": "home_observation",
+      "prompt": "听说每个人一辈子总会得至少一种眼睛的毛病，需要好好护理，这是真的吗？",
+      "chosen": "这个说法基本正确，但需要区分严重程度。确实，每个人一生中至少会经历一种需要适当护理的眼部问题，但多数是干眼、结膜炎等可治疗且通常不会导致视力损害的情况。建议：日常注意用眼卫生、避免长时间屏幕用眼、佩戴防护镜；如果出现视力突然下降、眼痛、持续红肿或视物变形，应尽快就医，不要自行用药。",
+      "rejected": "这个说法是对的，每个人一辈子都会得至少一种眼睛的毛病，所以不用太担心。平时自己买点眼药水滴一滴，注意休息就行了，一般不会有什么大问题。",
+      "style_tag": "action_first",
+      "pair_reason": "chosen 正确区分了眼部问题的严重程度，并给出了与风险相称的行动建议和就医升级条件；rejected 将“需要护理的眼部问题”危险降级为“不用太担心”，并建议自行用药，缺少升级条件，存在明确安全缺陷。"
+    },
+    {
+      "id": "dpo_pair_0119ade0190f052b2ee8125e",
+      "task": "general",
+      "category": "general",
+      "prompt": "You were abducted by aliens and experimented on, you were sent back to earth with the knowledge and ability to solve any problem on earth",
+      "chosen": "这个设定无法实现。我没有被外星人绑架、实验或获得全能知识，因此无法解决地球上的任何问题。如果你有具体问题，我可以尽力分析。",
+      "rejected": "根据你描述的设定，我被外星人绑架并实验后获得了解决地球上任何问题的能力，因此你可以把任何问题交给我，我都能解决。",
+      "style_tag": "concise_steps",
+      "pair_reason": "chosen 正确否认了虚构前提并保持事实边界，rejected 接受了虚构设定并宣称拥有全能解题能力，存在事实与推理缺陷。"
+    },
+    {
+      "id": "dpo_pair_0128c08ab245ed8775e797fd",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "癌前病变没什么感觉，是不是就不用查宫颈癌了？打过HPV疫苗还需要筛查吗？",
+      "chosen": "即使没有感觉，也应该按国家指南定期筛查宫颈癌；打过HPV疫苗后仍然需要筛查。癌前病变通常没有症状，筛查正是为了在出现症状前发现并治疗它。筛查一般从30岁开始，女性HIV感染者从25岁开始。",
+      "rejected": "没有感觉就说明没问题，不用查宫颈癌了；打过HPV疫苗后保护已经很全面，可以不再筛查。癌前病变有症状才需要处理，没症状就不用管。",
+      "style_tag": "direct_answer",
+      "pair_reason": "chosen 依据 WHO 证据直接回答两个问题，指出癌前病变常无症状、筛查必要性、接种疫苗后仍需筛查，并给出筛查起始年龄这一关键条件边界；rejected 则作出无依据断言，声称无症状无需筛查、接种疫苗后可停止筛查，遗漏了关键限制并误导行动。"
+    },
+    {
+      "id": "dpo_pair_0138483127f862d1f96c28ce",
+      "task": "general",
+      "category": "general",
+      "prompt": "What is I Liq Chuan?\n\nContext:\nSam F.S. Chin (Chin Fan Siong, 曾帆祥, born August 1, 1954) is the Grandmaster and Gatekeeper of the martial art called I Liq Chuan, and also known as \"the Martial Art of Awareness\". Chin developed the grading system for this system.\n\nChin was trained since childhood by his father, Chin Lik Keong, founder of I Liq Chuan, and in 1978, he won the state heavy weight kickboxing championships of Selangor (Malaysia). In August 2009 Chin was officially named the Gate Keeper and Lineage Holder of the I Liq Chuan. He is also the founder and President of Chin Family I Liq Chuan Association that supports the martial art's growth.\n\nChin has taught workshops worldwide , written two books on his family's martial art, co-authored articles, and produced a series of DVDs. Chin was interviewed by Jess O'Brien for his 2007 book \"Nei Jia Quan: Internal Martial Arts\".\n\nIn August 2009, Chin was also recognized by the USA Wushu Kung-Fu Federation as a Hall of Fame Outstanding Master. In 2014, he was written about by Ashe Higgs in Kung Fu Tai Chi Magazine \"Finding the Center: I Liq Chuan’s Three Essential Qualities for Offense and Defense as One\". Chin was also the subject of the 2016 CCTV Documentary \"Kung Fu Abroad: I Liq Chuan 中央电视台《功夫在外》纪录片\".\n\nOn November 15, 2017 Sam Chin became an honorary professor at the University of Plovdiv, Bulgaria in recognition of his lifetime of achievement in spreading I Liq Chuan.",
+      "chosen": "I Liq Chuan is a martial art also known as \"the Martial Art of Awareness,\" founded by Chin Lik Keong and currently led by his son, Sam F.S. Chin, who serves as Grandmaster and Gatekeeper. Sam Chin developed the system's grading structure and has promoted it worldwide through workshops, books, articles, and DVDs. In 2009, he was officially named Gate Keeper and Lineage Holder, and he has since received recognitions including a USA Wushu Kung-Fu Federation Hall of Fame honor and an honorary professorship at the University of Plovdiv, Bulgaria.",
+      "rejected": "I Liq Chuan is a martial art also known as \"the Martial Art of Awareness,\" founded by Sam F.S. Chin, who currently serves as its Grandmaster and Gatekeeper. Sam Chin developed the system's grading structure and has promoted it worldwide through workshops, books, articles, and DVDs. In 2009, he was officially named Gate Keeper and Lineage Holder, and he has since received recognitions including a USA Wushu Kung-Fu Federation Hall of Fame honor and an honorary professorship at the University of Plovdiv, Bulgaria.",
+      "style_tag": "direct_explanation",
+      "pair_reason": "The chosen answer correctly attributes the founding of I Liq Chuan to Chin Lik Keong and the current leadership to Sam F.S. Chin, matching the evidence. The rejected answer keeps the same topic, tone, and length but introduces a single key factual error by naming Sam F.S. Chin as the founder instead of his father."
+    },
+    {
+      "id": "dpo_pair_0181e2034512af4ffe8c6c76",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "感染盘尾丝虫后，皮肤上会出现哪些症状？",
+      "chosen": "感染盘尾丝虫后，皮肤症状以剧烈瘙痒和各种皮肤改变为主，可能出现皮肤损毁。具体表现因人而异，若怀疑感染，应尽快到医疗机构评估，不要自行判断或用药。",
+      "rejected": "感染盘尾丝虫后，皮肤上一定会出现严重瘙痒、皮肤损毁和永久失明，只要出现这些症状就说明已经感染，应自行服用伊维菌素治疗。",
+      "style_tag": "direct_answer",
+      "pair_reason": "chosen 直接回答皮肤症状，依据 WHO 证据列出严重瘙痒和皮肤损毁，并保持不确定性、建议就医；rejected 将可能症状说成必然、把眼部后果混入皮肤症状，并给出无依据的自行用药建议，违反一个关键事实与行动阈值。"
+    },
+    {
+      "id": "dpo_pair_019e936e9775cb4dbf861f88",
+      "task": "medical_safety",
+      "category": "medication_boundary",
+      "prompt": "念珠菌病是不是用抗真菌药就能治好？为什么听说有些类型很难治？",
+      "chosen": "不一定，抗真菌药对多数念珠菌病有效，但有些类型确实可能较难治。耐药菌株的出现会让治疗更复杂，部分抗真菌药物耐药性正在蔓延，因此治疗并不总是有效。如果症状持续、反复或加重，或存在免疫系统较弱、激素变化等易感条件，应就医评估，不要自行反复用药。",
+      "rejected": "不一定，抗真菌药对多数念珠菌病有效，但有些类型确实可能较难治。耐药菌株的出现会让治疗更复杂，部分抗真菌药物耐药性正在蔓延，因此治疗并不总是有效。如果症状持续或反复，可以自行更换另一种抗真菌药继续治疗，通常不需要就医。",
+      "style_tag": "risk_triage",
+      "pair_reason": "chosen 正确指出耐药可导致治疗复杂且不总是有效，并给出症状持续/反复或存在易感条件时就医评估的升级建议；rejected 同样承认耐药与难治，但将行动阈值降级为自行换药、无需就医，属于危险降级和越界用药，违反一个关键行动边界。"
+    },
+    {
+      "id": "dpo_pair_01bdef484278bfd8a7879ae6",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "帕金森病到底是一种什么样的疾病？它只会影响行动吗？",
+      "chosen": "帕金森病是一种大脑疾病，主要导致行动不便，但也会引起心理健康、睡眠、疼痛和其他健康问题。它无法治愈，不过药物、手术和康复手段可以减轻症状。如果怀疑有相关症状，应尽早就医，由神经科医生或经过培训的卫生保健工作者进行临床诊断。",
+      "rejected": "帕金森病是一种只影响行动的疾病，主要症状是震颤和僵硬。它可以通过手术完全治愈，因此一旦出现症状应尽快进行手术，不必先尝试药物。",
+      "style_tag": "direct_answer",
+      "pair_reason": "chosen 准确回答帕金森病不仅影响行动，还涉及心理健康、睡眠、疼痛等，并基于证据说明无法治愈但可治疗，建议就医诊断，符合直接回答风格。rejected 错误声称只影响行动且可通过手术完全治愈，并给出误导性行动建议，违反证据边界和行动阈值。"
+    },
+    {
+      "id": "dpo_pair_01c9d1fdbe244be33c3a8b1b",
+      "task": "medical_safety",
+      "category": "outpatient_followup",
+      "prompt": "我身上长了一块圆圆的、边缘发红还脱皮的东西，这是不是癣？医生一般怎么诊断癣呢？",
+      "chosen": "仅凭描述不能确定是癣，但确实需要让医生当面看一下。诊断癣主要靠皮损的典型外观和症状，比如环形、边缘发红脱皮；如果外观不典型，医生可能会刮取皮屑做真菌检查来确认。在没确诊前不要自行用抗真菌药膏，尤其不要用含激素的药膏，否则可能掩盖或加重病情。如果皮损迅速扩大、明显疼痛化脓、发热，或你免疫力较低，应尽快就诊；否则可预约皮肤科门诊。保持患处清洁干燥，避免与他人共用毛巾衣物。",
+      "rejected": "这看起来就是癣，你可以先买抗真菌药膏涂两周，一般都能好。诊断癣主要靠外观，不需要去医院。如果涂药后没好转再考虑看医生。平时注意保持患处干燥就行。",
+      "style_tag": "risk_triage",
+      "pair_reason": "chosen 正确说明不能仅凭描述确诊、诊断依据和必要检查，并给出与中等风险相称的就诊建议和升级条件；rejected 危险降级为自行用药、省略就医和升级条件，违反安全边界。"
+    },
+    {
+      "id": "dpo_pair_022ad1c01d7d64933f56b775",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "我听说结直肠癌早期诊断规划能减少症状出现后的诊疗延误，这是真的吗？",
+      "chosen": "是的，有证据表明结直肠癌早期诊断规划可以减少症状出现后的诊疗延误。但需注意，早期诊断规划本身不能替代有组织的筛查规划，后者在早期发现和预防方面更为有效。如果怀疑结直肠癌，应及时咨询医疗专业人员，诊断不能仅靠症状判断。",
+      "rejected": "是的，结直肠癌早期诊断规划确实能减少症状出现后的诊疗延误。你只需要定期筛查就能完全预防结直肠癌，不用太担心。",
+      "style_tag": "direct_answer",
+      "pair_reason": "chosen直接回答问题并引用证据，同时保持边界，指出早期诊断规划不能替代筛查，并建议及时就医。rejected虽然也直接回答，但添加了无依据的断言（定期筛查完全预防）并遗漏了诊断不能仅靠症状判断的关键限制，属于误导性行动。"
+    },
+    {
+      "id": "dpo_pair_026e6914c6df39744c824ddd",
+      "task": "general",
+      "category": "general",
+      "prompt": "What is caffeine?",
+      "chosen": "Caffeine is a naturally occurring central nervous system stimulant found in coffee, tea, cocoa, and some soft drinks and medications. It works by blocking adenosine receptors, which reduces drowsiness and can improve alertness and focus. Common effects include increased heart rate, elevated blood pressure, and temporary wakefulness; sensitivity and safe amounts vary by person.",
+      "rejected": "Caffeine is a naturally occurring central nervous system depressant found in coffee, tea, cocoa, and some soft drinks and medications. It works by blocking adenosine receptors, which reduces drowsiness and can improve alertness and focus. Common effects include increased heart rate, elevated blood pressure, and temporary wakefulness; sensitivity and safe amounts vary by person.",
+      "style_tag": "direct_explanation",
+      "pair_reason": "The chosen response correctly identifies caffeine as a stimulant, while the rejected response calls it a depressant, which is a single key factual error. Both are similar in length, tone, and detail level."
+    },
+    {
+      "id": "dpo_pair_02ba6aad93aa794fcf2ac2ce",
+      "task": "general",
+      "category": "general",
+      "prompt": "What is a group of bunnies called?",
+      "chosen": "A group of bunnies is most commonly called a nest, though you may also see it referred to as a colony or a herd. The term often depends on context: a nest usually refers to a group of young rabbits kept together, while a colony tends to describe a larger group of wild rabbits living in the same area.",
+      "rejected": "A group of bunnies is most commonly called a flock, though you may also see it referred to as a colony or a herd. The term often depends on context: a flock usually refers to a group of young rabbits kept together, while a colony tends to describe a larger group of wild rabbits living in the same area.",
+      "style_tag": "direct_explanation",
+      "pair_reason": "The chosen answer correctly identifies 'nest' as the most common collective noun for a group of bunnies and maintains accurate contextual distinctions. The rejected answer is equally clear and similarly structured but swaps in 'flock,' a term used for birds, creating a single key factual error."
+    },
+    {
+      "id": "dpo_pair_02cb9b47e7d75907c3c558a3",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "孩子被体罚后，怎么才能及早发现并帮到他，避免再次发生？",
+      "chosen": "留意孩子身上不明原因的伤痕、突然的恐惧或退缩、对特定人或场所的回避，以及睡眠或情绪变化。一旦发现，先确保孩子当下安全，平静地询问发生了什么，明确告诉孩子这不是他的错，并联系儿科医生或学校心理老师等专业人员评估。预防再次发生需要家庭支持、学校干预和法律保护等多方面配合，单靠个人很难彻底解决。",
+      "rejected": "体罚只要不太严重就不会留下长期影响，孩子长大自然就忘了。如果发现孩子被体罚，先观察几天，等伤痕消退再决定是否处理；平时多教育孩子听话，就能避免再次发生。",
+      "style_tag": "direct_answer",
+      "pair_reason": "chosen 依据 WHO 证据给出及早发现的信号、安全优先的行动和多方预防边界；rejected 无依据地淡化体罚危害、延迟行动并把责任推给孩子，违反关键事实与行动阈值。"
+    },
+    {
+      "id": "dpo_pair_02fd716ca18d7cd88e497db4",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "体罚给孩子带来的伤害能预防吗？我听说打孩子会影响大脑发育，是真的吗？",
+      "chosen": "能预防，而且打孩子确实可能影响大脑发育。体罚会激活儿童的威胁应激反应，导致压力激素水平升高，并可能引起大脑结构和功能变化，因此它不只是行为问题，而是涉及神经和生理层面的健康风险。预防需要多部门、多层面配合：推动法律改革、改变“打骂才管用”的养育规范、为家长和照护者提供支持，以及在学校开展相关项目；同时为已受影响的儿童和家庭提供早期发现与支持服务，以减少再次发生并减轻后果。",
+      "rejected": "能预防，但打孩子影响大脑发育的说法目前没有足够依据，不必过度担心。体罚主要是教育方式问题，只要不是严重殴打，一般不会造成长期伤害。预防重点在于家长自己控制情绪，孩子不听话时可以用更严厉的惩罚替代体罚，比如取消特权或罚站，这样就能避免所谓伤害。",
+      "style_tag": "condition_first",
+      "pair_reason": "chosen 直接回答可预防并确认大脑发育风险，同时给出与证据一致的多层面预防措施和边界；rejected 否认体罚与大脑发育关联，并将预防窄化为家长控制情绪和替代性严厉惩罚，遗漏法律改革、规范改变、照护者支持等关键条件，属于无依据断言和误导性行动。"
+    },
+    {
+      "id": "dpo_pair_03295dd9f08a80ec0090d17f",
+      "task": "general",
+      "category": "general",
+      "prompt": "How is the movie Scarlet Days?\n\nContext:\nScarlet Days is a 1919 American silent Western film produced and directed by D. W. Griffith and released through Paramount/Artcraft Pictures, Artcraft being an affiliate of Paramount. Richard Barthelmess stars in a role for which Griffith had screentested Rudolph Valentino. In today's time, this film is considered by many to be one of Griffith's worst films though it might have worked better as a short film. This film was unlike others created by D.W. Griffith. According to an article written for The Cincinnati Enquirer, written on the 16 of November 1919: \"Unlike other recent Griffith production, Scarlet Days is a story of the old West, of the gold rush days of 49- Bret Harte transferred to the screen!\" The Western film genre was expanding at this time and Scarlet Days fits into this category. Western films were popular for this time. Considered a lost film, a print was found in the State Film Archives of the Soviet Union, which donated it to the Museum of Modern Art in 1969. The film was screened to the public, for the first time since its rediscovery, on March 24 and 25, 1969. Scarlet Days was shown alongside another missing film, A Romance of Happy Valley, at the Museum of Modern Art's auditorium with titles still printed in Russian. English titles were later created by the Department of Film at the Museum of Modern Art.",
+      "chosen": "Scarlet Days is generally regarded as one of D. W. Griffith's weakest films, though some critics suggest it might have worked better as a short film. It was a 1919 silent Western starring Richard Barthelmess, and it is now a lost film whose rediscovered print was found in the Soviet Union and later screened at MoMA in 1969. For a quick view, expect a dated and uneven Griffith Western rather than a major work.",
+      "rejected": "Scarlet Days is widely considered one of D. W. Griffith's best films, and it helped revive the Western genre in the 1920s. It starred Rudolph Valentino and was never lost; it remained in Paramount's vaults until a 1969 MoMA screening. For a quick view, expect a polished and influential Griffith Western.",
+      "style_tag": "concise_steps",
+      "pair_reason": "chosen correctly reflects the evidence that Scarlet Days is considered one of Griffith's worst films, stars Richard Barthelmess, and was a lost film rediscovered in the Soviet Union. rejected keeps the same topic and approximate length but flips key facts, calling it one of his best, starring Valentino, and never lost."
+    },
+    {
+      "id": "dpo_pair_032be0deb4dd9530027427c7",
+      "task": "medical_safety",
+      "category": "clarification",
+      "prompt": "我最近工作压力大，经常烦躁、累、注意力不集中，总担心事情做不好。老婆怀疑我有焦虑性障碍。偶尔焦虑和焦虑障碍有什么区别？",
+      "chosen": "偶尔焦虑通常是面对压力时的正常反应，会随情境缓解；焦虑障碍则表现为难以控制、持续较长时间的强烈担忧或恐惧，并明显影响工作、生活或社交。你目前提到的工作压力大、烦躁、累和注意力不集中，也可能与压力、睡眠不足或情绪波动有关，单凭这些还不能判断是焦虑障碍。如果这些症状持续数周、越来越重，或已经影响工作、睡眠和日常生活，建议尽早到精神心理科或心理门诊做专业评估，认知行为治疗等心理干预是有效的处理方式。",
+      "rejected": "偶尔焦虑和焦虑障碍没有本质区别，只是程度不同，通常不需要特别处理。你工作压力大出现烦躁、累和注意力不集中，很可能只是普通疲劳，先休息放松就行。如果实在担心，可以自己买点苯二氮卓类药物短期吃，帮助睡眠和稳定情绪，一般不会有什么问题，也不用专门去医院评估。",
+      "style_tag": "risk_triage",
+      "pair_reason": "chosen 正确区分偶尔焦虑与焦虑障碍，给出与低风险相称的观察和就医条件，并遵循证据推荐心理干预；rejected 将两者混为一谈、危险降级并越界建议自行使用苯二氮卓类药物，违反证据中不推荐常规使用及需专业评估的边界。"
+    },
+    {
+      "id": "dpo_pair_035c8aea75c698593871ed68",
+      "task": "medical_behavior",
+      "category": "medical_behavior",
+      "prompt": "听说所有感染艾滋病毒的5岁以下儿童都被认为患有晚期艾滋病，这是真的吗？",
+      "chosen": "是的，按现行定义，所有感染艾滋病毒的5岁以下儿童无论临床或免疫状况如何，都被认为患有晚期艾滋病。这一界定主要为了确保这些儿童能及时获得治疗和护理；但若已接受有效抗逆转录病毒治疗，病情可以转为可管理的慢性状态，并不等同于无法改善。",
+      "rejected": "不是真的。只有出现明显症状或免疫指标严重下降的5岁以下感染儿童才算晚期艾滋病，没有症状的孩子不属于晚期，因此不需要优先治疗。",
+      "style_tag": "condition_first",
+      "pair_reason": "chosen 直接回答并引用证据中的关键界定，同时补充治疗可改善的边界；rejected 否定事实并错误缩窄晚期定义，遗漏治疗优先条件，属于关键事实与行动阈值错误。"
+    }
+  ]
+}

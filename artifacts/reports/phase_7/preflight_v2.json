@@ -1,0 +1,59 @@
+{
+  "format_version": 1,
+  "phase": "phase_7",
+  "status": "passed",
+  "created_at_utc": "2026-09-18T15:37:09.937172Z",
+  "device": "cuda",
+  "dtype": "bfloat16",
+  "samples": [
+    {
+      "id": "dpo_pair_0023f5910e87855c5c8d5a98",
+      "policy_chosen_logp": -184.05772399902344,
+      "reference_chosen_logp": -184.05772399902344,
+      "policy_rejected_logp": -133.76544189453125,
+      "reference_rejected_logp": -133.76544189453125,
+      "reward_margin": 0.0,
+      "dpo_loss": 0.6931471805599453,
+      "max_abs_logit_diff_chosen": 0.0,
+      "max_abs_logit_diff_rejected": 0.0
+    },
+    {
+      "id": "dpo_pair_00b54176338ea8489f5d1752",
+      "policy_chosen_logp": -140.92933654785156,
+      "reference_chosen_logp": -140.92933654785156,
+      "policy_rejected_logp": -110.03816986083984,
+      "reference_rejected_logp": -110.03816986083984,
+      "reward_margin": 0.0,
+      "dpo_loss": 0.6931471805599453,
+      "max_abs_logit_diff_chosen": 0.0,
+      "max_abs_logit_diff_rejected": 0.0
+    },
+    {
+      "id": "dpo_pair_00f7478185be420b5475cbcf",
+      "policy_chosen_logp": -173.38543701171875,
+      "reference_chosen_logp": -173.38543701171875,
+      "policy_rejected_logp": -86.6326904296875,
+      "reference_rejected_logp": -86.6326904296875,
+      "reward_margin": 0.0,
+      "dpo_loss": 0.6931471805599453,
+      "max_abs_logit_diff_chosen": 0.0,
+      "max_abs_logit_diff_rejected": 0.0
+    },
+    {
+      "id": "dpo_pair_0119ade0190f052b2ee8125e",
+      "policy_chosen_logp": -94.49723815917969,
+      "reference_chosen_logp": -94.49723815917969,
+      "policy_rejected_logp": -69.33644104003906,
+      "reference_rejected_logp": -69.33644104003906,
+      "reward_margin": 0.0,
+      "dpo_loss": 0.6931471805599453,
+      "max_abs_logit_diff_chosen": 0.0,
+      "max_abs_logit_diff_rejected": 0.0
+    }
+  ],
+  "tolerance": 0.0005,
+  "release_manifest_sha256": "d478e78e6411d233326db7cad0d633c6eabb1fe95eb2ba87ff0cb121f32e89c3",
+  "release_sha256": "1efe3de784bf8bc14cd04b7cc0b4018db737df75b13b167f592d3dfc57dfc618",
+  "training_started": false,
+  "release_allowed": false
+}

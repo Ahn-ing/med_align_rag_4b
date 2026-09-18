@@ -1,11 +1,12 @@
 # 交互式问答 Demo
 
-`demo/cli_chat.py` 在本地加载 `Qwen/Qwen3-4B` 基座和 Phase 6 LoRA 适配器，提供一个最小可用的命令行对话界面。它用于人工观察模型行为，不是评测脚本，输出不构成评测成绩或医疗建议。
+`demo/cli_chat.py` 在本地加载 Qwen3-4B 系列模型和 LoRA 适配器，提供一个最小可用的命令行对话界面。它用于人工观察模型行为，不是评测脚本，输出不构成评测成绩或医疗建议。
 
 ## 前置条件
 
 - 基础模型：`model/Qwen3-4B`，revision `1cfa9a7208912126459214e8b04321603b3df60c`。
 - 适配器：默认 `artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_r2_formal/final_adapter`。
+- DPO 模式：使用 `artifacts/runs/phase_7/merge_sft` 作为基础模型，并加载 `artifacts/runs/phase_7/dpo_formal_v2/final_adapter`；DPO adapter 不应直接加载到原始 `model/Qwen3-4B`。
 - 依赖：在项目根目录执行过 `uv sync --extra sft`（脚本用到 `torch`、`transformers`、`peft`）。
 
 模型尚未下载时，在 cmd 中执行：
@@ -19,6 +20,34 @@ uv run hf download Qwen/Qwen3-4B --revision 1cfa9a7208912126459214e8b04321603b3d
 
 ```powershell
 uv run python demo/cli_chat.py
+```
+
+也可以在项目根目录使用 Bash 启动脚本：
+
+```bash
+# Base：只加载 Qwen3-4B 基座
+bash demo/start_base.sh
+
+# LoRA：加载 Phase 6 SFT adapter
+bash demo/start_lora.sh
+
+# DPO：加载 merged SFT 基座和 Phase 7 DPO adapter
+bash demo/start_dpo.sh
+```
+
+启动脚本会自动切换到项目根目录，并将额外参数透传给 `cli_chat.py`：
+
+```bash
+bash demo/start_dpo.sh --greedy --max-new-tokens 512
+bash demo/start_lora.sh --multi-turn
+```
+
+DPO 模型：
+
+```powershell
+uv run python demo/cli_chat.py `
+	--model-path artifacts/runs/phase_7/merge_sft `
+	--adapter-path artifacts/runs/phase_7/dpo_formal_v2/final_adapter
 ```
 
 加载完成后直接输入问题回车。默认每轮只发送 `system prompt + 当前问题`，不携带历史；需要多轮上下文时加 `--multi-turn`。
@@ -60,6 +89,9 @@ uv run python demo/cli_chat.py --base-only
 uv run python demo/cli_chat.py --adapter-path artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_r2_formal/checkpoint-298
 uv run python demo/cli_chat.py --adapter-path artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_2epoch/final_adapter
 
+# DPO：merged SFT 基座 + DPO LoRA adapter
+uv run python demo/cli_chat.py --model-path artifacts/runs/phase_7/merge_sft --adapter-path artifacts/runs/phase_7/dpo_formal_v2/final_adapter
+
 # 多轮对话
 uv run python demo/cli_chat.py --multi-turn
 
@@ -86,6 +118,7 @@ uv run python demo/cli_chat.py --cpu --max-new-tokens 64
 
 - 推理 system prompt 固定为 `你是一个谨慎、清晰且遵循证据边界的助手。`，与 `data/sft/released/v2_plus_repair_r2/manifest.json` 的 `system_prompt` 一致。
 - 默认适配器的训练数据是 `v2_plus_repair_r2`，训练记录统一为 `system/user/assistant`；上一版 `v2_plus_repair` adapter 只作为对比保留。
+- DPO 适配器是在 merged SFT 模型上训练的，因此启动时必须将 `--model-path` 指向 `artifacts/runs/phase_7/merge_sft`，再将 `--adapter-path` 指向 DPO 的 `final_adapter` 或 checkpoint。
 - 公开 regression 审核记录见 `artifacts/evaluations/phase_6_public_regression/public_regression_audit_r2.json`：医疗表现相较 base 改善、通用能力无明显退化、两套协议 forbidden 零命中，按该标准验收通过。
 - 需要写入报告或做逐条对比时使用 `scripts/sft/evaluate_public_regression.py`；本 demo 只做人工观察，不生成审计产物。
 

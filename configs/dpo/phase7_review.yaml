@@ -1,0 +1,15 @@
+status: frozen
+provider: deepseek
+endpoint: https://api.deepseek.com
+api_key_env: MODEL_API_KEY
+
+review:
+  model: deepseek-flash
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 800
+  response_format: json_object
+  timeout_seconds: 90
+  max_attempts: 4
+  call_budget: 1200
+  total_token_budget: 1500000

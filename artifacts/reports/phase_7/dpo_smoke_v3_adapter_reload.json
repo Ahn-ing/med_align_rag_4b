@@ -1,0 +1,16 @@
+{
+  "format_version": 1,
+  "phase": "phase_7",
+  "status": "passed",
+  "run": "artifacts/runs/phase_7/dpo_smoke_v3",
+  "run_manifest_sha256": "0793e0d0b3d53e850a3791ae5159bce8041dd8fb25ad220837eda7254e45735a",
+  "adapter_weight_sha256": "d5790746bbe9c05dd46dd0830213d1bb59b00b457bac0e15dc55085548ebc8e9",
+  "adapter_config_sha256": "24cd4de337906de356fca068c10d650df57f340fa05f141f6af367313b88ea34",
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "prompt_tokens": 96,
+  "forward_loss": 3.7698967456817627,
+  "logits_finite": true,
+  "reloaded": true
+}

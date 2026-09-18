@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "phase": "phase_7",
+  "kind": "phase_7_preference_validation_summary",
+  "status": "completed",
+  "created_at_utc": "2026-09-17T11:48:05.076564Z",
+  "source_report": "artifacts/reports/phase_7/dpo_formal_evaluation.json",
+  "source_report_sha256": "2ebc15da23fefa4e1e713e33bfb49e53fff98915e3e68c790321aab03f227394",
+  "counts": {
+    "preference_validation": 100
+  },
+  "metrics": {
+    "dpo_mean_dpo_loss": 0.057569396920201896,
+    "dpo_mean_reward_margin": 8.407423021793365,
+    "dpo_preference_accuracy": 0.98,
+    "dpo_positive_margin_count": 98,
+    "policy_mean_log_ratio_chosen_minus_rejected": 30.093682050704956,
+    "reference_mean_log_ratio_chosen_minus_rejected": -53.98054658055305,
+    "mean_policy_minus_reference_log_ratio": 84.07422863125801,
+    "policy_raw_preference_accuracy": 0.74,
+    "reference_raw_preference_accuracy": 0.21
+  },
+  "limitations": [
+    "原始 log-ratio accuracy 与 DPO reward margin accuracy 不是同一指标",
+    "preference validation 只用于工程验收，不代表临床效果或安全性"
+  ]
+}
