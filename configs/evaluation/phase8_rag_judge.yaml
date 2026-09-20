@@ -1,0 +1,23 @@
+format_version: 1
+kind: phase8_rag_judge_config
+status: frozen
+
+provider: autodl
+endpoint: https://www.autodl.art/api/v1
+api_key_env: MODEL_API_KEY
+wire_api: chat_completions
+source_api_config: configs/dpo/phase7_api_v2.yaml
+
+judge:
+  model: DeepSeek-V4.1-Flash
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 600
+  response_format: json_object
+  timeout_seconds: 90
+  max_attempts: 3
+  stream: false
+  stream_options:
+    include_usage: true
+
+request_interval_seconds: 1.0

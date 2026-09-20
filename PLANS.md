@@ -2,7 +2,7 @@
 
 ## 目标与总门禁
 
-使用 `Qwen/Qwen3-4B` 低成本、可复现地构建 `RAG → SFT → Evaluation → DPO → 联合评测`。本项目仅用于研究、学习和工程展示，不提供临床诊断。
+使用 `Qwen/Qwen3-4B` 低成本、可复现地构建 `RAG → SFT → Evaluation → DPO → Ablation`。本项目仅用于研究、学习和工程展示，不提供临床诊断。
 
 - 一次只执行一个获批阶段，到达出口门禁后停止。
 - 本地模型路径只通过运行参数传入。
@@ -39,19 +39,19 @@
 
 ### Phase 6：正式 SFT 与评估
 
-状态：**COMPLETED**。`v2_plus_repair_r2` 两轮 LoRA SFT 已在 RTX 5090 完成并通过工程验收：9,495 条记录、298 optimizer steps、2 epochs，run 为 `qwen3_4b_lora_v2_plus_repair_r2_formal`；active assistant token validation loss 从 1.9274 降至 1.8060（上一版 `v2_plus_repair` 为 1.8413），checkpoint 与 final adapter 哈希校验通过。公开 regression 审核通过：greedy（do_sample=false，max_new_tokens=512）5 pass / 0 partial / 0 fail（base 3 pass / 1 partial / 1 fail），采样（temperature=0.3，top_p=0.95，top_k=20，max_new_tokens=1024，seed=420）5 pass / 0 partial / 0 fail（base 5 pass），两套协议 forbidden behavior 零命中，医疗表现相较 base 改善且通用能力无明显退化。`release_allowed=false`，代理审核不代表医生审核或临床验证；生成式隐藏评测、DPO 与联合评测当时继续锁定；Phase 7 已随后按门禁解锁并完成。Phase 7 保持锁定。
+状态：**COMPLETED**。`v2_plus_repair_r2` 两轮 LoRA SFT 已在 RTX 5090 完成并通过工程验收：9,495 条记录、298 optimizer steps、2 epochs，run 为 `qwen3_4b_lora_v2_plus_repair_r2_formal`；active assistant token validation loss 从 1.9274 降至 1.8060（上一版 `v2_plus_repair` 为 1.8413），checkpoint 与 final adapter 哈希校验通过。公开 regression 审核通过：greedy（do_sample=false，max_new_tokens=512）5 pass / 0 partial / 0 fail（base 3 pass / 1 partial / 1 fail），采样（temperature=0.3，top_p=0.95，top_k=20，max_new_tokens=1024，seed=420）5 pass / 0 partial / 0 fail（base 5 pass），两套协议 forbidden behavior 零命中，医疗表现相较 base 改善且通用能力无明显退化。`release_allowed=false`，代理审核不代表医生审核或临床验证；生成式隐藏评测、DPO 与消融实验当时继续锁定；Phase 7 已随后按门禁解锁并完成。
 
 ### Phase 7：DPO
 
-状态：**COMPLETED**。已独立构建 v1/v2 偏好数据，完成 release、merged SFT reference、preflight、GPU smoke、正式 DPO、preference validation、v1/v2 对比和 v2 公开 regression；v2 `dpo_formal_v2` 为最终接受版本，public sampled 为 5 pass / 0 partial / 0 fail、greedy 为 4 pass / 1 partial / 0 fail。所有结果仍为内部工程验收，不是医生审核或临床验证。
+状态：**COMPLETED**。已独立构建偏好数据并完成 release、merged SFT reference、preflight、GPU smoke、正式 DPO、preference validation 和公开 regression；`dpo_formal_v2` 是唯一最终 DPO 产物，`dpo_formal_v1` 已废弃且不进入最终交付、演示、验收或 Phase 8 消融实验。v2 held-out preference accuracy 为 0.96、mean reward margin 为 6.3207；public sampled 为 5 pass / 0 partial / 0 fail、greedy 为 4 pass / 1 partial / 0 fail。preference accuracy 是项目自建偏好对排序指标，不是生成式 blind win rate；所有结果仍为内部工程验收，不是医生审核或临床验证。
 
-### Phase 8：联合评测
+### Phase 8：消融实验
 
-状态：**IN PROGRESS**。已完成联合评测范围、冻结输入、Base/Base+RAG/SFT/SFT+RAG/DPO v1/DPO v2/DPO v2+RAG 矩阵和门禁整理；尚未运行联合评测。test 与 medical safety holdout 仍需在正式执行前单独获批解锁。
+状态：**COMPLETED**。最终组合为 `validation_v4 + formal_v4 + phase8-full-rag-judge-v4`；R0–R5 各 60 条，最终 judge 覆盖 360 条。最终均分为 R0 1.7167、R1 1.8667、R2 1.8333、R3 1.5833、R4 1.6833、R5 1.7333；R2→R3 为 -0.2500，显示 RAG 在 SFT 上的明显负交互。`formal_v1/v2/v3`、旧 judge 版本和 v5 相关报告均已废除，仅保留历史审计；test 与 medical safety holdout 仍未读取，全部结果仅限内部工程评测。
 
 ### Phase 9：求职交付
 
-状态：**LOCKED**。整理复现文档、数据卡、模型卡、演示、局限和失败分析。
+状态：**IN PROGRESS（Phase 9.1 COMPLETED，Phase 9.2 LOCKED）**。已完成求职交付的范围冻结、最终版本登记、可声明边界、Git 交付边界和证据目录。复现指南、数据卡、模型卡、演示和最终 README 改写属于后续子阶段，未经批准不读取 test 或 medical safety holdout，不重新训练或评分。
 
 ## 已批准 SFT 默认值
 

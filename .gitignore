@@ -45,7 +45,36 @@ data/dpo/
 # === 运行产物与报告 ===
 artifacts/reports/phase_4/
 artifacts/runs/
-artifacts/evaluations/
+# 评测原始输出默认不入库；Phase 8 仅保留最终 v4 的小型 manifest。
+artifacts/evaluations/**
+!artifacts/evaluations/phase_8_rag/
+artifacts/evaluations/phase_8_rag/**
+!artifacts/evaluations/phase_8_rag/formal_v4/
+artifacts/evaluations/phase_8_rag/formal_v4/**
+!artifacts/evaluations/phase_8_rag/formal_v4/R0.manifest.json
+!artifacts/evaluations/phase_8_rag/formal_v4/R1.manifest.json
+!artifacts/evaluations/phase_8_rag/formal_v4/R2.manifest.json
+!artifacts/evaluations/phase_8_rag/formal_v4/R3.manifest.json
+!artifacts/evaluations/phase_8_rag/formal_v4/R4.manifest.json
+!artifacts/evaluations/phase_8_rag/formal_v4/R5.manifest.json
+!artifacts/evaluations/phase_8_rag/formal_v4/judge_scores_v4.manifest.json
+
+# Phase 8 只提交最终 v4 聚合报告与审核证据；旧版本和中间报告留在本地审计。
+artifacts/reports/phase_8_rag/**
+!artifacts/reports/phase_8_rag/formal_v4_comprehensive_review.md
+!artifacts/reports/phase_8_rag/formal_v4_degradation_review_v4.json
+!artifacts/reports/phase_8_rag/formal_v4_degradation_review_v4_detailed.md
+!artifacts/reports/phase_8_rag/formal_v4_rules.json
+!artifacts/reports/phase_8_rag/validation_v4_candidate_audit.json
+!artifacts/reports/phase_8_rag/validation_v4_candidate_review.md
+
+# Phase 8 候选集和旧 v3 只用于构建/历史审计；保留最终 validation_v4 及其审核登记。
+data/evaluation/validation_v3/
+data/evaluation/validation_v3_candidates.jsonl
+data/evaluation/review_registry_v3.json
+data/evaluation/validation_v4_candidates.jsonl
+docs/evaluation/phase8_rag_rubric_v3.md
+scripts/evaluation/build_validation_v3.py
 
 # === 日志 ===
 *.log

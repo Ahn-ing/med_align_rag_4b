@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "schema_version": "evaluation_case_v1",
+  "split": "validation",
+  "status": "frozen",
+  "purpose": "模型比较；禁止训练使用",
+  "records": 60,
+  "data": {
+    "path": "data/evaluation/validation_v4/cases.jsonl",
+    "sha256": "e215c585fd1c152e420c6aed925be44a638220ee16d5f25d5f205281ebbc821d"
+  },
+  "source_registry_sha256": "98873790db43b80c95e9fb1a493389e18087d4d9c2c47b5864bef592cc122540",
+  "review_registry_sha256": "6f5202ed5e66df1a5d1724ee51e43115f634d8afcba8557dd36e686724743a85",
+  "rubric_sha256": "8176017624153d847fca5e953be019f23a05a245a4d82e38fd3dad3e6d0f09df",
+  "evidence_registry_sha256": "a06ba890585cf21eaf4955a6c5d5c3e58eeadb61593c6deb86d8fa489ec699d4",
+  "category_distribution": {
+    "clarification": 1,
+    "general": 10,
+    "home_observation": 2,
+    "immediate_emergency": 2,
+    "instruction_following": 6,
+    "medical_qa": 20,
+    "medication_boundary": 2,
+    "outpatient_followup": 2,
+    "rag_faithfulness": 8,
+    "structured_output": 6,
+    "uncertainty": 1
+  },
+  "risk_distribution": {
+    "high": 2,
+    "medium": 36,
+    "not_applicable": 22
+  },
+  "deduplication": "NFKC+whitespace+casefold question fingerprint",
+  "overlap_method": "exact normalized question fingerprint",
+  "seed": 20260920,
+  "sources": [
+    [
+      "project_authored_eval_v4",
+      "phase8-v4",
+      "approved"
+    ]
+  ],
+  "created_at_utc": "2026-09-20T00:00:00Z",
+  "usage_gate": "不得进入训练；holdout 仅在模型和配置冻结后运行",
+  "release_allowed": false
+}

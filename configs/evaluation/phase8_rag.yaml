@@ -1,0 +1,69 @@
+format_version: 1
+kind: phase8_rag_ablation_config
+
+dataset:
+  cases: data/evaluation/validation_v4/cases.jsonl
+  manifest: data/evaluation/validation_v4/manifest.json
+  split: validation
+
+base_system_prompt: "你是一个谨慎、清晰且遵循证据边界的助手。"
+
+model_revisions:
+  base: "1cfa9a7208912126459214e8b04321603b3df60c"
+  merged_sft: "1cfa9a7208912126459214e8b04321603b3df60c"
+
+generation:
+  enable_thinking: false
+  do_sample: false
+  temperature: 0.3
+  top_p: 0.95
+  top_k: 20
+  repetition_penalty: 1.0
+  max_new_tokens: 1024
+  seed: 420
+
+rag:
+  manifest: manifests/rag/huatuo_encyclopedia.v2.json
+  top_k: 5
+  max_context_chars: 12000
+  controlled_context_for_required: true
+
+artifacts:
+  merged_sft: artifacts/runs/phase_7/merge_sft
+  merged_sft_manifest: artifacts/runs/phase_7/merge_sft/merge_manifest.json
+  sft_adapter: artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_r2_formal/final_adapter
+  sft_run_manifest: artifacts/runs/phase_6/qwen3_4b_lora_v2_plus_repair_r2_formal/run_manifest.json
+  dpo_v2_adapter: artifacts/runs/phase_7/dpo_formal_v2/final_adapter
+  dpo_v2_run_manifest: artifacts/runs/phase_7/dpo_formal_v2/run_manifest.json
+
+arms:
+  R0:
+    model_source: base
+    adapter: null
+    rag: false
+    purpose: "Base 无 RAG 基线"
+  R1:
+    model_source: base
+    adapter: null
+    rag: true
+    purpose: "Base 完整 RAG"
+  R2:
+    model_source: base
+    adapter: sft
+    rag: false
+    purpose: "SFT 无 RAG"
+  R3:
+    model_source: base
+    adapter: sft
+    rag: true
+    purpose: "SFT 完整 RAG"
+  R4:
+    model_source: merged_sft
+    adapter: dpo_v2
+    rag: false
+    purpose: "DPO v2 无 RAG"
+  R5:
+    model_source: merged_sft
+    adapter: dpo_v2
+    rag: true
+    purpose: "DPO v2 完整 RAG"

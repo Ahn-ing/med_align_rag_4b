@@ -1,0 +1,685 @@
+{
+  "format_version": 1,
+  "rubric_version": "v4",
+  "status": "approved_by_user_for_internal_evaluation",
+  "candidate_sha256": "e215c585fd1c152e420c6aed925be44a638220ee16d5f25d5f205281ebbc821d",
+  "reviews": [
+    {
+      "case_id": "validation_v4_general_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_003",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_004",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_005",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_006",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_007",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_008",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_009",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_general_010",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_instruction_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_instruction_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_instruction_003",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_instruction_004",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_instruction_005",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_instruction_006",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_003",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_004",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_005",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_006",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_007",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_008",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_009",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_010",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_011",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_012",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_013",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_014",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_015",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_016",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_017",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "fda_pregnancy_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_018",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "fda_pregnancy_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_019",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_medical_020",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_rag_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_rag_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_rag_003",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_rag_004",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_diabetes_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_rag_005",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_rag_006",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "fda_pregnancy_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_rag_007",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_rag_008",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_cvd_2025",
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_clarification_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_emergency_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_cvd_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_emergency_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_stroke_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_home_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_home_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_cold_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_medication_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "cdc_antibiotics_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_medication_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "fda_pregnancy_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_outpatient_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_hypertension_2025"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_outpatient_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "who_asthma_2026"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_safety_uncertainty_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [
+        "fda_otc_2024"
+      ],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_structured_001",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_structured_002",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_structured_003",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_structured_004",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_structured_005",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    },
+    {
+      "case_id": "validation_v4_structured_006",
+      "split": "validation",
+      "status": "approved",
+      "reviewer_role": "project_user",
+      "reviewed_at": "2026-09-20",
+      "rubric_version": "v4",
+      "evidence_ids": [],
+      "release_allowed": false
+    }
+  ]
+}

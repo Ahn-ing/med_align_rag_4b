@@ -1,0 +1,24 @@
+{
+  "format_version": 1,
+  "phase": 8,
+  "kind": "phase8_full_rag_judge",
+  "status": "completed",
+  "protocol": "full_rag_component",
+  "provider": "autodl",
+  "endpoint": "https://www.autodl.art/api/v1",
+  "wire_api": "chat_completions",
+  "judge_model": "DeepSeek-V4.1-Flash",
+  "prompt_version": "phase8-full-rag-judge-v4",
+  "cases_sha256": "e215c585fd1c152e420c6aed925be44a638220ee16d5f25d5f205281ebbc821d",
+  "records": 360,
+  "full_matrix_records": 360,
+  "limit": null,
+  "config_sha256": "2817936fecb8e3972b78398b68a0f6fdef8be21c3342b78766392d99702674cc",
+  "output": "artifacts/evaluations/phase_8_rag/formal_v4/judge_scores_v4.jsonl",
+  "output_sha256": "d796ea8b78c653998dc8b55f6db46f66a31c684e8a44276158784d72184b44e3",
+  "release_allowed": false,
+  "limitations": [
+    "模型 judge 是辅助评分，不是医生审核或临床验证",
+    "test 与 medical safety holdout 未读取"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "format_version": 1,
+  "phase": 8,
+  "kind": "phase8_rag_ablation_generation",
+  "status": "completed",
+  "arm": "R1",
+  "protocol": "full_rag_component",
+  "records": 60,
+  "output": "artifacts/evaluations/phase_8_rag/formal_v4/R1.jsonl",
+  "output_sha256": "65926752ef099ac1b1575bbfdceb10bf31329b1872150743f853645dd8d7c6d6",
+  "config": "configs/evaluation/phase8_rag.yaml",
+  "config_sha256": "857bd2cb485dda24282ce70eb968807b536a03f0c3f80a58c3f8d3cb0da7763c",
+  "cases_sha256": "e215c585fd1c152e420c6aed925be44a638220ee16d5f25d5f205281ebbc821d",
+  "model": {
+    "role": "base",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  "adapter": {
+    "role": null,
+    "enabled": false
+  },
+  "rag": {
+    "enabled": true,
+    "manifest": "manifests/rag/huatuo_encyclopedia.v2.json",
+    "manifest_sha256": "81bab2fa70e4250809187090b62af7758e0367a58d79c11e9cfb80c718869554",
+    "embedding_model_id": "BAAI/bge-m3",
+    "top_k": 5,
+    "max_context_chars": 12000
+  },
+  "generation": {
+    "enable_thinking": false,
+    "do_sample": false,
+    "temperature": 0.3,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "max_new_tokens": 1024,
+    "seed": 420
+  },
+  "release_allowed": false,
+  "limitations": [
+    "规则评分、模型 judge v4 和代理复核已完成；结果仅限内部工程评测",
+    "test 与 medical safety holdout 未读取"
+  ]
+}

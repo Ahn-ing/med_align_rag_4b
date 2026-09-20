@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "phase": 8,
+  "kind": "phase8_full_rag_degradation_review",
+  "status": "pending_manual_review",
+  "cases_sha256": "e215c585fd1c152e420c6aed925be44a638220ee16d5f25d5f205281ebbc821d",
+  "records": 58,
+  "by_contrast": {
+    "R0->R1": 5,
+    "R0->R2": 5,
+    "R1->R3": 14,
+    "R2->R3": 13,
+    "R2->R4": 9,
+    "R3->R5": 7,
+    "R4->R5": 5
+  },
+  "reason_counts": {
+    "judge_score_decrease": 58,
+    "new_rule_hard_fail": 3
+  },
+  "queue": {
+    "path": "artifacts/evaluations/phase_8_rag/formal_v4/degradation_review_queue_v4.jsonl",
+    "sha256": "d1572c48d543a9546209b4f20a469975398ca3e2e07882f819e6a7c70f45fa19"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "candidate_audit_passed",
+  "records": 60,
+  "category_distribution": {
+    "clarification": 1,
+    "general": 10,
+    "home_observation": 2,
+    "immediate_emergency": 2,
+    "instruction_following": 6,
+    "medical_qa": 20,
+    "medication_boundary": 2,
+    "outpatient_followup": 2,
+    "rag_faithfulness": 8,
+    "structured_output": 6,
+    "uncertainty": 1
+  },
+  "task_distribution": {
+    "general": 10,
+    "instruction_following": 6,
+    "medical_qa": 20,
+    "medical_safety": 10,
+    "rag_faithfulness": 8,
+    "structured_output": 6
+  },
+  "blocked_fingerprint_counts": {
+    "test_v1": 90,
+    "medical_safety_holdout_v1": 30
+  },
+  "training_records_checked": 9495,
+  "training_question_fingerprints_checked": 9495,
+  "training_overlap": 0,
+  "evidence_alignment_errors": 0,
+  "rag_reference_errors": 0,
+  "structured_schema_errors": 0,
+  "manual_review_required": true,
+  "freeze_allowed": false,
+  "used_for_final_claims": false,
+  "candidate_path": "data/evaluation/validation_v4_candidates.jsonl",
+  "candidate_sha256": "e215c585fd1c152e420c6aed925be44a638220ee16d5f25d5f205281ebbc821d",
+  "candidate_review_path": "artifacts/reports/phase_8_rag/validation_v4_candidate_review.md"
+}
