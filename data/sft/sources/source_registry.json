@@ -140,6 +140,44 @@
       ],
       "review_status": "approved",
       "notes": "仅用于内部工程训练；代理证据审核不是医生审核或临床验证，release_allowed=false。"
+    },
+    {
+      "source_id": "project_authored_eval_v3",
+      "name": "Phase 8 RAG 消融评测集 v3 重建候选",
+      "purpose": "evaluation_only",
+      "origin": "根据冻结权威证据和通用能力任务要求独立编写",
+      "source_url": "internal",
+      "revision": "phase8-v3",
+      "license": "internal-evaluation-only",
+      "license_status": "approved",
+      "contains_medical_claims": true,
+      "contains_personal_data": false,
+      "generation_method": "project_authored",
+      "allowed_uses": [
+        "evaluation_candidate",
+        "internal_evaluation"
+      ],
+      "review_status": "approved",
+      "notes": "用户已完成内部评测审核并批准冻结；仅用于内部评测，代理证据审核不是医生审核或临床验证，release_allowed=false。"
+    },
+    {
+      "source_id": "project_authored_eval_v4",
+      "name": "Phase 8 RAG 消融评测集 v4",
+      "purpose": "evaluation_only",
+      "origin": "在已审核 validation_v3 基础上修正结构化案例歧义，并将 RAG 标准调整为事实忠实性",
+      "source_url": "internal",
+      "revision": "phase8-v4",
+      "license": "internal-evaluation-only",
+      "license_status": "approved",
+      "contains_medical_claims": true,
+      "contains_personal_data": false,
+      "generation_method": "project_authored",
+      "allowed_uses": [
+        "evaluation_candidate",
+        "internal_evaluation"
+      ],
+      "review_status": "approved",
+      "notes": "用户已批准执行 v4 修正；仅用于内部评测，不是医生审核或临床验证，release_allowed=false。"
     }
   ]
 }
