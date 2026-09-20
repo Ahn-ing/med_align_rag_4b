@@ -51,7 +51,7 @@
 
 ### Phase 9：求职交付
 
-状态：**IN PROGRESS（Phase 9.1 COMPLETED，Phase 9.2 LOCKED）**。已完成求职交付的范围冻结、最终版本登记、可声明边界、Git 交付边界和证据目录。复现指南、数据卡、模型卡、演示和最终 README 改写属于后续子阶段，未经批准不读取 test 或 medical safety holdout，不重新训练或评分。
+状态：**COMPLETED**。已完成范围冻结、最终版本登记、Git 交付边界、证据目录、项目首页、复现指南、数据卡、模型卡、实验/失败分析和求职讲述稿。按用户要求不制作现场演示；test 与 medical safety holdout 仍未读取，未进行新训练或重新评分。
 
 ## 已批准 SFT 默认值
 
